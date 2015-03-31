@@ -19,11 +19,6 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 600;
 }
 
-/**
- * Horizon Theme Widgets.
- */
-require_once get_template_directory() . '/core/classes/widgets/class-widget-like-box.php';
-
 if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 
 	/**

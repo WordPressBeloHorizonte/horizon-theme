@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 	$( '.wp-video-shortcode' ).parent( 'div' ).css( 'width', 'auto' );
 
 	/**
-	 * Horizon Theme Core shortcodes
+	 * Odin Core shortcodes
 	 */
 
 	// Tabs.

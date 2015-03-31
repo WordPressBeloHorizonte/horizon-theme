@@ -2,12 +2,13 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package Horizon_Theme
+ * @package Odin
+ * @since 2.2.0
  */
 
 get_header(); ?>
 
-	<div id="primary" class="">
+	<div id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
 		<main id="main-content" class="site-main" role="main">
 			<?php
 				// Start the Loop.

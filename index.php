@@ -9,12 +9,13 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Horizon_Theme
+ * @package Odin
+ * @since 2.2.0
  */
 
 get_header(); ?>
 
-	<div id="primary" class="">
+	<div id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
 		<main id="main-content" class="site-main" role="main">
 
 			<?php
@@ -32,7 +33,7 @@ get_header(); ?>
 					endwhile;
 
 					// Post navigation.
-					horizon_theme_paging_nav();
+					odin_paging_nav();
 
 				else :
 					// If no content, include the "No posts found" template.

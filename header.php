@@ -4,7 +4,8 @@
  *
  * Displays all of the <head> section and everything up till #main div
  *
- * @package Horizon_Theme
+ * @package Odin
+ * @since 2.2.0
  */
 ?><!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -39,10 +40,10 @@
 			<?php endif; ?>
 
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
-				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'horizon-theme' ); ?>"><?php _e( 'Skip to content', 'horizon-theme' ); ?></a>
+				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
-					<span class="sr-only"><?php _e( 'Toggle navigation', 'horizon-theme' ); ?></span>
+					<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -58,17 +59,22 @@
 					<?php
 						wp_nav_menu(
 							array(
-								'theme_location' => 'main-menu'
+								'theme_location' => 'main-menu',
+								'depth'          => 2,
+								'container'      => false,
+								'menu_class'     => 'nav navbar-nav',
+								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+								'walker'         => new Odin_Bootstrap_Nav_Walker()
 							)
 						);
 					?>
 
 					<form method="get" class="navbar-form navbar-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-						<label for="navbar-search" class="sr-only"><?php _e( 'Search:', 'horizon-theme' ); ?></label>
+						<label for="navbar-search" class="sr-only"><?php _e( 'Search:', 'odin' ); ?></label>
 						<div class="form-group">
 							<input type="search" class="form-control" name="s" id="navbar-search" />
 						</div>
-						<button type="submit" class="btn btn-default"><?php _e( 'Search', 'horizon-theme' ); ?></button>
+						<button type="submit" class="btn btn-default"><?php _e( 'Search', 'odin' ); ?></button>
 					</form>
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->

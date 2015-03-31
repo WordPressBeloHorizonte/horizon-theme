@@ -116,7 +116,53 @@ html {
 -------------------------------------------------------------- */
 
 #main-navigation {
+	background-color: rgba(41, 44, 46, 0.9);
+	padding: 0px;
+	margin: 0px;
+}
 
+.navbar-brand{
+	padding: 0;
+	margin: 45px 0px;
+	height: auto;
+	line-height: 5px;
+}
+
+.nav>li>a{
+	padding: 0px 30px;
+}
+
+.navbar-default .navbar-nav>li{	
+	padding: 45px 0px;
+	padding-bottom: 42px;
+	border-bottom: 3px transparent solid;
+	>a{
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: bold;
+		padding: 0px 30px;
+		border-right: 1px #aac54b solid;
+		line-height: 5px;		
+	}
+	&:last-child a{
+			border-right: 0px;
+	}
+	&:hover{
+		a{
+			color: #aac54b;
+		}
+		border-bottom: 3px #aac54b solid;
+	}
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+	background-color: transparent;
+	color: #aac54b;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+	background-color: transparent;
+	color: #aac54b;
 }
 
 /* =Search Form

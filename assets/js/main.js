@@ -17,5 +17,6 @@ jQuery(document).ready(function($) {
 
 	// Tooltip.
 	$( '.odin-tooltip' ).tooltip();
+	
 
 });

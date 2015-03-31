@@ -39,7 +39,6 @@ module.exports = function( grunt ) {
 						'<%= dirs.js %>/main.js'
 					]
 				}
-			}}
 			}
 		},
 

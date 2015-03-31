@@ -2,8 +2,6 @@
 
 Tema a ser criado e lançado no WordCamp Belo Horizonte
 
-Quer colaborar? Faça um  e envie sua alteração.
-
 ## Quer colaborar?
 
 1. Faça um fork do repositório

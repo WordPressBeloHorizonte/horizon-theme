@@ -1,0 +1,21 @@
+{
+  "name": "horizon-theme",
+  "description": "Needs description",
+  "version": "1.0.0",
+  "title": "Horizon Theme",
+  "homepage": "https://github.com/WordPressBeloHorizonte/horizon-theme",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "load-grunt-tasks": "~2.0.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-sass": "~0.9.2",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.7.0",
+    "grunt-contrib-imagemin": "~0.9.2"
+  },
+  "engines": {
+    "node": ">=0.10.1",
+    "npm": ">=1.1.0"
+  }
+}

@@ -207,6 +207,16 @@ function horizon_theme_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'horizon_theme_enqueue_scripts', 1 );
 
 /**
+ * Load font Open Sans - Google Fonts
+ */
+function horizon_theme_google_fonts() {
+	wp_register_style( 'horizon_theme-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
+    wp_enqueue_style( 'horizon_theme-open-sans' );
+}
+
+add_action( 'wp_print_styles', 'horizon_theme_google_fonts' );
+
+/**
  * Comments loop.
  */
 require_once get_template_directory() . '/inc/comments-loop.php';

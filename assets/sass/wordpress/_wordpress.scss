@@ -1,0 +1,18 @@
+/* =Wordpress Core
+-------------------------------------------------------------- */
+
+@import "alignment";
+@import "content";
+@import "galleries";
+@import "images";
+
+/* =Wordpress Core Widgets
+-------------------------------------------------------------- */
+
+@import "widgets/calendar";
+@import "widgets/search";
+
+/* =Wordpress Core Shortcodes
+-------------------------------------------------------------- */
+
+@import "shortcodes/video";

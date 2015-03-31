@@ -6,12 +6,13 @@
  * Please note that this is the WordPress construct of pages and that other
  * 'pages' on your WordPress site will use a different template.
  *
- * @package Horizon_Theme
+ * @package Odin
+ * @since 2.2.0
  */
 
 get_header(); ?>
 
-	<div id="primary" class="">
+	<div id="primary" class="<?php echo odin_classes_page_full(); ?>">
 		<main id="main-content" class="site-main" role="main">
 
 			<?php

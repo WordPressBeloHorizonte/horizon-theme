@@ -4,11 +4,12 @@
  *
  * If no active widgets in this sidebar, it will shows Recent Posts, Archives and Tag Cloud widgets.
  *
- * @package Horizon_Theme
+ * @package Odin
+ * @since 2.2.0
  */
 ?>
 
-<div id="secondary" class="" role="complementary">
+<div id="secondary" class="<?php echo odin_classes_page_sidebar_aside(); ?>" role="complementary">
 	<?php
 		if ( ! dynamic_sidebar( 'main-sidebar' ) ) {
 			the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ) );

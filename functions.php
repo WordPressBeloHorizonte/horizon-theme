@@ -18,6 +18,10 @@
 if ( ! isset( $content_width ) ) {
 	$content_width = 600;
 }
+/**
+ * Core Classes.
+ */
+require_once get_template_directory() . '/core/classes/class-bootstrap-nav.php';
 
 if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 
@@ -200,6 +204,23 @@ function horizon_theme_enqueue_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'horizon_theme_enqueue_scripts', 1 );
+
+/**
+ * Horizon Theme custom stylesheet URI.
+ *
+ * @since  2.2.0
+ *
+ * @param  string $uri Default URI.
+ * @param  string $dir Stylesheet directory URI.
+ *
+ * @return string      New URI.
+ */
+function odin_stylesheet_uri( $uri, $dir ) {
+	return $dir . '/assets/css/style.css';
+}
+
+add_filter( 'stylesheet_uri', 'odin_stylesheet_uri', 10, 2 );
+
 
 /**
  * Load font Open Sans - Google Fonts

@@ -10,3 +10,362 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: horizon-theme
 */
+
+//Variables configuration.
+
+@import "config";
+
+/* =Bootstrap Styles
+-------------------------------------------------------------- */
+
+// Reset
+@import "bootstrap/normalize";
+
+// Dependencies
+@import "bootstrap/glyphicons";
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+
+// Components
+@import "bootstrap/component-animations";
+@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+@import "bootstrap/labels";
+@import "bootstrap/badges";
+@import "bootstrap/jumbotron";
+@import "bootstrap/thumbnails";
+@import "bootstrap/alerts";
+@import "bootstrap/progress-bars";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/panels";
+@import "bootstrap/responsive-embed";
+@import "bootstrap/wells";
+@import "bootstrap/close";
+
+// Components w/ JavaScript
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+@import "bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap/utilities";
+
+
+/* =General
+-------------------------------------------------------------- */
+html {
+	overflow-y: scroll;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+
+#header {
+
+}
+
+.site-title,
+.site-description {
+	margin-top: $line-height-computed;
+	margin-bottom: ($line-height-computed / 2);
+}
+
+.site-title {
+	a {
+
+		&:hover {
+
+		}
+	}
+}
+
+.site-description {
+
+}
+
+/* =Navigation
+-------------------------------------------------------------- */
+
+#main-navigation {
+	background-color: $darkColor;
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbar-brand{
+	padding: 0;
+	margin: 45px 0px;
+	height: auto;
+	line-height: 5px;
+}
+
+.nav>li>a{
+	padding: 0px 30px;
+}
+
+.navbar-default .navbar-nav>li{	
+	padding: 45px 0px;
+	padding-bottom: 42px;
+	border-bottom: 3px transparent solid;
+	>a{
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: bold;
+		padding: 0px 30px;
+		border-right: 1px $primaryColor solid;
+		line-height: 5px;		
+	}
+	&:last-child a{
+			border-right: 0px;
+	}
+	&:hover{
+		>a{
+			color: $primaryColor;
+		}
+		border-bottom: 3px $primaryColor solid;
+	}
+}
+
+.navbar-default{
+	.navbar-nav>li>a:hover, .navbar-nav>.open>a, .navbar-nav>li>a:focus, .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus{
+		background-color: transparent;
+		color: $primaryColor;
+		border-color: $primaryColor;
+	}
+	.navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+	  	background-color: transparent;
+		color: $primaryColor;
+		border-color: $primaryColor;
+	}
+}
+
+.navbar-right .dropdown-menu{
+	border-top: 3px $primaryColor solid;
+}
+
+
+/* =Search Form
+-------------------------------------------------------------- */
+
+#searchform {
+
+}
+
+#s {
+
+}
+
+#searchsubmit {
+
+}
+
+/* =Content
+-------------------------------------------------------------- */
+
+.wrapper {
+
+}
+
+#main {
+
+}
+
+#primary {
+
+}
+
+#content {
+
+}
+
+#secondary {
+
+}
+
+.entry-title {
+	margin-bottom: 0.4em;
+
+	a {
+
+		&:hover {
+
+		}
+	}
+}
+
+.page-header {
+	margin-bottom: 1em;
+}
+
+.page-title {
+
+}
+
+.entry-meta {
+	margin-bottom: $text-margin-bottom;
+
+	a {
+
+	}
+}
+
+.sticky {
+	font-size: 100%;
+}
+
+/* =Pagination
+-------------------------------------------------------------- */
+
+.pagination-wrap {
+	text-align: center;
+	margin-top: 15px;
+
+	.infinite-scroll & {
+		display: none;
+	}
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+
+.commentlist {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	line-height: 22px;
+
+	li.comment, li.pingback {
+		@include clearfix();
+		list-style: none;
+		margin-bottom: 10px;
+	}
+
+	.comment-meta {
+		color: #666;
+		font-size: 12px;
+		line-height: 15px;
+
+		.fn {
+			font-size: 13px;
+			font-weight: 600;
+		}
+		a, .fn {
+			color: #444;
+
+			&:hover {
+				color: $link-color;
+				text-decoration: none;
+			}
+		}
+	}
+	.comment-author {
+		img {
+			float: left;
+			display: block;
+			margin-right: 10px;
+		}
+	}
+
+	.comment-awaiting-moderation {
+		margin-top: 5px;
+		font-weight: bold;
+		color: #333;
+	}
+}
+
+.bypostauthor {
+	font-size: 100%;
+}
+
+.required {
+	color: #c00;
+}
+
+#commentform {
+	font-size: 13px;
+	line-height: 22px;
+
+	label {
+		display: block;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+}
+
+/* =Sidebar and Widgets
+-------------------------------------------------------------- */
+
+.widget {
+	margin-bottom: $text-margin-bottom;
+
+	a {
+
+		&:hover {
+
+		}
+	}
+
+	ul {
+
+		ul {
+
+		}
+
+		li {
+
+		}
+	}
+}
+
+/* .widgettitle is a WordPress default */
+.widgettitle,
+.widget-title {
+	margin-bottom: 10px;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#footer {
+	border-top: 1px solid #ddd;
+	margin-top: 20px;
+	padding: 20px 0 20px;
+	text-align: center;
+}
+
+/* =Error 404 page
+-------------------------------------------------------------- */
+
+.error404 {
+
+	#searchform {
+		margin-bottom: $text-margin-bottom;
+	}
+}
+
+/* =Responsive Styles
+-------------------------------------------------------------- */
+
+@import "bootstrap/responsive-utilities";
+
+/* =Print Styles
+-------------------------------------------------------------- */
+
+@import "bootstrap/print";

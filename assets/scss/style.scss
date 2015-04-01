@@ -102,6 +102,7 @@ html {
 -------------------------------------------------------------- */
 
 #main-navigation {
+	font-size: 12px;
 	background-color: $darkColor;
 	padding: 0px;
 	margin: 0px;
@@ -128,7 +129,7 @@ html {
 		font-weight: bold;
 		padding: 0px 30px;
 		border-right: 1px $primaryColor solid;
-		line-height: 5px;		
+		line-height: 1;		
 	}
 	&:last-child a{
 			border-right: 0px;
@@ -151,6 +152,37 @@ html {
 	  	background-color: transparent;
 		color: $primaryColor;
 		border-color: $primaryColor;
+	}
+}
+
+.dropdown-menu{
+	padding: 0px;
+	min-width: 100%;
+	max-width: 100%;
+	height: auto;
+	.active > a, .active > a:focus, .active > a:hover{		
+		background-color: $primaryColor;
+	}
+}
+
+.navbar-nav > li > .dropdown-menu{
+	background-color: $darkColor;
+	a{
+		font-size: 12px;
+		color: #fff;
+		text-align: center;		
+		text-transform: uppercase;
+		padding: 15px;
+		line-height: 1.5;
+		&:hover{
+			background-color: $primaryColor;
+		}
+	}
+	li{
+		a{
+			white-space: normal;
+		}
+		border-bottom: 1px rgb(45, 45, 45) solid;
 	}
 }
 

@@ -15,7 +15,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
 	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
 </head>
@@ -41,8 +41,8 @@
 							'depth'          => 2,
 							'container'      => false,
 							'menu_class'     => 'nav navbar-nav',
-							'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-							'walker'         => new Odin_Bootstrap_Nav_Walker()
+							'fallback_cb'    => 'Horizon_Theme_Nav_Walker::fallback',
+							'walker'         => new Horizon_Theme_Nav_Walker()
 						)
 					);
 				?>

@@ -1,0 +1,246 @@
+# Copyright (C) 2015 
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Horizon Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2015-04-02 22:12:33+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.1\n"
+
+#: 404.php:14
+msgid "Not Found"
+msgstr ""
+
+#: 404.php:18
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: audio.php:23 video.php:23
+msgid "URL:"
+msgstr ""
+
+#: audio.php:29 image.php:39 video.php:29
+msgid "Back to %s"
+msgstr ""
+
+#: audio.php:29 image.php:39 video.php:29
+msgid "<span class=\"meta-nav\">&larr;</span> %s"
+msgstr ""
+
+#: comments.php:12
+msgid "This post is password protected. Enter the password to view all comments."
+msgstr ""
+
+#: comments.php:21
+msgid "0 Comments"
+msgstr ""
+
+#: comments.php:21 content.php:52
+msgid "1 Comment"
+msgstr ""
+
+#: comments.php:21 content.php:52
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:22
+msgid "to"
+msgstr ""
+
+#: comments.php:27 comments.php:36
+msgid "&larr; Old Comments"
+msgstr ""
+
+#: comments.php:28 comments.php:37
+msgid "New Comments &rarr;"
+msgstr ""
+
+#: comments.php:42
+msgid "Comments closed."
+msgstr ""
+
+#: comments.php:53
+msgid "Comment"
+msgstr ""
+
+#: comments.php:55
+msgid "Name"
+msgstr ""
+
+#: comments.php:56
+msgid "E-mail"
+msgstr ""
+
+#: comments.php:57
+msgid "Website"
+msgstr ""
+
+#: content-none.php:10
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:16
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:20
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:25
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content-page.php:16 content.php:37
+msgid "Pages:"
+msgstr ""
+
+#: content.php:35
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content.php:48
+msgid "Posted in:"
+msgstr ""
+
+#: content.php:50
+msgid "Tagged as:"
+msgstr ""
+
+#: content.php:52
+msgid "Leave a comment"
+msgstr ""
+
+#: footer.php:16
+msgid "All rights reserved"
+msgstr ""
+
+#: footer.php:16
+msgid ""
+"Powered by the <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Horizon "
+"Theme</a> forces and <a href=\"%s\" rel=\"nofollow\" "
+"target=\"_blank\">WordPress</a>."
+msgstr ""
+
+#: functions.php:41
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:154
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:156
+msgid "Site Main Sidebar"
+msgstr ""
+
+#: header.php:28
+msgid "Toggle navigation"
+msgstr ""
+
+#: image.php:22
+msgid "Image total size: %s pixels"
+msgstr ""
+
+#: image.php:22
+msgid "Full image link"
+msgstr ""
+
+#: image.php:33
+msgid "&larr; Previous image"
+msgstr ""
+
+#: image.php:34
+msgid "Next image &rarr;"
+msgstr ""
+
+#: inc/class-horizon-theme-nav-walker.php:198
+msgid "Add a menu"
+msgstr ""
+
+#: inc/comments-loop.php:21
+msgid "Pingback:"
+msgstr ""
+
+#: inc/comments-loop.php:21 inc/comments-loop.php:31
+msgid "Edit"
+msgstr ""
+
+#: inc/comments-loop.php:30
+msgid "in"
+msgstr ""
+
+#: inc/comments-loop.php:30
+msgid "at"
+msgstr ""
+
+#: inc/comments-loop.php:30
+msgid "said:"
+msgstr ""
+
+#: inc/comments-loop.php:34
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/comments-loop.php:39
+msgid "Respond"
+msgstr ""
+
+#: inc/template-tags.php:48
+msgid "&laquo; Previous"
+msgstr ""
+
+#: inc/template-tags.php:49
+msgid "Next &raquo;"
+msgstr ""
+
+#: inc/template-tags.php:74
+msgid "Sticky"
+msgstr ""
+
+#: inc/template-tags.php:79
+msgid "Posted in"
+msgstr ""
+
+#: inc/template-tags.php:82
+msgid "by"
+msgstr ""
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:11 searchform.php:14
+msgid "Search"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Horizon Theme"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/WordPressBeloHorizonte/horizon-theme"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Needs description."
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "With Sidebar"
+msgstr ""
+
+#: content.php:48
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ""

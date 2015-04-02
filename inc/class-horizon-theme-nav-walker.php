@@ -195,7 +195,7 @@ class Horizon_Theme_Nav_Walker extends Walker_Nav_Menu {
 			}
 
 			$fb_output .= '>';
-			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">' . __( 'Add a menu', 'odin' ) . '</a></li>';
+			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">' . __( 'Add a menu', 'horizon-theme' ) . '</a></li>';
 			$fb_output .= '</ul>';
 
 			if ( $container ) {

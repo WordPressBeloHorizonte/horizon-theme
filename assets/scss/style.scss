@@ -101,17 +101,21 @@ html {
 
 /* =Navigation
 -------------------------------------------------------------- */
-
+header {
+	position:relative;
+}
 #main-navigation {
 	font-size: 12px;
 	background-color: $darkColor;
 	padding: 0px;
 	margin: 0px;
+	height: $header-height;
+
 }
 
 .navbar-brand{
 	padding: 0;
-	margin: 45px 0px;
+	margin: 32px 0px 32px 10px !important;
 	height: auto;
 	line-height: 5px;
 }
@@ -121,8 +125,8 @@ html {
 }
 
 .navbar-default .navbar-nav>li{
-	padding: 45px 0px;
-	padding-bottom: 42px;
+	padding: 61px 0px;
+	padding-bottom: 51px;
 	border-bottom: 3px transparent solid;
 	>a{
 		text-transform: uppercase;
@@ -131,6 +135,10 @@ html {
 		padding: 0px 30px;
 		border-right: 1px $primaryColor solid;
 		line-height: 1;
+		.caret {
+			position: relative;
+			top: -1px;
+		}
 	}
 	&:last-child a{
 			border-right: 0px;
@@ -144,7 +152,9 @@ html {
 }
 
 .navbar-default{
-	.navbar-nav>li>a:hover, .navbar-nav>.open>a, .navbar-nav>li>a:focus, .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus{
+	border: none;
+	.navbar-nav>li>a:hover, .navbar-nav>.open>a, .navbar-nav>li>a:focus, .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus,
+	.navbar-nav > .active {
 		background-color: transparent;
 		color: $primaryColor;
 		border-color: $primaryColor;
@@ -192,41 +202,81 @@ html {
 }
 
 
-/* =Search Form
--------------------------------------------------------------- */
-
-#searchform {
-
-}
-
-#s {
-
-}
-
-#searchsubmit {
-
-}
-
 /* =Content
 -------------------------------------------------------------- */
 
-.wrapper {
-
+/*
+ * We need this wrapper class to crop the image, without this wrapper class
+ * firefox and opera have issues with overflow:hidden
+ */
+.wrapper-banner {
+	width: 100%;
+	overflow: hidden;
+	margin: -$header-height 0 0 0 !important;
+	float:left;
 }
 
-#main {
+#banner {
+	position: relative;
+	display: table;
+	width: 100%;
+	height: 939px;
+	> img {
+		max-height: 100%;
+		position: absolute;
+		top: 0;
+	}
+	.wrapper-description {
+		display: table-cell;
+    	vertical-align: middle;
+		width: 100%;
+		position: relative;
+		z-index: 100;
+		.description {
+			margin: 0 auto;
+			width: 650px;
+			position: relative;
+			text-align: center;
+			font-family: OpenSans;
+			color: #ffffff;
 
+			.horizon-icon {
+				position: relative;
+				left: 40px;
+			}
+
+			h1 {
+				color: #ffffff;
+				font-size: 61px;
+				font-weight: 700;
+				text-transform: uppercase;
+				span {
+					color: #aac54b;
+				}
+			}
+
+			p {
+				font-size: 31px;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+@media (min-width: 1920px) {
+  #banner  {
+  	> img {
+  		width: 100%;
+  		max-height: none;
+  	}
+  }
 }
 
 #primary {
 
 }
 
-#content {
-
-}
-
-#secondary {
+#main-content {
 
 }
 

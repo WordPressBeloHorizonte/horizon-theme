@@ -55,14 +55,14 @@ module.exports = function( grunt ) {
 		sass: {
 			dist: {
 				options: {
-					//outputStyle: 'compressed',
-					//sourceMap: true
+					style: 'expanded',
+					sourcemap: 'none'
 				},
 				files: [{
 					expand: true,
 					cwd: '<%= dirs.sass %>',
 					src: ['*.scss'],
-					dest: '<%= dirs.css %>',
+					dest: './',
 					ext: '.css'
 				}]
 			}

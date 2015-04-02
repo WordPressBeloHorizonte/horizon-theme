@@ -17,7 +17,7 @@
 	<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
 
 	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
 	<![endif]-->
 
 	<?php wp_head(); ?>
@@ -39,7 +39,6 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/horizon-logo.png" alt="<?php _e('Site Logo', 'horizon-theme'); ?>">
 					</a>
 				</div>
-
 				<div class="collapse navbar-collapse navbar-main-navigation navbar-right">
 					<?php
 						wp_nav_menu(
@@ -48,13 +47,13 @@
 								'depth'          => 2,
 								'container'      => false,
 								'menu_class'     => 'nav navbar-nav',
-								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-								'walker'         => new Odin_Bootstrap_Nav_Walker()
+								'fallback_cb'    => 'Horizon_Theme_Nav_Walker::fallback',
+								'walker'         => new Horizon_Theme_Nav_Walker()
 							)
 						);
 					?>
 				</div><!-- .navbar-collapse -->
 			</div><!-- .container -->
-		</nav><!-- #main-navigation -->
+		</nav><!-- #main-menu -->
 	</header>
 

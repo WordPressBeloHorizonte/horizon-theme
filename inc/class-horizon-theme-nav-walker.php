@@ -1,17 +1,12 @@
 <?php
 /**
- * Odin_Bootstrap_Nav_Walker class.
+ * Horizon_Theme_Nav_Walker class.
  *
  * A custom Wordpress nav walker to implement the Bootstrap 3 dropdown navigation using the Wordpress built in menu manager.
  * Inspired by the class twitter_bootstrap_nav_walker <https://github.com/twittem/wp-bootstrap-navwalker>,
  * created by Edward McIntyre and with the licence GPLv2.
- *
- * @package  Odin
- * @category Bootstrap
- * @author   WPBrasil
- * @version  2.1.4
  */
-class Odin_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
+class Horizon_Theme_Nav_Walker extends Walker_Nav_Menu {
 
 	/**
 	 * @see Walker::start_lvl()

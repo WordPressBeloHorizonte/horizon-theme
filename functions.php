@@ -18,10 +18,6 @@
 if ( ! isset( $content_width ) ) {
 	$content_width = 600;
 }
-/**
- * Core Classes.
- */
-require_once get_template_directory() . '/core/classes/class-bootstrap-nav.php';
 
 if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 
@@ -84,7 +80,7 @@ if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 		/**
 		 * Support Custom Editor Style.
 		 */
-		add_editor_style( 'assets/css/editor-style.css' );
+		add_editor_style( 'editor-style.css' );
 
 		/**
 		 * Add support for infinite scroll.
@@ -177,7 +173,10 @@ function horizon_theme_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
 	// Loads Horizon Theme main stylesheet.
-	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
+	wp_enqueue_style( 'horizon-theme-style', get_stylesheet_uri(), array(), null, 'all' );
+
+	wp_register_style( 'horizon_theme-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
+    wp_enqueue_style( 'horizon_theme-open-sans' );
 
 	// jQuery.
 	wp_enqueue_script( 'jquery' );
@@ -185,16 +184,16 @@ function horizon_theme_enqueue_scripts() {
 	// General scripts.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 		// Bootstrap.
-		wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array(), null, true );
+		wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array( 'jquery' ), null, true );
 
 		// FitVids.
-		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array(), null, true );
+		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array( 'jquery' ), null, true );
 
 		// Main jQuery.
-		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
+		wp_enqueue_script( 'horizon-theme-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
 	} else {
 		// Grunt main file with Bootstrap, FitVids and others libs.
-		wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
+		wp_enqueue_script( 'horizon-theme-main-min', $template_url . '/assets/js/main.min.js', array( 'jquery' ), null, true );
 	}
 
 	// Load Thread comments WordPress script.
@@ -206,16 +205,6 @@ function horizon_theme_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'horizon_theme_enqueue_scripts', 1 );
 
 /**
- * Load font Open Sans - Google Fonts
- */
-function horizon_theme_google_fonts() {
-	wp_register_style( 'horizon_theme-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
-    wp_enqueue_style( 'horizon_theme-open-sans' );
-}
-
-add_action( 'wp_print_styles', 'horizon_theme_google_fonts' );
-
-/**
  * Comments loop.
  */
 require_once get_template_directory() . '/inc/comments-loop.php';
@@ -224,3 +213,8 @@ require_once get_template_directory() . '/inc/comments-loop.php';
  * Custom template tags.
  */
 require_once get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Nav Walker.
+ */
+require_once get_template_directory() . '/inc/class-horizon-theme-nav-walker.php';

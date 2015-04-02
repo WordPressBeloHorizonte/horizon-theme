@@ -25,7 +25,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
-				<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
+				<span class="sr-only"><?php _e( 'Toggle navigation', 'horizon-theme' ); ?></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -63,7 +63,7 @@
 				$header_image = get_header_image();
 				if ( ! empty( $header_image ) ) :
 			?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" height="<?php esc_attr_e( $header_image->height ); ?>" width="<?php esc_attr_e( $header_image->width ); ?>" alt="" /></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" height="<?php echo esc_attr( $header_image->height ); ?>" width="<?php echo esc_attr( $header_image->width ); ?>" alt="" /></a>
 			<?php endif; ?>
 		</header><!-- #header -->
 

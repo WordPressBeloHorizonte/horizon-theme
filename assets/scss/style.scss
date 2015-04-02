@@ -9,6 +9,7 @@ Tags:
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: horizon-theme
+Domain Path: languages/
 */
 
 //Variables configuration.
@@ -119,7 +120,7 @@ html {
 	padding: 0px 30px;
 }
 
-.navbar-default .navbar-nav>li{	
+.navbar-default .navbar-nav>li{
 	padding: 45px 0px;
 	padding-bottom: 42px;
 	border-bottom: 3px transparent solid;
@@ -129,7 +130,7 @@ html {
 		font-weight: bold;
 		padding: 0px 30px;
 		border-right: 1px $primaryColor solid;
-		line-height: 1;		
+		line-height: 1;
 	}
 	&:last-child a{
 			border-right: 0px;
@@ -160,7 +161,7 @@ html {
 	min-width: 100%;
 	max-width: 100%;
 	height: auto;
-	.active > a, .active > a:focus, .active > a:hover{		
+	.active > a, .active > a:focus, .active > a:hover{
 		background-color: $primaryColor;
 	}
 }
@@ -170,7 +171,7 @@ html {
 	a{
 		font-size: 12px;
 		color: #fff;
-		text-align: center;		
+		text-align: center;
 		text-transform: uppercase;
 		padding: 15px;
 		line-height: 1.5;

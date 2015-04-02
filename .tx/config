@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[horizon-theme.horizon-theme]
+file_filter = languages/<lang>.po
+source_file = languages/horizon-theme.pot
+source_lang = en
+type = PO

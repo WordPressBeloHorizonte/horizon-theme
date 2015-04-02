@@ -5418,15 +5418,19 @@ html {
 
 /* =Navigation
 -------------------------------------------------------------- */
+header {
+  position: relative; }
+
 #main-navigation {
   font-size: 12px;
   background-color: rgba(41, 44, 46, 0.9);
   padding: 0px;
-  margin: 0px; }
+  margin: 0px;
+  height: 128px; }
 
 .navbar-brand {
   padding: 0;
-  margin: 45px 0px;
+  margin: 32px 0px 32px 10px !important;
   height: auto;
   line-height: 5px; }
 
@@ -5434,8 +5438,8 @@ html {
   padding: 0px 30px; }
 
 .navbar-default .navbar-nav > li {
-  padding: 45px 0px;
-  padding-bottom: 42px;
+  padding: 61px 0px;
+  padding-bottom: 51px;
   border-bottom: 3px transparent solid; }
   .navbar-default .navbar-nav > li > a {
     text-transform: uppercase;
@@ -5444,6 +5448,9 @@ html {
     padding: 0px 30px;
     border-right: 1px #aac54b solid;
     line-height: 1; }
+    .navbar-default .navbar-nav > li > a .caret {
+      position: relative;
+      top: -1px; }
   .navbar-default .navbar-nav > li:last-child a {
     border-right: 0px; }
   .navbar-default .navbar-nav > li:hover {
@@ -5451,14 +5458,17 @@ html {
     .navbar-default .navbar-nav > li:hover > a {
       color: #aac54b; }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: transparent;
-  color: #aac54b;
-  border-color: #aac54b; }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  background-color: transparent;
-  color: #aac54b;
-  border-color: #aac54b; }
+.navbar-default {
+  border: none; }
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
+  .navbar-default .navbar-nav > .active {
+    background-color: transparent;
+    color: #aac54b;
+    border-color: #aac54b; }
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    color: #aac54b;
+    border-color: #aac54b; }
 
 .dropdown-menu {
   padding: 0px;
@@ -5487,10 +5497,58 @@ html {
 .navbar-right .dropdown-menu {
   border-top: 3px #aac54b solid; }
 
-/* =Search Form
--------------------------------------------------------------- */
 /* =Content
 -------------------------------------------------------------- */
+/*
+ * We need this wrapper class to crop the image, without this wrapper class
+ * firefox and opera have issues with overflow:hidden
+ */
+.wrapper-banner {
+  width: 100%;
+  overflow: hidden;
+  margin: -128px 0 0 0 !important;
+  float: left; }
+
+#banner {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 939px; }
+  #banner > img {
+    max-height: 100%;
+    position: absolute;
+    top: 0; }
+  #banner .wrapper-description {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    position: relative;
+    z-index: 100; }
+    #banner .wrapper-description .description {
+      margin: 0 auto;
+      width: 650px;
+      position: relative;
+      text-align: center;
+      font-family: OpenSans;
+      color: #ffffff; }
+      #banner .wrapper-description .description .horizon-icon {
+        position: relative;
+        left: 40px; }
+      #banner .wrapper-description .description h1 {
+        color: #ffffff;
+        font-size: 61px;
+        font-weight: 700;
+        text-transform: uppercase; }
+        #banner .wrapper-description .description h1 span {
+          color: #aac54b; }
+      #banner .wrapper-description .description p {
+        font-size: 31px;
+        font-weight: 400; }
+
+@media (min-width: 1920px) {
+  #banner > img {
+    width: 100%;
+    max-height: none; } }
 .entry-title {
   margin-bottom: 0.4em; }
 

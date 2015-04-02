@@ -15,7 +15,7 @@ module.exports = function( grunt ) {
 		dirs: {
 			css: 'assets/css',
 			js: 'assets/js',
-			sass: 'assets/sass',
+			sass: 'assets/scss',
 			images: 'assets/images',
 			fonts: 'assets/fonts'
 		},
@@ -36,10 +36,18 @@ module.exports = function( grunt ) {
 			dist: {
 				files: {
 					'<%= dirs.js %>/main.min.js': [
+						'<%= dirs.js %>/libs/*.js', // External libs/plugins
 						'<%= dirs.js %>/main.js'
 					]
 				}
-			}}
+			},
+			bootstrap: {
+				files: {
+					'<%= dirs.js %>/libs/bootstrap.min.js': [
+						'<%= dirs.js %>/bootstrap/button.js',
+						'<%= dirs.js %>/bootstrap/dropdown.js'
+					]
+				}
 			}
 		},
 
@@ -47,14 +55,14 @@ module.exports = function( grunt ) {
 		sass: {
 			dist: {
 				options: {
-					style: 'expanded',
-					sourceMap: 'none'
+					//outputStyle: 'compressed',
+					//sourceMap: true
 				},
 				files: [{
 					expand: true,
 					cwd: '<%= dirs.sass %>',
 					src: ['*.scss'],
-					dest: './',
+					dest: '<%= dirs.css %>',
 					ext: '.css'
 				}]
 			}

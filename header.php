@@ -7,7 +7,7 @@
  * @package Horizon_Theme
  */
 ?><!DOCTYPE html>
-<html class="no-js" <?php language_attributes(); ?>>
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js" <?php language_attributes(); language_attributes( 'xhtml' ); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">

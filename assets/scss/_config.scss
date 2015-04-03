@@ -10,11 +10,14 @@ $bootstrap-sass-asset-helper: false;
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
+// Theme colors
+$primaryColor: #fff;
+$secondaryColor: #aac54b;
+$darkColor: rgba(41, 44, 46, 0.9);
+
 // Template variables
 $text-margin-bottom: $line-height-computed / 2;
 $header-height: 128px;
 
-// Theme colors
-$primaryColor: #aac54b;
-$secondaryColor: #aac54b;
-$darkColor: rgba(41, 44, 46, 0.9);
+$hover-transition-time: 0.3s;
+

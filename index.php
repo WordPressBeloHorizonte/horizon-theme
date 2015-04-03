@@ -24,37 +24,71 @@ get_header(); ?>
 					<p>and our goal is to serve you!</p>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div> <!-- #banner -->
+	</div> <!-- .wrapper-banner -->
 
-	<div id="primary">
-			<main id="main-content" class="site-main" role="main">
-				<?php
-					if ( have_posts() ) :
-						// Start the Loop.
-						while ( have_posts() ) : the_post();
+	<main id="main-content" class="site-main" role="main">
 
-							/*
-							 * Include the post format-specific template for the content. If you want to
-							 * use this in a child theme, then include a file called called content-___.php
-							 * (where ___ is the post format) and that will be used instead.
-							 */
-							get_template_part( 'content', get_post_format() );
+		<section id="about">
 
-						endwhile;
+			<div class="container">
 
-						// Post navigation.
-						horizon_theme_paging_nav();
+				<header class="horizon-header">
+					<h2 class="title">I'm the <span>Horizon</span></h2>
+					<span class="sep"></span>
+					<p class="desc">Our work is your satisfaction</p>
+				</header>
 
-					else :
-						// If no content, include the "No posts found" template.
-						get_template_part( 'content', 'none' );
+				<blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget nulla ex. Curabitur mauris felis, vestibulum eget eros ac,
+					congue suscipit felis. Etiam accumsan, libero ac tristique maximus, diam risus interdum odio, sed ultricies arcu quam vel mauris.</p>
+				</blockquote>
 
-					endif;
-				?>
+				<a href="#" class="horizon-btn">Contact us</a>
 
-			</main><!-- #content -->
-		</div><!-- #primary -->
+			</div> <!-- .container -->
+
+		</section> <!-- #about -->
+
+		<section id="joker-sep">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 col-xs-4 no-padding left hidden-xs">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-joker.jpg" alt="">
+					</div>
+					<div class="col-md-6 col-sm-8 col-xs-12 no-padding right">
+						<div class="wrapper-blockquote">
+							<blockquote class="cite">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Phasellus eget nulla ex.</p>
+								<footer>
+									<cite>Chuck Norris</cite>
+								</footer>
+							</blockquote>
+						</div> <!-- .wrapper-blockquote -->
+					</div>
+				</div>
+			</div> <!-- .container-fluid -->
+		</section> <!-- #joker-sep -->
+
+		<section id="services">
+			<div class="container">
+
+				<header class="horizon-header">
+					<h2 class="title"><span>Horizon</span> Services</h2>
+					<span class="sep"></span>
+					<p class="desc">Our work is your satisfaction</p>
+				</header>
+
+				<blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget nulla ex. Curabitur mauris felis, vestibulum eget eros ac,
+					congue suscipit felis. Etiam accumsan, libero ac tristique maximus, diam risus interdum odio, sed ultricies arcu quam vel mauris.</p>
+				</blockquote>
+
+			</div>
+		</section> <!-- #services -->
+
+	</main><!-- #main-content -->
 
 <?php
 get_footer();

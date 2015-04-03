@@ -6974,16 +6974,27 @@ header {
 }
 
 .navbar-default .navbar-nav > li {
-  padding: 61px 0px;
-  padding-bottom: 51px;
   border-bottom: 3px transparent solid;
+}
+.navbar-default .navbar-nav > li:after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 12px;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  top: 50%;
+  margin-top: -1px;
+}
+.navbar-default .navbar-nav > li:last-child::after {
+  display: none;
 }
 .navbar-default .navbar-nav > li > a {
   text-transform: uppercase;
   color: #fff;
-  font-weight: 700;
-  padding: 0px 30px;
-  border-right: 1px #aac54b solid;
+  font-weight: bold;
+  padding: 61px 30px 51px;
   line-height: 1;
 }
 .navbar-default .navbar-nav > li > a .caret {

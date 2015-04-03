@@ -1,8 +1,8 @@
-##Horizon Theme
+# Horizon Theme #
 
 Tema a ser criado e lançado no WordCamp Belo Horizonte
 
-## Quer colaborar?
+## Quer colaborar? ##
 
 1. Faça um fork do repositório
 2. Verifique as issues para e escolha uma que não tenha ninguém trabalhando
@@ -14,3 +14,7 @@ Tema a ser criado e lançado no WordCamp Belo Horizonte
 Observação: Se deseja contribuir com algo que não foi registrado nas issues é importante criar e assinar para evitar que outra pessoa comece a trabalhar na mesma coisa que você.
 
 Se precisar de ajuda para executar algum dos procedimentos acima acesse o link e [aprenda como fazer um Pull Request](http://pythonclub.com.br/como-fazer-fork-clone-push-pull-request-no-github.html).
+
+## Tradução ##
+
+Você pode traduzir o Horizon Theme no [Transifex](https://www.transifex.com/projects/p/horizon-theme/).

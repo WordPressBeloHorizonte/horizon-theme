@@ -125,15 +125,26 @@ header {
 }
 
 .navbar-default .navbar-nav>li{
-	padding: 61px 0px;
-	padding-bottom: 51px;
 	border-bottom: 3px transparent solid;
+	&:after{
+		content: '';
+		display: block;
+		width: 1px;
+		height: 12px;
+		position: absolute;
+		right: 0;
+		background: $primaryColor;
+		top: 50%;
+		margin-top: -1px;
+	}
+	&:last-child::after{
+		display: none;
+	}
 	>a{
 		text-transform: uppercase;
 		color: #fff;
 		font-weight: bold;
-		padding: 0px 30px;
-		border-right: 1px $primaryColor solid;
+		padding: 61px 30px 51px;
 		line-height: 1;
 		.caret {
 			position: relative;

@@ -162,6 +162,9 @@ module.exports = function( grunt ) {
 		'uglify'
 	] );
 
+	// Watch Task
+	grunt.registerTask( 'w', ['watch'] );
+
 	// Optimize Images Task
 	grunt.registerTask( 'optimize', ['imagemin'] );
 };

@@ -66,6 +66,9 @@ Domain Path: languages/
 // Utility classes
 @import "bootstrap/utilities";
 
+//Horizon Theme classes
+@import "classes";
+
 
 /* =General
 -------------------------------------------------------------- */
@@ -73,31 +76,12 @@ html {
 	overflow-y: scroll;
 }
 
+body {
+	font-family: OpenSans;
+}
+
 /* =Header
 -------------------------------------------------------------- */
-
-#header {
-
-}
-
-.site-title,
-.site-description {
-	margin-top: $line-height-computed;
-	margin-bottom: ($line-height-computed / 2);
-}
-
-.site-title {
-	a {
-
-		&:hover {
-
-		}
-	}
-}
-
-.site-description {
-
-}
 
 /* =Navigation
 -------------------------------------------------------------- */
@@ -130,11 +114,12 @@ header {
 	border-bottom: 3px transparent solid;
 	>a{
 		text-transform: uppercase;
-		color: #fff;
-		font-weight: bold;
+		color: $primaryColor;
+		font-weight: 700;
 		padding: 0px 30px;
-		border-right: 1px $primaryColor solid;
+		border-right: 1px $secondaryColor solid;
 		line-height: 1;
+
 		.caret {
 			position: relative;
 			top: -1px;
@@ -145,9 +130,9 @@ header {
 	}
 	&:hover{
 		>a{
-			color: $primaryColor;
+			color: $secondaryColor;
 		}
-		border-bottom: 3px $primaryColor solid;
+		border-bottom: 3px $secondaryColor solid;
 	}
 }
 
@@ -156,13 +141,13 @@ header {
 	.navbar-nav>li>a:hover, .navbar-nav>.open>a, .navbar-nav>li>a:focus, .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus,
 	.navbar-nav > .active {
 		background-color: transparent;
-		color: $primaryColor;
-		border-color: $primaryColor;
+		color: $secondaryColor;
+		border-color: $secondaryColor;
 	}
 	.navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
 	  	background-color: transparent;
-		color: $primaryColor;
-		border-color: $primaryColor;
+		color: $secondaryColor;
+		border-color: $secondaryColor;
 	}
 }
 
@@ -172,7 +157,7 @@ header {
 	max-width: 100%;
 	height: auto;
 	.active > a, .active > a:focus, .active > a:hover{
-		background-color: $primaryColor;
+		background-color: $secondaryColor;
 	}
 }
 
@@ -180,13 +165,13 @@ header {
 	background-color: $darkColor;
 	a{
 		font-size: 12px;
-		color: #fff;
+		color: $primaryColor;
 		text-align: center;
 		text-transform: uppercase;
 		padding: 15px;
 		line-height: 1.5;
 		&:hover{
-			background-color: $primaryColor;
+			background-color: $secondaryColor;
 		}
 	}
 	li{
@@ -198,7 +183,7 @@ header {
 }
 
 .navbar-right .dropdown-menu{
-	border-top: 3px $primaryColor solid;
+	border-top: 3px $secondaryColor solid;
 }
 
 
@@ -237,8 +222,7 @@ header {
 			width: 650px;
 			position: relative;
 			text-align: center;
-			font-family: OpenSans;
-			color: #ffffff;
+			color: $primaryColor;
 
 			.horizon-icon {
 				position: relative;
@@ -246,12 +230,11 @@ header {
 			}
 
 			h1 {
-				color: #ffffff;
 				font-size: 61px;
 				font-weight: 700;
 				text-transform: uppercase;
 				span {
-					color: #aac54b;
+					color: $secondaryColor;
 				}
 			}
 
@@ -272,44 +255,58 @@ header {
   }
 }
 
-#primary {
-
-}
 
 #main-content {
+	background-color: $primaryColor;
+	float:left;
+	width: 100%;
+	> section {
+		width: 100%;
+		float:left;
+	}
+	#about {
+		height: 595px;
+		padding: 116px 0;
+		text-align: center;
 
-}
+		blockquote {
+			margin-top: 66px;
+			margin-bottom: 87px;
+		}
+	}
 
-.entry-title {
-	margin-bottom: 0.4em;
+	#joker-sep {
+		background-color: #292c2e;
 
-	a {
+		height: 450px;
+		.left {
+			max-height: 450px;
+			overflow: hidden;
+		}
+		.right {
+			display: table;
+			height: 450px;
+			.wrapper-blockquote {
+				display: table-cell;
+    			vertical-align: middle;
+			}
 
-		&:hover {
+			blockquote.cite {
+				width: 70%;
 
+			}
+		}
+	}
+
+	#services {
+		padding: 117px 0 150px 0;
+
+		blockquote {
+			margin-top:  75px;
 		}
 	}
 }
 
-.page-header {
-	margin-bottom: 1em;
-}
-
-.page-title {
-
-}
-
-.entry-meta {
-	margin-bottom: $text-margin-bottom;
-
-	a {
-
-	}
-}
-
-.sticky {
-	font-size: 100%;
-}
 
 /* =Pagination
 -------------------------------------------------------------- */

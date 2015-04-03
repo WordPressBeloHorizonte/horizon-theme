@@ -6814,20 +6814,140 @@ button.close {
   position: fixed;
 }
 
+/**
+ * A Horizon header is composed of a title, separator and a description
+ * EX: <header class="horizon-header">
+ *			<h2 class="title">I'm the <span>Horizon</span></h2>
+ *			<span class="sep"></span>
+ *			<p class="desc">Our work is your satisfaction</p>
+ *		</header>
+ */
+.horizon-header {
+  text-align: center;
+}
+.horizon-header .title {
+  font-family: OpenSans;
+  color: #9f9f9f;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.horizon-header .title span {
+  color: #aac54b;
+}
+.horizon-header .sep {
+  width: 325px;
+  height: 3px;
+  background-color: #aac54b;
+  display: block;
+  margin: 10px auto;
+}
+.horizon-header .desc {
+  color: #9f9f9f;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+/**
+ * Default button styles
+ */
+.horizon-btn {
+  box-sizing: content-box;
+  background-color: #aac54b;
+  padding: 22px 32px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+.horizon-btn:link, .horizon-btn:visited, .horizon-btn:hover, .horizon-btn:active {
+  text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+}
+.horizon-btn:hover {
+  background-color: rgba(41, 44, 46, 0.9);
+}
+
+/**
+ * We have two styles for blockquote, the default and the cite blockquote.
+ */
+blockquote {
+  padding: 0;
+  margin: 0 auto;
+  border: none;
+}
+blockquote:not(.cite) {
+  color: #9f9f9f;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  width: 90%;
+}
+blockquote:not(.cite):before, blockquote:not(.cite):after {
+  width: 20px;
+  height: 17px;
+  display: block;
+  content: '*';
+  text-indent: -9999px;
+  position: absolute;
+}
+blockquote:not(.cite):before {
+  top: -10px;
+  left: -23px;
+  background: url("assets/images/quote-open.png") no-repeat;
+}
+blockquote:not(.cite):after {
+  bottom: -10px;
+  right: -23px;
+  background: url("assets/images/quote-close.png") no-repeat;
+}
+blockquote.cite {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  max-width: 665px;
+  text-align: justify;
+}
+blockquote.cite p {
+  margin-bottom: 25px;
+}
+blockquote.cite footer {
+  border-top: 2px solid #aac54b;
+  padding-top: 20px;
+}
+blockquote.cite footer:before {
+  color: #fff;
+}
+blockquote.cite footer cite {
+  color: #fff;
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.no-padding {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /* =General
 -------------------------------------------------------------- */
 html {
   overflow-y: scroll;
 }
 
-/* =Header
--------------------------------------------------------------- */
-.site-title,
-.site-description {
-  margin-top: 20px;
-  margin-bottom: 10px;
+body {
+  font-family: OpenSans;
 }
 
+/* =Header
+-------------------------------------------------------------- */
 /* =Navigation
 -------------------------------------------------------------- */
 header {
@@ -6861,7 +6981,7 @@ header {
 .navbar-default .navbar-nav > li > a {
   text-transform: uppercase;
   color: #fff;
-  font-weight: bold;
+  font-weight: 700;
   padding: 0px 30px;
   border-right: 1px #aac54b solid;
   line-height: 1;
@@ -6966,15 +7086,13 @@ header {
   width: 650px;
   position: relative;
   text-align: center;
-  font-family: OpenSans;
-  color: #ffffff;
+  color: #fff;
 }
 #banner .wrapper-description .description .horizon-icon {
   position: relative;
   left: 40px;
 }
 #banner .wrapper-description .description h1 {
-  color: #ffffff;
   font-size: 61px;
   font-weight: 700;
   text-transform: uppercase;
@@ -6993,20 +7111,48 @@ header {
     max-height: none;
   }
 }
-.entry-title {
-  margin-bottom: 0.4em;
+#main-content {
+  background-color: #fff;
+  float: left;
+  width: 100%;
 }
-
-.page-header {
-  margin-bottom: 1em;
+#main-content > section {
+  width: 100%;
+  float: left;
 }
-
-.entry-meta {
-  margin-bottom: 10px;
+#main-content #about {
+  height: 595px;
+  padding: 116px 0;
+  text-align: center;
 }
-
-.sticky {
-  font-size: 100%;
+#main-content #about blockquote {
+  margin-top: 66px;
+  margin-bottom: 87px;
+}
+#main-content #joker-sep {
+  background-color: #292c2e;
+  height: 450px;
+}
+#main-content #joker-sep .left {
+  max-height: 450px;
+  overflow: hidden;
+}
+#main-content #joker-sep .right {
+  display: table;
+  height: 450px;
+}
+#main-content #joker-sep .right .wrapper-blockquote {
+  display: table-cell;
+  vertical-align: middle;
+}
+#main-content #joker-sep .right blockquote.cite {
+  width: 70%;
+}
+#main-content #services {
+  padding: 117px 0 150px 0;
+}
+#main-content #services blockquote {
+  margin-top: 75px;
 }
 
 /* =Pagination

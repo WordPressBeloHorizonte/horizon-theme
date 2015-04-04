@@ -1,3 +1,5 @@
+->![Horizon Theme](/assets/images/horizon-icon.jpg?raw=true)<-
+
 # Horizon Theme #
 
 Tema a ser criado e lançado no WordCamp Belo Horizonte
@@ -13,7 +15,7 @@ Tema a ser criado e lançado no WordCamp Belo Horizonte
 4. Faça um push para a branch: `git push origin issue-17`;
 5. Faça um [Pull Request](https://help.github.com/articles/using-pull-requests/) :D
 
-Observação: Se deseja contribuir com algo que não foi registrado nas [issues](https://github.com/WordPressBeloHorizonte/horizon-theme/issues) é importante criar e assinar para evitar que outra pessoa comece a trabalhar na mesma coisa que você.
+**Observação:** Se deseja contribuir com algo que não foi registrado nas [issues](https://github.com/WordPressBeloHorizonte/horizon-theme/issues) é importante criar e assinar para evitar que outra pessoa comece a trabalhar na mesma coisa que você.
 
 Se precisar de ajuda para executar algum dos procedimentos acima acesse o link e [aprenda como fazer um Pull Request](http://pythonclub.com.br/como-fazer-fork-clone-push-pull-request-no-github.html).
 

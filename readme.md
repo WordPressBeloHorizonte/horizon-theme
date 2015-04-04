@@ -1,4 +1,4 @@
-->![Horizon Theme](/assets/images/horizon-icon.jpg?raw=true)<-
+![Horizon Theme](assets/images/horizon-icon.jpg?raw=true)
 
 # Horizon Theme #
 

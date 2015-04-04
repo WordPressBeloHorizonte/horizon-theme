@@ -6826,7 +6826,7 @@ button.close {
   text-align: center;
 }
 .horizon-header .title {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   color: #9f9f9f;
   font-size: 40px;
   font-weight: bold;
@@ -6924,7 +6924,7 @@ blockquote.cite footer:before {
 }
 blockquote.cite footer cite {
   color: #fff;
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -6943,7 +6943,7 @@ html {
 }
 
 body {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* =Header
@@ -6983,7 +6983,7 @@ header {
   height: 12px;
   position: absolute;
   right: 0;
-  background: #fff;
+  background: #aac54b;
   top: 50%;
   margin-top: -1px;
 }

@@ -7140,23 +7140,23 @@ header {
   margin-top: 66px;
   margin-bottom: 87px;
 }
-#main-content #joker-sep {
+#main-content .joker-sep {
   background-color: #292c2e;
   height: 450px;
 }
-#main-content #joker-sep .left {
+#main-content .joker-sep .left {
   max-height: 450px;
   overflow: hidden;
 }
-#main-content #joker-sep .right {
+#main-content .joker-sep .right {
   display: table;
   height: 450px;
 }
-#main-content #joker-sep .right .wrapper-blockquote {
+#main-content .joker-sep .right .wrapper-blockquote {
   display: table-cell;
   vertical-align: middle;
 }
-#main-content #joker-sep .right blockquote.cite {
+#main-content .joker-sep .right blockquote.cite {
   width: 70%;
 }
 #main-content #services {

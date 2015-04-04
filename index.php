@@ -50,10 +50,10 @@ get_header(); ?>
 
 		</section> <!-- #about -->
 
-		<section class="joker-sep">
+		<section id="joker-sep">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-6 col-sm-4 no-padding left hidden-xs">
+					<div class="col-md-6 col-xs-4 no-padding left hidden-xs">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-joker.jpg" alt="">
 					</div>
 					<div class="col-md-6 col-sm-8 col-xs-12 no-padding right">

@@ -11,7 +11,6 @@
  *
  * @package Horizon_Theme
  */
-
 get_header(); ?>
 
 	<div class="wrapper-banner">

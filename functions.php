@@ -189,8 +189,6 @@ function horizon_theme_enqueue_scripts() {
 		// FitVids.
 		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array( 'jquery' ), null, true );
 
-		wp_enqueue_script( 'horizon-theme-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
-
 		// Main jQuery.
 		wp_enqueue_script( 'horizon-theme-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
 	} else {

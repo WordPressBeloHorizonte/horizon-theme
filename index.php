@@ -50,7 +50,7 @@ get_header(); ?>
 
 		</section> <!-- #about -->
 
-		<section id="joker-sep">
+		<section class="joker-sep">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 col-xs-4 no-padding left hidden-xs">

@@ -93,7 +93,7 @@ header {
 	background-color: $darkColor;
 	padding: 0px;
 	margin: 0px;
-	height: $header-height;
+	height: auto;
 
 }
 
@@ -196,6 +196,27 @@ header {
 .navbar-right .dropdown-menu{
 	border-top: 3px $secondaryColor solid;
 }
+
+@media (max-width: 767px){
+	.navbar-default .navbar-nav{
+		>li>a{
+			padding: 20px 20px;
+		}
+		.open .dropdown-menu > li > a{
+			font-size: 12px;
+			color: $primaryColor;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 15px;
+			line-height: 1.5;
+			&:hover{
+				background-color: $secondaryColor;
+			}
+		}
+	}
+
+}
+
 
 
 /* =Content

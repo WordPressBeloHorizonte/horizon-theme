@@ -6826,7 +6826,7 @@ button.close {
   text-align: center;
 }
 .horizon-header .title {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   color: #9f9f9f;
   font-size: 40px;
   font-weight: bold;
@@ -6924,7 +6924,7 @@ blockquote.cite footer:before {
 }
 blockquote.cite footer cite {
   color: #fff;
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -6943,7 +6943,7 @@ html {
 }
 
 body {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* =Header
@@ -6959,7 +6959,7 @@ header {
   background-color: rgba(41, 44, 46, 0.9);
   padding: 0px;
   margin: 0px;
-  height: 128px;
+  height: auto;
 }
 
 .navbar-brand {
@@ -6983,7 +6983,7 @@ header {
   height: 12px;
   position: absolute;
   right: 0;
-  background: #fff;
+  background: #aac54b;
   top: 50%;
   margin-top: -1px;
 }
@@ -7061,6 +7061,22 @@ header {
   border-top: 3px #aac54b solid;
 }
 
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav > li > a {
+    padding: 20px 20px;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px;
+    line-height: 1.5;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+    background-color: #aac54b;
+  }
+}
 /* =Content
 -------------------------------------------------------------- */
 /*
@@ -7140,23 +7156,23 @@ header {
   margin-top: 66px;
   margin-bottom: 87px;
 }
-#main-content #joker-sep {
+#main-content .joker-sep {
   background-color: #292c2e;
   height: 450px;
 }
-#main-content #joker-sep .left {
+#main-content .joker-sep .left {
   max-height: 450px;
   overflow: hidden;
 }
-#main-content #joker-sep .right {
+#main-content .joker-sep .right {
   display: table;
   height: 450px;
 }
-#main-content #joker-sep .right .wrapper-blockquote {
+#main-content .joker-sep .right .wrapper-blockquote {
   display: table-cell;
   vertical-align: middle;
 }
-#main-content #joker-sep .right blockquote.cite {
+#main-content .joker-sep .right blockquote.cite {
   width: 70%;
 }
 #main-content #services {

@@ -181,6 +181,19 @@ function horizon_theme_enqueue_scripts() {
 	// jQuery.
 	wp_enqueue_script( 'jquery' );
 
+	if(is_home()){
+		// Google Maps
+		wp_enqueue_script( 'google-maps-v3', 'http://maps.googleapis.com/maps/api/js?sensor=false', array(), null, true );
+
+		// Google Maps Configuration
+		wp_enqueue_script( 'google-maps-config', $template_url . '/assets/js/googleMaps.js', array('google-maps-v3'), null, true );
+
+		wp_localize_script( 'google-maps-config', 'google_maps_data', array(
+			'address' => "Belo Horizonte - MG", //TODO Entrada de endereço personalizado (Theme options)
+			'icon' => $template_url . '/assets/images/marker.png' //TODO Entrada de icone personalizado (Theme options)
+		));
+	}	
+
 	// General scripts.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 		// Bootstrap.
@@ -188,7 +201,7 @@ function horizon_theme_enqueue_scripts() {
 
 		// FitVids.
 		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array( 'jquery' ), null, true );
-
+		
 		// Main jQuery.
 		wp_enqueue_script( 'horizon-theme-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
 	} else {

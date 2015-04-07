@@ -87,6 +87,35 @@ get_header(); ?>
 			</div>
 		</section> <!-- #services -->
 
+		<section id="contact">
+			<div class="content">
+				<div class="col-md-6 contact-form">
+					<header class="horizon-header">
+						<h2 class="title">Entre em contato com a <span>Horizon</span></h2>
+						<span class="sep"></span>
+						<p class="desc">Nosso trabalho é a sua satisfação</p>
+					</header>
+					<form class="horizon-form">
+							<!-- Nome-->
+							<div class="form-group">
+									<input id="horizon-form-name" name="name" type="text" placeholder="Nome">
+							</div>
+							<!-- Email-->
+							<div class="form-group">
+									<input id="horizon-form-email" name="email" type="text" placeholder="Email">
+							</div>
+							<!-- Mensagem -->
+							<div class="form-group">                    
+									<textarea id="horizon-form-message" name="message" placeholder="Mensagem"></textarea>
+							</div>
+							<button href="#" class="horizon-btn btn-md">Entre em contato</button>
+					</form>
+				</div><!-- .contact-form -->
+				<div id="map" class="col-md-6">
+				</div><!-- #map -->
+			</div><!-- .content -->
+		</section><!-- #contact -->
+
 	</main><!-- #main-content -->
 
 <?php

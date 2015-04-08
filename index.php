@@ -96,26 +96,25 @@ get_header(); ?>
 						<p class="desc">Nosso trabalho é a sua satisfação</p>
 					</header>
 					<form class="horizon-form">
-							<!-- Nome-->
+							<!-- Input Name-->
 							<div class="form-group">
-									<input id="horizon-form-name" name="name" type="text" placeholder="Nome">
+									<input id="horizon-form-name" name="name" type="text" placeholder="<?php _e( 'Name', 'horizon-theme' ); ?>">
 							</div>
-							<!-- Email-->
+							<!-- Inputa Mail-->
 							<div class="form-group">
-									<input id="horizon-form-email" name="email" type="text" placeholder="Email">
+									<input id="horizon-form-email" name="mail" type="text" placeholder="<?php _e( 'E-mail', 'horizon-theme' ); ?>">
 							</div>
-							<!-- Mensagem -->
+							<!-- Input Message -->
 							<div class="form-group">                    
-									<textarea id="horizon-form-message" name="message" placeholder="Mensagem"></textarea>
+									<textarea id="horizon-form-message" name="message" placeholder="<?php _e( 'Message', 'horizon-theme' ); ?>"></textarea>
 							</div>
-							<button href="#" class="horizon-btn btn-md">Entre em contato</button>
+							<button href="#" class="horizon-btn btn-md"><?php _e( 'Send Message', 'horizon-theme' ); ?></button>
 					</form>
 				</div><!-- .contact-form -->
 				<div id="map" class="col-md-6">
 				</div><!-- #map -->
 			</div><!-- .content -->
 		</section><!-- #contact -->
-
 	</main><!-- #main-content -->
 
 <?php

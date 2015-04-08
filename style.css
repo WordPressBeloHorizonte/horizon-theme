@@ -3160,7 +3160,7 @@ tbody.collapse.in {
   padding: 15px 20px;
   font-size: 14px;
 }
-.horizon-btn.btn-small {
+.horizon-btn.btn-sm {
   padding: 10px 15px;
   font-size: 12px;
 }
@@ -3630,9 +3630,9 @@ header {
   border-color: transparent transparent #fff #fff;
   transform-origin: 0 0;
   transform: rotate(-135deg);
-  box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
 }
 
 #map {

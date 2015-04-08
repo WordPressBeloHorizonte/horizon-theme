@@ -45,6 +45,7 @@
 	color: $primaryColor;
 	font-size: 16px;
 	font-weight: 700;
+	border: none;
 	transition: background-color $hover-transition-time;
 
 	&:link, &:visited, &:hover, &:active {
@@ -54,6 +55,14 @@
 	}
 	&:hover {
 		background-color: $darkColor;
+	}
+	&.btn-md{
+		padding: 15px 20px;
+		font-size: 14px;
+	}
+	&.btn-sm{
+		padding: 10px 15px;
+		font-size: 12px;
 	}
 }
 
@@ -123,4 +132,29 @@ blockquote {
 .no-padding {
 	margin: 0 !important;
 	padding: 0 !important;
+}
+/**
+ * Form style
+ */
+.horizon-form{
+	padding: 10px 30px;
+	text-align: center;
+	input, textarea{
+		width: 100%;
+		padding: 10px 5px;
+		border-left: 0;
+		border-right: 0;
+		border-top: 0;
+		border-bottom: 2px #9f9f9f solid;
+		&:focus, &:active{
+			border-bottom-color: $secondaryColor;
+			outline: none;
+		}
+		.error{
+			border-bottom-color: #555;
+		}
+	}
+	button{
+		margin: 0 auto;		
+	}
 }

@@ -91,16 +91,16 @@ get_header(); ?>
 			<div class="content">
 				<div class="col-md-6 contact-form">
 					<header class="horizon-header">
-						<h2 class="title">Entre em contato com a <span>Horizon</span></h2>
+						<h2 class="title">Contact the <span>Horizon</span></h2>
 						<span class="sep"></span>
-						<p class="desc">Nosso trabalho é a sua satisfação</p>
+						<p class="desc">Our work is your satisfaction</p>
 					</header>
 					<form class="horizon-form">
 							<!-- Input Name-->
 							<div class="form-group">
 									<input id="horizon-form-name" name="name" type="text" placeholder="<?php _e( 'Name', 'horizon-theme' ); ?>">
 							</div>
-							<!-- Inputa Mail-->
+							<!-- Input Mail-->
 							<div class="form-group">
 									<input id="horizon-form-email" name="mail" type="text" placeholder="<?php _e( 'E-mail', 'horizon-theme' ); ?>">
 							</div>

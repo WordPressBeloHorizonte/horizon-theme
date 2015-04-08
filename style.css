@@ -3634,6 +3634,11 @@ header {
   -moz-box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
   box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
 }
+@media (max-width: 992px) {
+  #contact .contact-form::after {
+    display: none;
+  }
+}
 
 #map {
   height: 450px;

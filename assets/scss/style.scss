@@ -456,10 +456,40 @@ header {
 -------------------------------------------------------------- */
 
 #footer {
-	border-top: 1px solid #ddd;
-	margin-top: 20px;
-	padding: 20px 0 20px;
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
+	color: #fff;
+	background-color:  $darkColor;
+	clear: both;
+	a {
+		color: $ligthGray;
+		&:hover {
+			text-decoration: none;
+			color: $secondaryColor;
+		}
+	}
+	.general-info {
+		color: #fff;
+		background-color: $secondaryColor;
+		p {
+			padding: 20px;
+			margin: 0;
+		}		
+	}
+	.social-icons {
+		padding: 50px;
+		/*Temporary for icon fonts*/
+		span {
+			border: 1px  $ligthGray solid;
+			border-radius: 50%;
+			margin: 0 5px;
+			padding: 10px 15px;
+			
+		}
+	}
+	.site-info{		
+		padding-bottom: 50px;
+	}
 }
 
 /* =Error 404 page
@@ -473,7 +503,7 @@ header {
 }
 
 /* Contact section */
-#contact{
+#contact {
 	position: relative;
 	.contact-form{
 		 padding: 20px 40px;
@@ -481,7 +511,7 @@ header {
 		-webkit-box-shadow: 6px 0px 6px -5px rgba(0, 0, 0, 0.4);
 		-moz-box-shadow:    6px 0px 6px -5px rgba(0, 0, 0, 0.4);
 		box-shadow: 		6px 0px 6px -5px rgba(0, 0, 0, 0.4);
-		&::after{
+		&::after {
 			content: "";
 			position: absolute;
 			width: 0;
@@ -498,7 +528,7 @@ header {
 			-webkit-box-shadow:	-3px 3px 2px 0 rgba(0, 0, 0, 0.3);
 			-moz-box-shadow: 	-3px 3px 2px 0 rgba(0, 0, 0, 0.3);
 			box-shadow: 		-3px 3px 2px 0 rgba(0, 0, 0, 0.3);
-			@media (max-width: $screen-md-min){
+			@media (max-width: $screen-md-min) {
 				display: none;
 			}
 		}

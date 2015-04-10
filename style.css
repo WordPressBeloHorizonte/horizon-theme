@@ -3593,10 +3593,38 @@ header {
 /* =Footer
 -------------------------------------------------------------- */
 #footer {
-  border-top: 1px solid #ddd;
-  margin-top: 20px;
-  padding: 20px 0 20px;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
+  color: #fff;
+  background-color: rgba(41, 44, 46, 0.9);
+}
+#footer a {
+  color: #9f9f9f;
+}
+#footer a:hover {
+  text-decoration: none;
+  color: #aac54b;
+}
+#footer .general-info {
+  color: #fff;
+  background-color: #aac54b;
+}
+#footer .general-info p {
+  padding: 20px;
+  margin: 0;
+}
+#footer .social-icons {
+  padding: 50px;
+  /*Temporary for icon fonts*/
+}
+#footer .social-icons span {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: 1px #9f9f9f solid;
+  border-radius: 50%;
+}
+#footer .site-info {
+  padding-bottom: 50px;
 }
 
 /* =Error 404 page

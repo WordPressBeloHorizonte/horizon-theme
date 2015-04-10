@@ -456,10 +456,38 @@ header {
 -------------------------------------------------------------- */
 
 #footer {
-	border-top: 1px solid #ddd;
-	margin-top: 20px;
-	padding: 20px 0 20px;
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
+	color: #fff;
+	background-color:  $darkColor;
+	a{
+		color: $ligthGray;
+		&:hover{
+			text-decoration: none;
+			color: $secondaryColor;
+		}
+	}
+	.general-info{
+		color: #fff;
+		background-color: $secondaryColor;
+		p{
+			padding: 20px;
+			margin: 0;
+		}		
+	}
+	.social-icons{
+		padding: 50px;
+		/*Temporary for icon fonts*/
+		span{ 
+			margin: 0 5px;
+			padding: 10px 15px;
+			border: 1px  $ligthGray solid;
+			border-radius: 50%;
+		}
+	}
+	.site-info{		
+		padding-bottom: 50px;
+	}
 }
 
 /* =Error 404 page

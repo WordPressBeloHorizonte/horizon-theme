@@ -26,7 +26,7 @@ get_header(); ?>
 		</div> <!-- #banner -->
 	</div> <!-- .wrapper-banner -->
 
-	<main id="main-content" class="site-main" role="main">
+	<main id="main-content" class="site-main clearfix" role="main">
 
 		<section id="about">
 

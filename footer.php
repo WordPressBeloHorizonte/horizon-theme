@@ -11,8 +11,8 @@
 
 
 
-	<footer id="footer" class="clearfix" role="contentinfo">
-		<div class="general-info row">
+	<footer id="footer" role="contentinfo">
+		<div class="general-info clearfix">
 			<div class="col-md-6">
 				<p>	Tel: +55 (31) 9999-9999 | +55 (31) 3333-3333 | contact@horizon.com.br</p>
 			</div><!-- .col-md-6 -->

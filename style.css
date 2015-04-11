@@ -3624,8 +3624,6 @@ header {
   padding: 50px;
 }
 #footer .social-icons svg {
-  border: 1px #9f9f9f solid;
-  border-radius: 50%;
   margin: 0 5px;
   fill: #fff;
 }

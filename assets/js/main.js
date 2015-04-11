@@ -1,14 +1,9 @@
 jQuery(document).ready(function($) {
 
 	$('.carousel').owlCarousel({
-
-
-
 	      items : 5
-	      /*temsDesktop : [1199,3],
-	      itemsDesktopSmall : [979,3]*/
-
   	});
+
 	// fitVids.
 	$( '.entry-content' ).fitVids();
 

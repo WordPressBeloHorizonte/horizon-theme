@@ -87,6 +87,52 @@ get_header(); ?>
 			</div>
 		</section> <!-- #services -->
 
+		<section id="clients">
+			<div class="container">
+				<header class="horizon-header">
+					<h2 class="title"><span>Horizon</span> Clients</h2>
+					<span class="sep"></span>
+					<p class="desc">Our work is your satisfaction</p>
+				</header>
+
+				<div class="carousel">
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
+				</div>
+
+			</div>
+		</section> <!-- #clients -->
+
+		<section class="joker-sep">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 col-sm-4 no-padding left hidden-xs">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-joker.jpg" alt="">
+					</div>
+					<div class="col-md-6 col-sm-8 col-xs-12 no-padding right">
+						<div class="wrapper-blockquote">
+							<blockquote class="cite">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Phasellus eget nulla ex.</p>
+								<footer>
+									<cite>Chuck Norris</cite>
+								</footer>
+							</blockquote>
+						</div> <!-- .wrapper-blockquote -->
+					</div>
+				</div>
+			</div> <!-- .container-fluid -->
+		</section> <!-- #joker-sep -->
+
 		<section id="contact">
 			<div class="content">
 				<div class="col-md-6 contact-form">
@@ -105,7 +151,7 @@ get_header(); ?>
 									<input id="horizon-form-email" name="mail" type="text" placeholder="<?php _e( 'E-mail', 'horizon-theme' ); ?>">
 							</div>
 							<!-- Input Message -->
-							<div class="form-group">                    
+							<div class="form-group">
 									<textarea id="horizon-form-message" name="message" placeholder="<?php _e( 'Message', 'horizon-theme' ); ?>"></textarea>
 							</div>
 							<button href="#" class="horizon-btn btn-md"><?php _e( 'Send Message', 'horizon-theme' ); ?></button>

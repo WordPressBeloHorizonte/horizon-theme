@@ -466,6 +466,7 @@ header {
 	text-align: center;
 	color: #fff;
 	background-color:  $darkColor;
+	clear: both;
 	a {
 		color: $ligthGray;
 		&:hover {
@@ -476,7 +477,7 @@ header {
 	.general-info {
 		color: #fff;
 		background-color: $secondaryColor;
-		p{
+		p {
 			padding: 20px;
 			margin: 0;
 		}		
@@ -507,7 +508,7 @@ header {
 }
 
 /* Contact section */
-#contact{
+#contact {
 	position: relative;
 	.contact-form{
 		 padding: 20px 40px;
@@ -515,7 +516,7 @@ header {
 		-webkit-box-shadow: 6px 0px 6px -5px rgba(0, 0, 0, 0.4);
 		-moz-box-shadow:    6px 0px 6px -5px rgba(0, 0, 0, 0.4);
 		box-shadow: 		6px 0px 6px -5px rgba(0, 0, 0, 0.4);
-		&::after{
+		&::after {
 			content: "";
 			position: absolute;
 			width: 0;
@@ -532,7 +533,7 @@ header {
 			-webkit-box-shadow:	-3px 3px 2px 0 rgba(0, 0, 0, 0.3);
 			-moz-box-shadow: 	-3px 3px 2px 0 rgba(0, 0, 0, 0.3);
 			box-shadow: 		-3px 3px 2px 0 rgba(0, 0, 0, 0.3);
-			@media (max-width: $screen-md-min){
+			@media (max-width: $screen-md-min) {
 				display: none;
 			}
 		}

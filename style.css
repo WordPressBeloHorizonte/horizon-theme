@@ -3323,7 +3323,7 @@ header {
   top: -1px;
 }
 .navbar-default .navbar-nav > li:last-child a {
-  border-right: 0px;
+  border-right: 0;
 }
 .navbar-default .navbar-nav > li:hover {
   border-bottom: 3px #aac54b solid;
@@ -3335,20 +3335,26 @@ header {
 .navbar-default {
   border: none;
 }
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .active {
   background-color: transparent;
   color: #aac54b;
   border-color: #aac54b;
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
   background-color: transparent;
   color: #aac54b;
   border-color: #aac54b;
 }
 
 .dropdown-menu {
-  padding: 0px;
+  padding: 0;
   min-width: 100%;
   max-width: 100%;
   height: auto;
@@ -3616,13 +3622,13 @@ header {
 }
 #footer .social-icons {
   padding: 50px;
-  /*Temporary for icon fonts*/
 }
-#footer .social-icons span {
-  border: 1px #9f9f9f solid;
-  border-radius: 50%;
+#footer .social-icons svg {
   margin: 0 5px;
-  padding: 10px 15px;
+  fill: #fff;
+}
+#footer .social-icons svg:hover {
+  fill: #aac54b;
 }
 #footer .site-info {
   padding-bottom: 50px;

@@ -1,4 +1,9 @@
 jQuery(document).ready(function($) {
+
+	$('.carousel').owlCarousel({
+	      items : 5
+  	});
+
 	// fitVids.
 	$( '.entry-content' ).fitVids();
 

@@ -21,9 +21,15 @@
 			</div><!-- .col-md-6 -->
 		</div><!-- .general-info .row -->
 		<div class="social-icons">
-			<a href="#"><span>X</span></a>
-			<a href="#"><span>X</span></a>
-			<a href="#"><span>X</span></a>
+			<a href="#">
+				<?php echo file_get_contents(get_stylesheet_directory_uri().'/assets/images/social/google.svg'); ?>
+			</a>
+			<a href="#">
+				<?php echo file_get_contents(get_stylesheet_directory_uri().'/assets/images/social/facebook.svg'); ?>
+			</a>
+			<a href="#">
+				<?php echo file_get_contents(get_stylesheet_directory_uri().'/assets/images/social/twitter.svg'); ?>
+			</a>
 		</div><!-- .social-icons -->
 		<div class="site-info">
 			<span>Copyright &copy; <?php echo date( 'Y' ); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'horizon-theme' ); ?> | <?php echo _e( 'Powered by', 'horizon-theme' ).' <a href="https://wordpress.org/" rel="nofollow" target="_blank">WordPress</a>.'; ?></span>

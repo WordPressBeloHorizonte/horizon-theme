@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="reddit" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+<g>
+	<path d="M24.991,0C11.188,0,0,11.188,0,24.991c0,13.803,11.188,24.991,24.991,24.991c13.803,0,24.991-11.188,24.991-24.991
+		C49.98,11.188,38.794,0,24.991,0z M24.991,46.075c-11.646,0-21.085-9.439-21.085-21.084c0-11.646,9.439-21.085,21.085-21.085
+		c11.646,0,21.084,9.439,21.084,21.085C46.075,36.636,36.637,46.075,24.991,46.075z"/>
+	<circle cx="17.676" cy="25" r="5.023"/>
+	<circle cx="32.305" cy="25" r="5.023"/>
+</g>
+</svg>

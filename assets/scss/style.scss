@@ -176,7 +176,9 @@ header {
 	min-width: 100%;
 	max-width: 100%;
 	height: auto;
-	.active > a, .active > a:focus, .active > a:hover{
+	.active > a,
+	.active > a:focus,
+	.active > a:hover {
 		background-color: $secondaryColor;
 		transition: background-color $hover-transition-time;
 	}
@@ -515,14 +517,14 @@ header {
 			content: none;
 		}
 	}
-	.menu-item-link{
+	.menu-item-link {
 		color: $ligthGray;
 		padding-top: 0;
 		padding-bottom: 0;
 		text-transform: capitalize;
 		font-weight: bold;
 
-		&:hover{
+		&:hover {
 			color: $secondaryColor;
 		}
 	}
@@ -570,7 +572,7 @@ header {
 			}
 		}
 		&:hover {
-			.portfolio-item-caption{
+			.portfolio-item-caption {
 				opacity: 1;
 				transition: opacity $hover-transition-time;
 			}
@@ -578,7 +580,7 @@ header {
 	}
 }
 
-.load-more{
+.load-more {
 	clear: both;
 	margin: 50px auto;
 	text-align: center;

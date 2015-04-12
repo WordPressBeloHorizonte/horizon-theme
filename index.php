@@ -187,97 +187,97 @@ get_header(); ?>
 						</li>
 					</ul>
 				</nav>
-			</div>
+			</div> <!-- .content -->
 			<div class="portfolio-list clearfix">
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto3.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto4.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto5.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto6.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto7.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto8.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto3.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto4.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
 				<div class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto5.jpg" alt="">
 					<div class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
 						<span class="portfolio-item-description">Lorem Ipsum</span>    
-					</div>    
-				</div>
-			</div>
+					</div><!-- .portfolio-item-caption -->
+				</div><!-- .portfolio-item -->
+			</div><!-- .portifolio-list -->
 			<div class="content load-more">
 				<button href="#" class="horizon-btn secondary"><?php _e( 'Load More', 'horizon-theme' ); ?></button>
-			</div>
-		</section>
+			</div><!-- .load-more -->
+		</section><!-- .portfolio -->
 
 		<section id="clients">
 			<div class="container">
@@ -300,7 +300,6 @@ get_header(); ?>
 					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
 					<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/horizon-clients.png" alt=""></div>
 				</div>
-
 			</div>
 		</section> <!-- #clients -->
 

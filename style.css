@@ -3533,7 +3533,9 @@ header {
   max-width: 100%;
   height: auto;
 }
-.dropdown-menu .active > a, .dropdown-menu .active > a:focus, .dropdown-menu .active > a:hover {
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:focus,
+.dropdown-menu .active > a:hover {
   background-color: #aac54b;
   transition: background-color 0.3s;
 }

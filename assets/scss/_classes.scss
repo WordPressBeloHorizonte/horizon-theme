@@ -54,7 +54,6 @@
 	&:link, &:visited, &:hover, &:active {
 		text-decoration: none;
 		color: $primaryColor;
-		text-decoration: none;
 	}
 	&:hover {
 		background-color: $darkColor;
@@ -66,6 +65,16 @@
 	&.btn-sm{
 		padding: 10px 15px;
 		font-size: 12px;
+	}
+	&.secondary{
+		background-color: #fff;
+		color: $ligthGray;
+		border: 2px $ligthGray solid;
+		&:link, &:visited, &:hover, &:active {
+			text-decoration: none;
+			color: $primaryColor;
+			background-color: $ligthGray;
+		}
 	}
 }
 

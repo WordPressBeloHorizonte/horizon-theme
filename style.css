@@ -6102,10 +6102,40 @@ header {
 }
 
 #services {
-  padding: 117px 0 150px 0;
+  padding: 117px 0 90px 0;
 }
 #services blockquote {
-  margin-top: 75px;
+  margin: 75px auto 60px;
+}
+#services .service {
+  text-align: center;
+}
+#services .service .service-wrapper {
+  max-width: 230px;
+  padding: 60px 0;
+  margin: 0 auto;
+}
+#services .service .service-wrapper .service-icon {
+  font-size: 80px;
+  width: 80px;
+  height: 80px;
+}
+#services .service .service-wrapper h4 {
+  color: #9f9f9f;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 40px 0 0;
+}
+#services .service .service-wrapper .sep {
+  display: block;
+  margin: 20px auto 30px;
+  max-width: 230px;
+  height: 1px;
+  background: #9f9f9f;
+}
+#services .service .service-wrapper p {
+  font-size: 12px;
+  color: #9f9f9f;
 }
 
 #clients {

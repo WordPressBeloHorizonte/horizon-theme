@@ -3650,6 +3650,11 @@ header {
   margin-bottom: 87px;
 }
 
+.joker-sep, .skills {
+  background-color: #292c2e;
+  height: 450px;
+}
+
 .joker-sep {
   background-color: #292c2e;
   height: 450px;
@@ -3668,6 +3673,79 @@ header {
 }
 .joker-sep .right blockquote.cite {
   width: 70%;
+}
+
+.skills .left {
+  padding: 100px 70px;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .skills .left {
+    padding-left: 10px;
+  }
+}
+.skills .right {
+  max-height: 450px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .skills {
+    height: auto;
+  }
+}
+
+.skills-list {
+  padding: 0 0 50px 0;
+  border-bottom: 2px solid #aac54b;
+  float: left;
+  overflow: hidden;
+}
+.skills-list li {
+  cursor: pointer;
+  list-style-type: none;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  position: relative;
+}
+.skills-list li:last-child {
+  margin-bottom: 0;
+}
+.skills-list li:hover .dashicons {
+  color: #aac54b;
+}
+.skills-list li .dashicons {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.skills-list li span {
+  display: block;
+  padding-left: 30px;
+}
+.skills-list li h5 {
+  margin: 0 0 3px 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.skills-list li p {
+  color: #797979;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .skills-list li {
+    min-height: 90px;
+  }
+}
+@media (max-width: 480px) {
+  .skills-list li {
+    min-height: 120px;
+  }
 }
 
 #services {

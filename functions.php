@@ -173,7 +173,7 @@ function horizon_theme_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
 	// Loads Horizon Theme main stylesheet.
-	wp_enqueue_style( 'horizon-theme-style', get_stylesheet_uri(), array(), null, 'all' );
+	wp_enqueue_style( 'horizon-theme-style', get_stylesheet_uri(), array( 'dashicons' ), null, 'all' );
 
 	wp_register_style( 'horizon_theme-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
     wp_enqueue_style( 'horizon_theme-open-sans' );
@@ -192,7 +192,7 @@ function horizon_theme_enqueue_scripts() {
 			'address' => "Belo Horizonte - MG", //TODO Entrada de endereço personalizado (Theme options)
 			'icon' => $template_url . '/assets/images/marker.png' //TODO Entrada de icone personalizado (Theme options)
 		));
-	}	
+	}
 
 	// General scripts.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
@@ -201,7 +201,7 @@ function horizon_theme_enqueue_scripts() {
 
 		// FitVids.
 		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array( 'jquery' ), null, true );
-		
+
 		// Main jQuery.
 		wp_enqueue_script( 'horizon-theme-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
 	} else {

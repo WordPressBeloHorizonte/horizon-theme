@@ -308,38 +308,110 @@ header {
 }
 
 #about {
-		height: 595px;
-		padding: 116px 0;
-		text-align: center;
+	height: 595px;
+	padding: 116px 0;
+	text-align: center;
 
-		blockquote {
-			margin-top: 66px;
-			margin-bottom: 87px;
-		}
+	blockquote {
+		margin-top: 66px;
+		margin-bottom: 87px;
 	}
+}
 
-	.joker-sep {
-		background-color: #292c2e;
+.joker-sep, .skills {
+	background-color: #292c2e;
+	height: 450px;
+}
 
+.joker-sep {
+	background-color: #292c2e;
+	height: 450px;
+	.left {
+		max-height: 450px;
+		overflow: hidden;
+	}
+	.right {
+		display: table;
 		height: 450px;
-		.left {
-			max-height: 450px;
-			overflow: hidden;
+		.wrapper-blockquote {
+			display: table-cell;
+			vertical-align: middle;
 		}
-		.right {
-			display: table;
-			height: 450px;
-			.wrapper-blockquote {
-				display: table-cell;
-    			vertical-align: middle;
-			}
 
-			blockquote.cite {
-				width: 70%;
-
-			}
+		blockquote.cite {
+			width: 70%;
 		}
 	}
+}
+
+.skills {
+	.left {
+		padding: 100px 70px;
+		margin: 0;
+		@media(max-width: $screen-xs-min) {
+			padding-left: 10px;
+		}
+	}
+	.right {
+		max-height: 450px;
+		overflow: hidden;
+	}
+	@media(max-width: $screen-xs-max) {
+		height: auto;
+	}
+
+}
+
+.skills-list {
+	padding: 0 0 50px 0;
+	border-bottom : 2px solid $secondaryColor;
+	float:left;
+	overflow: hidden;
+	li {
+		cursor: pointer;
+		list-style-type: none;
+		color: #FFF;
+		font-size: 14px;
+		font-weight: 600;
+		margin-bottom: 50px;
+		position: relative;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:hover .dashicons {
+			color: $secondaryColor;
+		}
+		.dashicons {
+			padding: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		span {
+			display: block;
+			padding-left: 30px;
+		}
+		h5 {
+			margin: 0 0 3px 0;
+			padding: 0;
+			text-transform: uppercase;
+		}
+		p {
+			color: #797979;
+			font-size: 12px;
+			font-weight: 400;
+			margin: 0;
+			padding:0;
+		}
+		@media(max-width: $screen-xs-max) {
+			min-height: 90px;
+		}
+		@media(max-width: $screen-xs-min) {
+			min-height: 120px;
+		}
+
+	}
+}
 
 #services {
 	padding: 117px 0 150px 0;

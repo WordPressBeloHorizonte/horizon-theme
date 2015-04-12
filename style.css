@@ -3128,6 +3128,11 @@ tbody.collapse.in {
   display: block;
   margin: 10px auto;
 }
+@media (max-width: 480px) {
+  .horizon-header .sep {
+    width: 80%;
+  }
+}
 .horizon-header .desc {
   color: #9f9f9f;
   font-size: 16px;
@@ -3725,6 +3730,11 @@ header {
 @media (max-width: 992px) {
   #contact .contact-form::after {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  #contact .contact-form {
+    padding: 20px 10px;
   }
 }
 

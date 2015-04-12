@@ -404,6 +404,9 @@ header {
 				display: none;
 			}
 		}
+		@media (max-width: $screen-sm-min) {
+			padding: 20px 10px;
+		}
 	}
 }
 
@@ -572,7 +575,6 @@ header {
 		margin-bottom: $text-margin-bottom;
 	}
 }
-
 
 /* =Responsive Styles
 -------------------------------------------------------------- */

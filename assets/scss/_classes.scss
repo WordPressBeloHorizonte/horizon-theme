@@ -25,6 +25,9 @@
 		background-color: $secondaryColor;
 		display: block;
 		margin: 10px auto;
+		@media (max-width: $screen-xs-min) {
+			width: 80%;
+		}
 	}
 
 	.desc {

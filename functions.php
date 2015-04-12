@@ -172,21 +172,22 @@ add_action( 'widgets_init', 'horizon_theme_widgets_init' );
 function horizon_theme_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
+	wp_register_style( 'horizon_theme-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', array(), null, 'all' );
+    wp_enqueue_style( 'horizon_theme-open-sans' );
+
 	// Loads Horizon Theme main stylesheet.
 	wp_enqueue_style( 'horizon-theme-style', get_stylesheet_uri(), array( 'dashicons' ), null, 'all' );
-
-	wp_register_style( 'horizon_theme-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
-    wp_enqueue_style( 'horizon_theme-open-sans' );
 
 	// jQuery.
 	wp_enqueue_script( 'jquery' );
 
-	if(is_home()){
-		// Google Maps
+	// Google Maps
+	if ( is_home() ) {
+		// Google Maps V3 Engine
 		wp_enqueue_script( 'google-maps-v3', 'http://maps.googleapis.com/maps/api/js?sensor=false', array(), null, true );
 
 		// Google Maps Configuration
-		wp_enqueue_script( 'google-maps-config', $template_url . '/assets/js/googleMaps.js', array('google-maps-v3'), null, true );
+		wp_enqueue_script( 'google-maps-config', $template_url . '/assets/js/googleMaps.js', array( 'google-maps-v3' ), null, true );
 
 		wp_localize_script( 'google-maps-config', 'google_maps_data', array(
 			'address' => "Belo Horizonte - MG", //TODO Entrada de endereço personalizado (Theme options)

@@ -75,13 +75,11 @@
 }
 
 #about {
-	height: 595px;
-	padding: 116px 0;
+	padding: 115px 0;
 	text-align: center;
 
-	blockquote {
-		margin-top: 66px;
-		margin-bottom: 87px;
+	.horizon-btn {
+		margin-top: 10px;
 	}
 }
 
@@ -182,11 +180,7 @@
 }
 
 #services {
-	padding: 117px 0 90px 0;
-
-	blockquote {
-		margin: 75px auto 60px;
-	}
+	padding: 110px 0 90px 0;
 
 	.service {
 		text-align: center;
@@ -195,11 +189,14 @@
 			max-width: 230px;
 			padding: 60px 0;
 			margin: 0 auto;
+			cursor: pointer;
 
 			.service-icon {
 				font-size: 80px;
 				width: 80px;
 				height: 80px;
+				-webkit-transition: color .3s;
+				transition: color .3s;
 			}
 
 			h4 {
@@ -215,11 +212,23 @@
 				max-width: 230px;
 				height: 1px;
 				background: $ligthGray;
+				-webkit-transition: background .3s;
+				transition: background .3s;
 			}
 
 			p {
 				font-size: 12px;
 				color: $ligthGray;
+			}
+
+			&:hover {
+				.service-icon {
+					color: $secondaryColor;
+				}
+
+				.sep {
+					background: $secondaryColor;
+				}
 			}
 
 		}
@@ -252,20 +261,30 @@
 }
 
 /**
- * Portifolio Section
+ * Portfolio Section
  */
 .portfolio {
+	padding: 110px 0 110px 0;
+
 	.menu {
 		display: block;
 		width: 100%;
 		text-align: center;
-		margin-bottom: 50px;
+		margin: 40px 0 0;
+
+		ul {
+			padding: 0;
+			margin: 0;
+		}
 	}
+
 	.menu-item {
 		display: inline-block;
+		
 		a {
 			text-decoration: none;
 		}
+
 		&:after {
 			background-color: $secondaryColor;
 			content: '';
@@ -274,6 +293,7 @@
 			margin: 0 20px;
 			width: 3px;
 		}
+
 		&:last-child:after {
 			display: none;
 		}
@@ -282,6 +302,7 @@
 			content: none;
 		}
 	}
+
 	.menu-item-link {
 		color: $ligthGray;
 		padding-top: 0;
@@ -296,7 +317,7 @@
 }
 .portfolio-list {
 	clear: both;
-	margin: 0;
+	margin: 115px 0;
 	padding: 0;
 	.portfolio-item {
 		margin: 0;
@@ -347,7 +368,6 @@
 
 .load-more {
 	clear: both;
-	margin: 50px auto;
 	text-align: center;
 }
 

@@ -41,7 +41,9 @@
 /**
  * Default button styles
  */
+
 .horizon-btn {
+	display: inline-block;
 	box-sizing: content-box;
 	background-color: $secondaryColor;
 	padding: 22px 32px;
@@ -86,7 +88,7 @@ blockquote {
 	margin: 0 auto;
 	border: none;
 	&:not(.cite) {
-		color: #9f9f9f;
+		color: $ligthGray;
 		font-size: 17px;
 		font-weight: 700;
 		text-align: center;
@@ -110,6 +112,10 @@ blockquote {
 			right: -23px;
 			background: url('assets/images/quote-close.png') no-repeat;
 		}
+	}
+
+	&.horizon-blockquote {
+		margin: 70px auto 60px;
 	}
 
 	&.cite {

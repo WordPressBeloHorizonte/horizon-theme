@@ -38,7 +38,7 @@ get_header(); ?>
 					<p class="desc">Our work is your satisfaction</p>
 				</header>
 
-				<blockquote>
+				<blockquote class="horizon-blockquote">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget nulla ex. Curabitur mauris felis, vestibulum eget eros ac,
 					congue suscipit felis. Etiam accumsan, libero ac tristique maximus, diam risus interdum odio, sed ultricies arcu quam vel mauris.</p>
 				</blockquote>
@@ -79,7 +79,7 @@ get_header(); ?>
 					<p class="desc">Our work is your satisfaction</p>
 				</header>
 
-				<blockquote>
+				<blockquote class="horizon-blockquote">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget nulla ex. Curabitur mauris felis, vestibulum eget eros ac,
 					congue suscipit felis. Etiam accumsan, libero ac tristique maximus, diam risus interdum odio, sed ultricies arcu quam vel mauris.</p>
 				</blockquote>
@@ -224,7 +224,7 @@ get_header(); ?>
 			</div> <!-- .container-fluid -->
 		</section> <!-- #joker-sep -->
 
-		<section id="services">
+		<section class="portfolio">
 			<div class="container">
 
 				<header class="horizon-header">
@@ -233,15 +233,12 @@ get_header(); ?>
 					<p class="desc">Our work is your satisfaction</p>
 				</header>
 
-				<blockquote>
+				<blockquote class="horizon-blockquote">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget nulla ex. Curabitur mauris felis, vestibulum eget eros ac,
 					congue suscipit felis. Etiam accumsan, libero ac tristique maximus, diam risus interdum odio, sed ultricies arcu quam vel mauris.</p>
 				</blockquote>
 
-			</div>
-		</section> <!-- #services -->
-
-		<section class="portfolio">
+			</div><!-- .container -->
 			<div class="content">
 				<nav class="menu">
 					<ul>
@@ -408,19 +405,19 @@ get_header(); ?>
 						<p class="desc">Our work is your satisfaction</p>
 					</header>
 					<form class="horizon-form">
-							<!-- Input Name-->
-							<div class="form-group">
-									<input id="horizon-form-name" name="name" type="text" placeholder="<?php _e( 'Name', 'horizon-theme' ); ?>">
-							</div>
-							<!-- Input Mail-->
-							<div class="form-group">
-									<input id="horizon-form-email" name="mail" type="text" placeholder="<?php _e( 'E-mail', 'horizon-theme' ); ?>">
-							</div>
-							<!-- Input Message -->
-							<div class="form-group">
-									<textarea id="horizon-form-message" name="message" placeholder="<?php _e( 'Message', 'horizon-theme' ); ?>"></textarea>
-							</div>
-							<button href="#" class="horizon-btn btn-md"><?php _e( 'Send Message', 'horizon-theme' ); ?></button>
+						<!-- Input Name-->
+						<div class="form-group">
+								<input id="horizon-form-name" name="name" type="text" placeholder="<?php _e( 'Name', 'horizon-theme' ); ?>">
+						</div>
+						<!-- Input Mail-->
+						<div class="form-group">
+								<input id="horizon-form-email" name="mail" type="text" placeholder="<?php _e( 'E-mail', 'horizon-theme' ); ?>">
+						</div>
+						<!-- Input Message -->
+						<div class="form-group">
+								<textarea id="horizon-form-message" name="message" placeholder="<?php _e( 'Message', 'horizon-theme' ); ?>"></textarea>
+						</div>
+						<button href="#" class="horizon-btn btn-md"><?php _e( 'Send Message', 'horizon-theme' ); ?></button>
 					</form>
 				</div><!-- .contact-form -->
 				<div id="map" class="col-md-6">

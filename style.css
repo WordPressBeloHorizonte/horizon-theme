@@ -5646,6 +5646,7 @@ tbody.collapse.in {
  * Default button styles
  */
 .horizon-btn {
+  display: inline-block;
   box-sizing: content-box;
   background-color: #aac54b;
   padding: 22px 32px;
@@ -5714,6 +5715,9 @@ blockquote:not(.cite):after {
   bottom: -10px;
   right: -23px;
   background: url("assets/images/quote-close.png") no-repeat;
+}
+blockquote.horizon-blockquote {
+  margin: 70px auto 60px;
 }
 blockquote.cite {
   text-align: left;
@@ -5993,13 +5997,11 @@ header {
 }
 
 #about {
-  height: 595px;
-  padding: 116px 0;
+  padding: 115px 0;
   text-align: center;
 }
-#about blockquote {
-  margin-top: 66px;
-  margin-bottom: 87px;
+#about .horizon-btn {
+  margin-top: 10px;
 }
 
 .joker-sep, .skills {
@@ -6102,10 +6104,7 @@ header {
 }
 
 #services {
-  padding: 117px 0 90px 0;
-}
-#services blockquote {
-  margin: 75px auto 60px;
+  padding: 110px 0 90px 0;
 }
 #services .service {
   text-align: center;
@@ -6114,11 +6113,14 @@ header {
   max-width: 230px;
   padding: 60px 0;
   margin: 0 auto;
+  cursor: pointer;
 }
 #services .service .service-wrapper .service-icon {
   font-size: 80px;
   width: 80px;
   height: 80px;
+  -webkit-transition: color .3s;
+  transition: color .3s;
 }
 #services .service .service-wrapper h4 {
   color: #9f9f9f;
@@ -6132,10 +6134,18 @@ header {
   max-width: 230px;
   height: 1px;
   background: #9f9f9f;
+  -webkit-transition: background .3s;
+  transition: background .3s;
 }
 #services .service .service-wrapper p {
   font-size: 12px;
   color: #9f9f9f;
+}
+#services .service .service-wrapper:hover .service-icon {
+  color: #aac54b;
+}
+#services .service .service-wrapper:hover .sep {
+  background: #aac54b;
 }
 
 #clients {
@@ -6160,13 +6170,20 @@ header {
 }
 
 /**
- * Portifolio Section
+ * Portfolio Section
  */
+.portfolio {
+  padding: 110px 0 110px 0;
+}
 .portfolio .menu {
   display: block;
   width: 100%;
   text-align: center;
-  margin-bottom: 50px;
+  margin: 40px 0 0;
+}
+.portfolio .menu ul {
+  padding: 0;
+  margin: 0;
 }
 .portfolio .menu-item {
   display: inline-block;
@@ -6201,7 +6218,7 @@ header {
 
 .portfolio-list {
   clear: both;
-  margin: 0;
+  margin: 115px 0;
   padding: 0;
 }
 .portfolio-list .portfolio-item {
@@ -6252,7 +6269,6 @@ header {
 
 .load-more {
   clear: both;
-  margin: 50px auto;
   text-align: center;
 }
 

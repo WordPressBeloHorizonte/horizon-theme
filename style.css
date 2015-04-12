@@ -3443,8 +3443,6 @@ body {
 
 /* =Header
 -------------------------------------------------------------- */
-/* =Navigation
--------------------------------------------------------------- */
 header {
   position: relative;
 }
@@ -3581,7 +3579,7 @@ header {
     background-color: #aac54b;
   }
 }
-/* =Content
+/* =Home Styles
 -------------------------------------------------------------- */
 /*
  * We need this wrapper class to crop the image, without this wrapper class
@@ -3789,46 +3787,6 @@ header {
   margin-top: 25px;
 }
 
-/* Contact section */
-#contact {
-  position: relative;
-}
-#contact .contact-form {
-  padding: 20px 40px;
-  z-index: 1;
-  -webkit-box-shadow: 6px 0px 6px -5px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 6px 0px 6px -5px rgba(0, 0, 0, 0.4);
-  box-shadow: 6px 0px 6px -5px rgba(0, 0, 0, 0.4);
-}
-#contact .contact-form::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  margin-right: -60px;
-  margin-top: 30px;
-  top: 50%;
-  right: 0px;
-  box-sizing: border-box;
-  border: 30px solid black;
-  border-color: transparent transparent #fff #fff;
-  transform-origin: 0 0;
-  transform: rotate(-135deg);
-  -webkit-box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
-}
-@media (max-width: 992px) {
-  #contact .contact-form::after {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  #contact .contact-form {
-    padding: 20px 10px;
-  }
-}
-
 /**
  * Portifolio Section
  */
@@ -3924,6 +3882,46 @@ header {
   clear: both;
   margin: 50px auto;
   text-align: center;
+}
+
+/* Contact section */
+#contact {
+  position: relative;
+}
+#contact .contact-form {
+  padding: 20px 40px;
+  z-index: 1;
+  -webkit-box-shadow: 6px 0px 6px -5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 6px 0px 6px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 0px 6px -5px rgba(0, 0, 0, 0.4);
+}
+#contact .contact-form::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-right: -60px;
+  margin-top: 30px;
+  top: 50%;
+  right: 0px;
+  box-sizing: border-box;
+  border: 30px solid black;
+  border-color: transparent transparent #fff #fff;
+  transform-origin: 0 0;
+  transform: rotate(-135deg);
+  -webkit-box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: -3px 3px 2px 0 rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 992px) {
+  #contact .contact-form::after {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #contact .contact-form {
+    padding: 20px 10px;
+  }
 }
 
 #map {

@@ -1,0 +1,35 @@
+#footer {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	color: #fff;
+	background-color:  $darkColor;
+	clear: both;
+	a {
+		color: $ligthGray;
+		&:hover {
+			text-decoration: none;
+			color: $secondaryColor;
+		}
+	}
+	.general-info {
+		color: #fff;
+		background-color: $secondaryColor;
+		p {
+			padding: 20px;
+			margin: 0;
+		}
+	}
+	.social-icons {
+		padding: 50px;
+		svg {
+			margin: 0 5px;
+			fill: #fff;
+			&:hover{
+				fill: $secondaryColor;
+			}
+		}
+	}
+	.site-info{
+		padding-bottom: 50px;
+	}
+}

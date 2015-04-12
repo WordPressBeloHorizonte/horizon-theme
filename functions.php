@@ -172,6 +172,7 @@ add_action( 'widgets_init', 'horizon_theme_widgets_init' );
 function horizon_theme_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
+	// Register and enqueues Open Sans
 	wp_register_style( 'horizon_theme-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', array(), null, 'all' );
     wp_enqueue_style( 'horizon_theme-open-sans' );
 

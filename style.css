@@ -6005,7 +6005,7 @@ header {
   margin-top: 10px;
 }
 
-.joker-sep, .skills {
+.joker-sep, #skills {
   background-color: #292c2e;
   height: 450px;
 }
@@ -6030,21 +6030,21 @@ header {
   width: 70%;
 }
 
-.skills .left {
+#skills .left {
   padding: 100px 70px;
   margin: 0;
 }
 @media (max-width: 480px) {
-  .skills .left {
+  #skills .left {
     padding-left: 10px;
   }
 }
-.skills .right {
+#skills .right {
   max-height: 450px;
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  .skills {
+  #skills {
     height: auto;
   }
 }
@@ -6067,15 +6067,18 @@ header {
 .skills-list li:last-child {
   margin-bottom: 0;
 }
-.skills-list li:hover .dashicons {
+.skills-list li:hover .icon {
   color: #aac54b;
 }
-.skills-list li .dashicons {
+.skills-list li .icon {
   padding: 0;
   position: absolute;
   top: 0;
   left: 0;
   color: #666;
+}
+.skills-list li .icon.fa {
+  top: 4px;
 }
 .skills-list li span {
   display: block;
@@ -6173,26 +6176,26 @@ header {
 /**
  * Portfolio Section
  */
-.portfolio {
+#portfolio {
   padding: 110px 0 110px 0;
 }
-.portfolio .menu {
+#portfolio .menu {
   display: block;
   width: 100%;
   text-align: center;
   margin: 40px 0 0;
 }
-.portfolio .menu ul {
+#portfolio .menu ul {
   padding: 0;
   margin: 0;
 }
-.portfolio .menu-item {
+#portfolio .menu-item {
   display: inline-block;
 }
-.portfolio .menu-item a {
+#portfolio .menu-item a {
   text-decoration: none;
 }
-.portfolio .menu-item:after {
+#portfolio .menu-item:after {
   background-color: #aac54b;
   content: '';
   display: inline-block;
@@ -6200,20 +6203,20 @@ header {
   margin: 0 20px;
   width: 3px;
 }
-.portfolio .menu-item:last-child:after {
+#portfolio .menu-item:last-child:after {
   display: none;
 }
-.portfolio .menu-item:hover > .menu-item-link:after {
+#portfolio .menu-item:hover > .menu-item-link:after {
   content: none;
 }
-.portfolio .menu-item-link {
+#portfolio .menu-item-link {
   color: #9f9f9f;
   padding-top: 0;
   padding-bottom: 0;
   text-transform: capitalize;
   font-weight: bold;
 }
-.portfolio .menu-item-link:hover {
+#portfolio .menu-item-link:hover {
   color: #aac54b;
 }
 

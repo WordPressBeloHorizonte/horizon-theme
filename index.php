@@ -162,28 +162,28 @@ get_header(); ?>
 			</div>
 		</section> <!-- #services -->
 
-		<section class="skills">
+		<section id="skills">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-8 col-sm-12 col-xs-12 left">
 						<div class="col-md-6 col-sm-6 col-xs-6">
 							<ul class="skills-list">
 								<li>
-									<span class="dashicons dashicons-leftright"></span>
+									<span class="icon dashicons dashicons-leftright"></span>
 									<span>
 										<h5>Código de Qualidade</h5>
 										<p>Lorem ipsum dolor sit amet. Consectetur adpiscing elit.</p>
 									</span>
 								</li>
 								<li>
-									<span class="dashicons dashicons-welcome-view-site"></span>
+									<span class="icon fa fa-desktop"></span>
 									<span>
 										<h5>Design Moderno</h5>
 										<p>Lorem ipsum dolor sit amet. Consectetur adpiscing elit.</p>
 									</span>
 								</li>
 								<li>
-									<span class="dashicons dashicons-admin-tools"></span>
+									<span class="icon fa fa-paint-brush"></span>
 									<span>
 										<h5>Suporte dedicado</h5>
 										<p>Lorem ipsum dolor sit amet. Consectetur adpiscing elit.</p>
@@ -194,21 +194,21 @@ get_header(); ?>
 						<div class="col-md-6 col-sm-6 col-xs-6">
 							<ul class="skills-list">
 								<li>
-									<span class="dashicons dashicons-admin-users"></span>
+									<span class="icon dashicons dashicons-admin-users"></span>
 									<span>
 										<h5>Ideias Inovadores</h5>
 										<p>Lorem ipsum dolor sit amet. Consectetur adpiscing elit.</p>
 									</span>
 								</li>
 								<li>
-									<span class="dashicons dashicons-awards"></span>
+									<span class="icon dashicons dashicons-awards"></span>
 									<span>
 										<h5>Design Moderno</h5>
 										<p>Lorem ipsum dolor sit amet. Consectetur adpiscing elit.</p>
 									</span>
 								</li>
 								<li>
-									<span class="dashicons dashicons-admin-site"></span>
+									<span class="icon dashicons dashicons-admin-site"></span>
 									<span>
 										<h5>Design Moderno</h5>
 										<p>Lorem ipsum dolor sit amet. Consectetur adpiscing elit.</p>
@@ -224,7 +224,7 @@ get_header(); ?>
 			</div> <!-- .container-fluid -->
 		</section> <!-- #joker-sep -->
 
-		<section class="portfolio">
+		<section id="portfolio">
 			<div class="container">
 
 				<header class="horizon-header">
@@ -265,84 +265,84 @@ get_header(); ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto3.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto4.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto5.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto6.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto7.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto8.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto3.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto4.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 				<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto5.jpg" alt="">
 					<figcaption class="portfolio-item-caption">
 						<h4 class="portfolio-item-title">Lorem Ipsum</h4>
-						<span class="portfolio-item-description">Lorem Ipsum</span>    
+						<span class="portfolio-item-description">Lorem Ipsum</span>
 					</figcaption><!-- .portfolio-item-caption -->
 				</figure><!-- .portfolio-item -->
 			</div><!-- .portifolio-list -->
@@ -371,13 +371,13 @@ get_header(); ?>
 									<div class="sep"></div>
 									<span class="blog-item-publish-date">13 de Abril de 2015</span>
 								</header><!-- .blog-item-header -->
-								
+
 								<div class="blog-item-excerpt">
 									<p>Ex itaque a facilis, recusandae laudantium est voluptatem porro fuga cupiditate atque eligendi natus voluptatum doloribus voluptate, modi reiciendis corporis magni iusto!</p>
 								</div><!-- .blog-item-excerpt -->
-								
+
 								<button class="horizon-btn btn-blog-item"><?php _e( 'Continue reading', 'horizon-theme' ); ?></button>
-								
+
 								<footer class="blog-item-footer">
 									<span class="blog-item-author"><?php _e( 'Published by', 'horizon-theme' ); ?> <a href="#">Administrador</a></span>
 									<?php $comments = 23; ?>
@@ -403,13 +403,13 @@ get_header(); ?>
 									<div class="sep"></div>
 									<span class="blog-item-publish-date">13 de Junho de 2015</span>
 								</header><!-- .blog-item-header -->
-								
+
 								<div class="blog-item-excerpt">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex itaque a facilis, recusandae laudantium est voluptatem porro fuga cupiditate atque eligendi natus voluptatum doloribus voluptate, modi reiciendis corporis magni iusto!</p>
 								</div><!-- .blog-item-excerpt -->
-								
+
 								<button class="horizon-btn btn-blog-item"><?php _e( 'Continue reading', 'horizon-theme' ); ?></button>
-								
+
 								<footer class="blog-item-footer">
 									<span class="blog-item-author"><?php _e( 'Published by', 'horizon-theme' ); ?> <a href="#">Administrador</a></span>
 									<?php $comments = 1; ?>

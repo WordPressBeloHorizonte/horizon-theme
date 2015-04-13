@@ -164,6 +164,7 @@ blockquote {
 		border-right: 0;
 		border-top: 0;
 		border-bottom: 2px #9f9f9f solid;
+		resize: none;
 		&:focus, &:active{
 			border-bottom-color: $secondaryColor;
 			outline: none;

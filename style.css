@@ -5765,6 +5765,7 @@ blockquote.cite footer cite {
   border-right: 0;
   border-top: 0;
   border-bottom: 2px #9f9f9f solid;
+  resize: none;
 }
 .horizon-form input:focus, .horizon-form input:active, .horizon-form textarea:focus, .horizon-form textarea:active {
   border-bottom-color: #aac54b;

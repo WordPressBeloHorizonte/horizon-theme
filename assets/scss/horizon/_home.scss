@@ -83,7 +83,7 @@
 	}
 }
 
-.joker-sep, .skills {
+.joker-sep, #skills {
 	background-color: #292c2e;
 	height: 450px;
 }
@@ -109,7 +109,7 @@
 	}
 }
 
-.skills {
+#skills {
 	.left {
 		padding: 100px 70px;
 		margin: 0;
@@ -143,15 +143,18 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
-		&:hover .dashicons {
+		&:hover .icon{
 			color: $secondaryColor;
 		}
-		.dashicons {
+		.icon {
 			padding: 0;
 			position: absolute;
 			top: 0;
 			left: 0;
 			color: #666;
+			&.fa {
+				top: 4px;
+			}
 		}
 		span {
 			display: block;
@@ -263,7 +266,7 @@
 /**
  * Portfolio Section
  */
-.portfolio {
+#portfolio {
 	padding: 110px 0 110px 0;
 
 	.menu {
@@ -280,7 +283,7 @@
 
 	.menu-item {
 		display: inline-block;
-		
+
 		a {
 			text-decoration: none;
 		}
@@ -389,7 +392,7 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
-		
+
 		&:hover {
 			border-color: #f1f1f1;
 		}

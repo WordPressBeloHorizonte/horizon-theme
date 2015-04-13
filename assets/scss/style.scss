@@ -66,12 +66,25 @@ Domain Path: languages/
 // Utility classes
 @import "bootstrap/utilities";
 
-//Horizon Theme classes
-@import "horizon/classes";
-
 @import "owlcarousel/owl.carousel";
 @import "owlcarousel/owl.theme";
 
+// Font Awesome
+@import "font-awesome/variables";
+@import "font-awesome/mixins";
+@import "font-awesome/path";
+@import "font-awesome/core";
+@import "font-awesome/larger";
+@import "font-awesome/fixed-width";
+@import "font-awesome/list";
+@import "font-awesome/bordered-pulled";
+@import "font-awesome/animated";
+@import "font-awesome/rotated-flipped";
+@import "font-awesome/stacked";
+@import "font-awesome/icons";
+
+//Horizon Theme classes
+@import "horizon/classes";
 
 /* =General
 -------------------------------------------------------------- */

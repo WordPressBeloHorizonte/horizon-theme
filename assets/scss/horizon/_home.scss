@@ -198,8 +198,8 @@
 				font-size: 80px;
 				width: 80px;
 				height: 80px;
-				-webkit-transition: color .3s;
-				transition: color .3s;
+				-webkit-transition: color $hover-transition-time;
+				transition: color $hover-transition-time;
 			}
 
 			h4 {
@@ -215,8 +215,8 @@
 				max-width: 230px;
 				height: 1px;
 				background: $ligthGray;
-				-webkit-transition: background .3s;
-				transition: background .3s;
+				-webkit-transition: background $hover-transition-time;
+				transition: background $hover-transition-time;
 			}
 
 			p {
@@ -385,8 +385,8 @@
 		max-width: 577px;
 		margin: 75px auto 85px;
 		border: 11px solid transparent;
-		-webkit-transition: border .3s;
-		transition: border .3s;
+		-webkit-transition: border $hover-transition-time;
+		transition: border $hover-transition-time;
 
 		@media (min-width: $screen-md-min) {
 			margin-left: 0;
@@ -485,8 +485,8 @@
 			a {
 				color: $ligthGray;
 				text-decoration: none;
-				-webkit-transition: all .3s;
-				transition: all .3s;
+				-webkit-transition: all $hover-transition-time;
+				transition: all $hover-transition-time;
 
 				&:hover {
 					color: $secondaryColor;

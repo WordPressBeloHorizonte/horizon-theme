@@ -334,7 +334,7 @@
 			background-color: $darkColor;
 			bottom: 0;
 			color: #fff;
-			opacity: 0;
+			opacity: 1;
 			padding: 20px;
 			position: absolute;
 			text-align: center;
@@ -356,8 +356,8 @@
 				margin: 0;
 				color: $ligthGray;
 			}
-			@media (max-width: $screen-md-min) {
-				opacity: 1;
+			@media (min-width: $screen-md-min) {
+				opacity: 0;
 			}
 		}
 		&:hover {

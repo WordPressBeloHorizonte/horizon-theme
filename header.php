@@ -2,7 +2,7 @@
 /**
  * The Header for our theme.
  *
- * Displays all of the <head> section and everything up till #main div
+ * Displays all of the <head> section and <header>
  *
  * @package Horizon_Theme
  */

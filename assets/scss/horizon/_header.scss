@@ -1,13 +1,12 @@
-header {
-	position:relative;
-}
 #main-navigation {
 	font-size: 12px;
 	background-color: $darkColor;
 	padding: 0px;
 	margin: 0px;
 	height: auto;
-
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 .navbar-brand{

@@ -10,6 +10,9 @@
 	@media (min-width: $screen-lg-min) {
 		width: $container-large-lg;
 	}
+	@media (min-width: $screen-xlg-min) {
+		width: $container-large-xlg;
+	}
 }
 
 

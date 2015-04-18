@@ -5622,12 +5622,17 @@ tbody.collapse.in {
 }
 @media (min-width: 992px) {
   .container-large {
-    width: 1010px;
+    width: 990px;
   }
 }
 @media (min-width: 1200px) {
   .container-large {
-    width: 1230px;
+    width: 1190px;
+  }
+}
+@media (min-width: 1300px) {
+  .container-large {
+    width: 1270px;
   }
 }
 

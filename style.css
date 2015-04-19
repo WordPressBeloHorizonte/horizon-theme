@@ -5602,6 +5602,40 @@ tbody.collapse.in {
   content: "";
 }
 
+.container-large {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container-large:before, .container-large:after {
+  content: " ";
+  display: table;
+}
+.container-large:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .container-large {
+    width: 810px;
+  }
+}
+@media (min-width: 992px) {
+  .container-large {
+    width: 990px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-large {
+    width: 1190px;
+  }
+}
+@media (min-width: 1300px) {
+  .container-large {
+    width: 1270px;
+  }
+}
+
 /**
  * A Horizon header is composed of a title, separator and a description
  * EX: <header class="horizon-header">
@@ -5790,16 +5824,15 @@ body {
 
 /* =Header
 -------------------------------------------------------------- */
-header {
-  position: relative;
-}
-
 #main-navigation {
   font-size: 12px;
   background-color: rgba(41, 44, 46, 0.9);
   padding: 0px;
   margin: 0px;
   height: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-brand {
@@ -5935,7 +5968,7 @@ header {
 .wrapper-banner {
   width: 100%;
   overflow: hidden;
-  margin: -128px 0 0 0 !important;
+  margin: 0 !important;
   float: left;
 }
 
@@ -6157,7 +6190,6 @@ header {
 }
 #clients .container {
   padding: 120px 0;
-  border-top: 10px solid #f1f1f1;
 }
 #clients .carousel {
   margin: 60px 0 0 0;
@@ -6276,12 +6308,22 @@ header {
   text-align: center;
 }
 
-#blog .container {
+#blog .container-large {
   padding: 120px 0;
   border-top: 10px solid #f1f1f1;
+  border-bottom: 10px solid #f1f1f1;
+}
+#blog .container-large .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  #blog .container-large .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 #blog .blog-item {
-  max-width: 577px;
   margin: 75px auto 85px;
   border: 11px solid transparent;
   -webkit-transition: border .3s;
@@ -6303,6 +6345,9 @@ header {
   position: relative;
   overflow: hidden;
   border-bottom: 5px solid #aac54b;
+}
+#blog .blog-item .blog-item-image img {
+  width: 100%;
 }
 #blog .blog-item .blog-item-image:after {
   content: '';

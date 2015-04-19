@@ -71,7 +71,7 @@ get_header(); ?>
 		</section> <!-- #joker-sep -->
 
 		<section id="services">
-			<div class="container">
+			<div class="container-large">
 
 				<header class="horizon-header">
 					<h2 class="title"><span>Horizon</span> Services</h2>
@@ -353,7 +353,7 @@ get_header(); ?>
 
 
 		<section id="blog">
-			<div class="container">
+			<div class="container-large">
 				<header class="horizon-header">
 					<h2 class="title">Blog da Horizon</h2>
 					<span class="sep"></span>
@@ -363,6 +363,7 @@ get_header(); ?>
 					<div class="col-md-6 col-xs-12">
 						<article class="blog-item">
 							<figure class="blog-item-image">
+								<!-- This image must be cropped/resized to 555x285 by WordPress-->
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/post-01.jpg" alt="Post 01">
 							</figure><!-- .blog-item-image -->
 							<div class="blog-item-content">
@@ -395,6 +396,7 @@ get_header(); ?>
 					<div class="col-md-6 col-xs-12">
 						<article class="blog-item">
 							<figure class="blog-item-image">
+								<!-- This image must be cropped/resized to 555x285 by WordPress-->
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/post-02.jpg" alt="Post 01">
 							</figure><!-- .blog-item-image -->
 							<div class="blog-item-content">

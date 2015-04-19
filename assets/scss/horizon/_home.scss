@@ -5,7 +5,7 @@
 .wrapper-banner {
 	width: 100%;
 	overflow: hidden;
-	margin: -$header-height 0 0 0 !important;
+	margin:0 !important;
 	float:left;
 }
 
@@ -242,7 +242,6 @@
 	height: 595px;
 	.container {
 		padding: 120px 0;
-		border-top: 10px solid #f1f1f1;
 	}
 
 	.carousel {
@@ -374,15 +373,26 @@
 	text-align: center;
 }
 
+
 #blog {
 
-	.container {
+	.container-large {
 		padding: 120px 0;
 		border-top: 10px solid #f1f1f1;
+		border-bottom: 10px solid #f1f1f1;
+
+		//fixes horizontal bar that .row makes on small devices
+		.row {
+			margin-left: 0;
+			margin-right: 0 ;
+			@media (min-width: 768px) {
+				margin-left:  ($grid-gutter-width / -2);
+			 	margin-right: ($grid-gutter-width / -2);
+			}
+		}
 	}
 
 	.blog-item {
-		max-width: 577px;
 		margin: 75px auto 85px;
 		border: 11px solid transparent;
 		-webkit-transition: border .3s;
@@ -405,6 +415,10 @@
 			position: relative;
 			overflow: hidden;
 			border-bottom: 5px solid $secondaryColor;
+			img {
+				width: 100%;
+			}
+
 
 			&:after {
 				content: '';

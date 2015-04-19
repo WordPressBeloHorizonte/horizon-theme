@@ -22,3 +22,15 @@ $header-height: 128px;
 
 $hover-transition-time: 0.3s;
 
+//** For `$screen-sm-min` and up.
+$container-large-sm:                 780px + $grid-gutter-width;
+//** For `$screen-md-min` and up.
+$container-large-md:                 960px + $grid-gutter-width;
+//** For `$screen-lg-min` and up.
+$container-large-lg:               1160px + $grid-gutter-width;
+
+$screen-xlg-min: 				   1300px;
+
+//** For $screen-xlg-min and up
+$container-large-xlg: 			   1240px + $grid-gutter-width;
+

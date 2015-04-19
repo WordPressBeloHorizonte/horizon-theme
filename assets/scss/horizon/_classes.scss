@@ -1,3 +1,21 @@
+.container-large {
+	@include container-fixed;
+
+	@media (min-width: $screen-sm-min) {
+		width: $container-large-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		width: $container-large-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		width: $container-large-lg;
+	}
+	@media (min-width: $screen-xlg-min) {
+		width: $container-large-xlg;
+	}
+}
+
+
 /**
  * A Horizon header is composed of a title, separator and a description
  * EX: <header class="horizon-header">
@@ -174,6 +192,6 @@ blockquote {
 		}
 	}
 	button{
-		margin: 0 auto;		
+		margin: 0 auto;
 	}
 }

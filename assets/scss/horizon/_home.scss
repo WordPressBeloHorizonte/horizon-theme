@@ -326,19 +326,23 @@
 		margin: 0;
 		padding: 0;
 		position: relative;
+		overflow: hidden;
 		img {
 			max-width: 100%;
 			width: 100%;
 		}
 		.portfolio-item-caption {
 			background-color: $darkColor;
-			bottom: 0;
+			height: 100px;
+			bottom: 0px;
 			color: #fff;
 			opacity: 1;
 			padding: 20px;
 			position: absolute;
 			text-align: center;
 			width: 100%;
+			-webkit-transition: bottom $hover-transition-time;
+			transition: bottom $hover-transition-time;
 			.portfolio-item-title {
 				font-weight: bold;
 				padding-right: 5px;
@@ -357,13 +361,29 @@
 				color: $ligthGray;
 			}
 			@media (min-width: $screen-md-min) {
-				opacity: 0;
+				bottom: -100px;
+				.portfolio-item-title,
+				.portfolio-item-description {
+					opacity: 0;
+					margin-top: -10px;
+					-webkit-transition: .5s all $hover-transition-time;
+					transition: .5s all $hover-transition-time;
+				}
 			}
 		}
 		&:hover {
 			.portfolio-item-caption {
+				bottom: 0;
+			}
+			.portfolio-item-title,
+			.portfolio-item-description {
 				opacity: 1;
-				transition: opacity $hover-transition-time;
+			}
+			.portfolio-item-title {
+				margin-top: 10px;
+			}
+			.portfolio-item-description {
+				margin-top: 0;
 			}
 		}
 	}

@@ -56,8 +56,8 @@ if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 		 * Support Custom Header.
 		 */
 		$default = array(
-			'width'         => 0,
-			'height'        => 0,
+			'width'         => 1920,
+			'height'        => 939,
 			'flex-height'   => false,
 			'flex-width'    => false,
 			'header-text'   => false,
@@ -233,3 +233,8 @@ require_once get_template_directory() . '/inc/template-tags.php';
  * Nav Walker.
  */
 require_once get_template_directory() . '/inc/class-horizon-theme-nav-walker.php';
+
+/**
+ * Customizer additions.
+ */
+require_once get_template_directory() . '/inc/customizer.php';

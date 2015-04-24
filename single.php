@@ -7,8 +7,17 @@
 
 get_header(); ?>
 
-	<div id="primary" class="">
-		<main id="main-content" class="site-main" role="main">
+	<div id="primary" class="container">
+		<header class="horizon-header">
+			<h2 class="title">Blog da <span>Horizon</span></h2>
+			<span class="sep"></span>
+			<p class="desc">Our work is your satisfaction</p>
+			<figure class="banner-blog col-lg-12">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/banner-blog.jpg" alt="">
+			</figure><!-- .banner-blog -->
+		</header><!-- .horizon-header -->
+		<?php get_sidebar(); ?>
+		<main id="main-content" class="site-main col-md-8" role="main">			
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
@@ -30,5 +39,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

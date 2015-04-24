@@ -9,8 +9,9 @@
 
 get_header(); ?>
 
-	<section id="primary" class="">
-		<main id="main-content" class="site-main" role="main">
+	<section id="primary" class="container">
+		<?php get_sidebar(); ?>
+		<main id="main-content" class="site-main col-md-8" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -47,5 +48,4 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

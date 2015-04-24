@@ -96,6 +96,21 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+a {
+  color: $secondaryColor;
+  text-decoration: none;
+  -webkit-transition: color $hover-transition-time;
+			transition: color $hover-transition-time;
+
+  &:hover {
+  	color: $darkColor;
+  	text-decoration: none;
+  	-webkit-transition: color $hover-transition-time;
+			transition: color $hover-transition-time;
+  }
+
+}
+
 /* =Header
 -------------------------------------------------------------- */
 @import "horizon/header";
@@ -104,6 +119,11 @@ body {
 -------------------------------------------------------------- */
 
 @import "horizon/home";
+
+/* =Blog Styles
+-------------------------------------------------------------- */
+
+@import "horizon/blog";
 
 /* =Pagination
 -------------------------------------------------------------- */

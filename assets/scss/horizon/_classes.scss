@@ -62,7 +62,6 @@
 
 .horizon-btn {
 	display: inline-block;
-	box-sizing: content-box;
 	background-color: $secondaryColor;
 	padding: 22px 32px;
 	color: $primaryColor;
@@ -172,9 +171,10 @@ blockquote {
 /**
  * Form style
  */
-.horizon-form{
+.comment-form, .horizon-form {
 	padding: 10px 30px;
 	text-align: center;
+
 	input, textarea{
 		width: 100%;
 		padding: 10px 5px;
@@ -183,15 +183,67 @@ blockquote {
 		border-top: 0;
 		border-bottom: 2px #9f9f9f solid;
 		resize: none;
-		&:focus, &:active{
+
+		&:focus, &:active {
 			border-bottom-color: $secondaryColor;
 			outline: none;
 		}
-		.error{
+
+		.error {
 			border-bottom-color: #555;
 		}
 	}
-	button{
+
+	input[type="submit"], button {
+		border: 0;
 		margin: 0 auto;
 	}
+
+}
+
+.comment-reply-title {
+	color: $ligthGray;
+}
+
+.comment-form {
+	color: $ligthGray;	
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.horizon-search {
+	position: relative;
+	width: 100%;
+	display: block;
+	text-align: right;
+
+	.search {
+		position: absolute;
+	    left: 0px;
+	    right: 50px;
+		input[type="search"] {
+			border: 1px $ligthGray solid;
+			border-right: none;
+			outline: none;
+			padding-left: 20px;
+			width: 100%;
+			height: 50px;
+		}
+	}
+
+	.search-btn {
+		border: none;
+		color: #fff;
+		background-color: $secondaryColor;
+		height: 50px;
+		width: 50px;
+		outline: none;
+		transition: background-color $hover-transition-time;
+
+		&:hover {
+			background-color: $darkColor;
+			transition: background-color $hover-transition-time;
+		}
+	}	
 }

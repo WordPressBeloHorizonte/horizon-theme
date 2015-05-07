@@ -6613,7 +6613,7 @@ a:hover {
   height: auto;
 }
 .pagination-wrap ul li a {
-  padding: 20px;
+  padding: 10px;
   background-color: #fff;
   color: #9f9f9f;
   border: 2px #9f9f9f solid;
@@ -6627,11 +6627,11 @@ a:hover {
 }
 .pagination-wrap ul li span {
   border: 2px #aac54b solid;
-  padding: 20px 20px;
+  padding: 10px;
   background-color: #aac54b;
 }
 .pagination-wrap ul li .dots {
-  padding: 20px 20px;
+  padding: 10px;
   background-color: #fff;
   color: #9f9f9f;
   border: 2px #9f9f9f solid;

@@ -13,11 +13,12 @@
 	<article id="post-<?php the_ID(); ?>" class="blog-item blog-single">
 <?php else: ?>
 	<article id="post-<?php the_ID(); ?>" class="blog-item">
-<?php  endif; ?>	
-		<figure class="blog-item-image">
-			<!-- This image must be cropped/resized to 555x285 by WordPress-->
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/post-02.jpg" alt="Post 01">
-		</figure><!-- .blog-item-image -->
+<?php  endif; ?>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<figure class="blog-item-image">
+				<?php the_post_thumbnail( 'horizon-thumbnail' ); ?>
+			</figure><!-- .blog-item-image -->
+		<?php endif; ?>
 		<div class="blog-item-content">
 			<header class="blog-item-header">
 				<?php
@@ -28,7 +29,7 @@
 					endif;
 				?>
 				<div class="sep"></div>
-				<span class="blog-item-publish-date"><?php the_time('F j, Y'); ?></span>
+				<span class="blog-item-publish-date"><?php the_time(__('j \d\e F \d\e Y')); ?></span>
 			</header><!-- .blog-item-header -->
 			<?php if ( is_single() ) : ?>
 				<div class="blog-content">
@@ -37,7 +38,7 @@
 			<?php else: ?>
 				<div class="blog-item-excerpt">
 					<?php the_excerpt(); ?>
-					<button type="button" href="<?php echo esc_url( get_permalink() ); ?>" class="horizon-btn btn-blog-item"><?php _e( 'Continue reading', 'horizon-theme' ); ?></button>
+					<a href="<?php echo esc_url( get_permalink() ); ?>" ><button type="button" class="horizon-btn btn-blog-item"><?php _e( 'Continue reading', 'horizon-theme' ); ?></button></a>
 				</div><!-- .blog-item-excerpt -->
 			<?php endif; ?>
 			

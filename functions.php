@@ -48,6 +48,11 @@ if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 		add_theme_support( 'post-thumbnails' );
 
 		/**
+		 * Add thumbnail blog size
+		 */
+		add_image_size( 'horizon-thumbnail', 555, 285, true );
+
+		/**
 		 * Add feed link.
 		 */
 		add_theme_support( 'automatic-feed-links' );

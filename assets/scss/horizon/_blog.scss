@@ -1,24 +1,3 @@
-#primary {
-	margin-top: 127px;
-}
-
-
-.container-large {
-	padding: 120px 0;
-	border-top: 10px solid #f1f1f1;
-	border-bottom: 10px solid #f1f1f1;
-
-	//fixes horizontal bar that .row makes on small devices
-	.row {
-		margin-left: 0;
-		margin-right: 0 ;
-		@media (min-width: 768px) {
-			margin-left:  ($grid-gutter-width / -2);
-		 	margin-right: ($grid-gutter-width / -2);
-		}
-	}
-}
-
 .blog-item {
 	border-bottom: 10px solid #F1F1F1;
 	margin: 0px auto 85px;
@@ -36,9 +15,7 @@
 	@media (min-width: $screen-md-min) {
 		margin-left: 0;
 		margin-right: 0;
-	}
-
-	
+	}	
 
 	.blog-item-content {
 		padding: 30px 45px 35px;

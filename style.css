@@ -5887,8 +5887,6 @@ a:hover {
   padding: 0px;
   margin: 0px;
   height: auto;
-  position: absolute;
-  top: 0;
   width: 100%;
 }
 
@@ -6429,26 +6427,6 @@ a:hover {
 
 /* =Blog Styles
 -------------------------------------------------------------- */
-#primary {
-  margin-top: 127px;
-}
-
-.container-large {
-  padding: 120px 0;
-  border-top: 10px solid #f1f1f1;
-  border-bottom: 10px solid #f1f1f1;
-}
-.container-large .row {
-  margin-left: 0;
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  .container-large .row {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-}
-
 .blog-item {
   border-bottom: 10px solid #F1F1F1;
   margin: 0px auto 85px;
@@ -6599,60 +6577,145 @@ a:hover {
   width: 100%;
 }
 
+/* =Containers
+-------------------------------------------------------------- */
+#primary {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.container-large {
+  padding: 120px 0;
+  border-top: 10px solid #f1f1f1;
+  border-bottom: 10px solid #f1f1f1;
+}
+.container-large .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .container-large .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
 /* =Pagination
 -------------------------------------------------------------- */
 .pagination-wrap {
-  text-align: center;
+  text-align: right;
   margin-top: 15px;
+  clear: both;
+}
+.pagination-wrap ul li {
+  list-style: none;
+  display: inline-block;
+  height: auto;
+}
+.pagination-wrap ul li a {
+  padding: 20px;
+  background-color: #fff;
+  color: #9f9f9f;
+  border: 2px #9f9f9f solid;
+}
+.pagination-wrap ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+  transition: background-color color 0.3s;
+  border: 2px #aac54b solid;
+  background-color: #aac54b;
+}
+.pagination-wrap ul li span {
+  border: 2px #aac54b solid;
+  padding: 20px 20px;
+  background-color: #aac54b;
+}
+.pagination-wrap ul li .dots {
+  padding: 20px 20px;
+  background-color: #fff;
+  color: #9f9f9f;
+  border: 2px #9f9f9f solid;
+}
+.pagination-wrap ul li .current {
+  color: #fff;
+  border: 2px #aac54b solid;
+  background-color: #aac54b;
 }
 .infinite-scroll .pagination-wrap {
   display: none;
 }
 
+/* =Titles 
+------------------------------------------------------------- */
+.page-title, .entry-title {
+  color: #9f9f9f;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+#comments-title {
+  color: #9f9f9f;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.page-header {
+  margin: 0;
+}
+
 /* =Comments
 -------------------------------------------------------------- */
 .commentlist {
+  color: #9f9f9f;
   margin: 0;
   padding: 0;
   font-size: 13px;
   line-height: 22px;
 }
-.commentlist li.comment, .commentlist li.pingback {
+.commentlist .comment, .commentlist .pingback {
   list-style: none;
-  margin-bottom: 10px;
 }
-.commentlist li.comment:before, .commentlist li.comment:after, .commentlist li.pingback:before, .commentlist li.pingback:after {
+.commentlist .comment:before, .commentlist .comment:after, .commentlist .pingback:before, .commentlist .pingback:after {
   content: " ";
   display: table;
 }
-.commentlist li.comment:after, .commentlist li.pingback:after {
+.commentlist .comment:after, .commentlist .pingback:after {
   clear: both;
 }
-.commentlist .comment-meta {
-  color: #666;
-  font-size: 12px;
-  line-height: 15px;
+.commentlist .comment .children, .commentlist .pingback .children {
+  padding-left: 0;
+  margin-left: 70px;
 }
-.commentlist .comment-meta .fn {
-  font-size: 13px;
-  font-weight: 600;
+.commentlist .comment .comment-content, .commentlist .pingback .comment-content {
+  padding-left: 0;
+  margin-left: 70px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  border-top: 1px solid #ddd;
 }
-.commentlist .comment-meta a, .commentlist .comment-meta .fn {
-  color: #444;
+.commentlist .comment .comment-awaiting-moderation, .commentlist .pingback .comment-awaiting-moderation {
+  font-weight: bold;
 }
-.commentlist .comment-meta a:hover, .commentlist .comment-meta .fn:hover {
-  color: #337ab7;
-  text-decoration: none;
+.commentlist .comment-author .fn {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.commentlist .comment-author .reply {
+  text-transform: uppercase;
+  font-weight: bold;
+  float: right;
 }
 .commentlist .comment-author img {
   float: left;
   display: block;
   margin-right: 10px;
-}
-.commentlist .comment-awaiting-moderation {
-  margin-top: 5px;
-  font-weight: bold;
-  color: #333;
 }
 
 .bypostauthor {

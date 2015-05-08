@@ -11,8 +11,9 @@
 
 get_header(); ?>
 
-	<div id="primary" class="">
-		<main id="main-content" class="site-main" role="main">
+	<div id="primary" class="container">
+		<?php get_sidebar(); ?>
+		<main id="main-content" class="site-main col-md-8" role="main">
 
 			<?php
 				// Start the Loop.

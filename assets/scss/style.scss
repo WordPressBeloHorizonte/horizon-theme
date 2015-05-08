@@ -96,6 +96,21 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+a {
+  color: $secondaryColor;
+  text-decoration: none;
+  -webkit-transition: color $hover-transition-time;
+			transition: color $hover-transition-time;
+
+  &:hover {
+  	color: $darkColor;
+  	text-decoration: none;
+  	-webkit-transition: color $hover-transition-time;
+			transition: color $hover-transition-time;
+  }
+
+}
+
 /* =Header
 -------------------------------------------------------------- */
 @import "horizon/header";
@@ -105,63 +120,158 @@ body {
 
 @import "horizon/home";
 
+/* =Blog Styles
+-------------------------------------------------------------- */
+
+@import "horizon/blog";
+
+/* =Containers
+-------------------------------------------------------------- */
+
+#primary {
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.container-large {
+	padding: 120px 0;
+	border-top: 10px solid #f1f1f1;
+	border-bottom: 10px solid #f1f1f1;
+
+	//fixes horizontal bar that .row makes on small devices
+	.row {
+		margin-left: 0;
+		margin-right: 0 ;
+		@media (min-width: 768px) {
+			margin-left:  ($grid-gutter-width / -2);
+		 	margin-right: ($grid-gutter-width / -2);
+		}
+	}
+}
+
+
 /* =Pagination
 -------------------------------------------------------------- */
 
 .pagination-wrap {
-	text-align: center;
+	text-align: right;
 	margin-top: 15px;
+	clear: both;
+	ul {
+		li{
+			list-style: none;
+			display: inline-block;
+			height: auto;			
+			a {
+				padding: 10px;
+				background-color: #fff;
+				color: $ligthGray;
+				border: 2px $ligthGray solid;
+				&:hover {
+					text-decoration: none;
+					color: #fff;
+					transition: background-color color $hover-transition-time;
+					border: 2px $secondaryColor solid;
+					background-color: $secondaryColor;
+				}
+			}
+
+			span {
+				border: 2px $secondaryColor solid;
+				padding:  10px;
+				background-color: $secondaryColor;
+			}
+
+			.dots {
+				padding:  10px;
+				background-color: #fff;
+				color: $ligthGray;
+				border: 2px $ligthGray solid;
+			}
+
+			.current {
+				color: #fff;
+				border: 2px $secondaryColor solid;
+				background-color: $secondaryColor;
+			}
+
+		}
+	} 
 
 	.infinite-scroll & {
 		display: none;
 	}
 }
 
+/* =Titles 
+------------------------------------------------------------- */
+
+.page-title, .entry-title {
+	color: #9f9f9f;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+#comments-title {
+	color: #9f9f9f;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+}
+
+.page-header {
+	margin: 0;
+}
+
 /* =Comments
 -------------------------------------------------------------- */
 
 .commentlist {
+	color: $ligthGray;
 	margin: 0;
 	padding: 0;
 	font-size: 13px;
 	line-height: 22px;
 
-	li.comment, li.pingback {
+	.comment, .pingback {
 		@include clearfix();
 		list-style: none;
-		margin-bottom: 10px;
-	}
-
-	.comment-meta {
-		color: #666;
-		font-size: 12px;
-		line-height: 15px;
-
-		.fn {
-			font-size: 13px;
-			font-weight: 600;
+		.children {
+			padding-left: 0;
+			margin-left: 70px;
 		}
-		a, .fn {
-			color: #444;
-
-			&:hover {
-				color: $link-color;
-				text-decoration: none;
-			}
+		.comment-content {
+			padding-left: 0;
+			margin-left: 70px;
+			margin-top: 25px;
+			margin-bottom: 20px;
+			border-top: 1px solid #ddd;
+		}
+		.comment-awaiting-moderation {
+			font-weight: bold;
 		}
 	}
 	.comment-author {
+		.fn {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.reply {
+			text-transform: uppercase;
+			font-weight: bold;
+			float: right;
+		}
 		img {
 			float: left;
 			display: block;
 			margin-right: 10px;
 		}
-	}
-
-	.comment-awaiting-moderation {
-		margin-top: 5px;
-		font-weight: bold;
-		color: #333;
 	}
 }
 

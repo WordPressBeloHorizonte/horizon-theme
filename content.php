@@ -16,7 +16,12 @@
 <?php  endif; ?>
 		<?php if ( has_post_thumbnail() ) : ?>
 			<figure class="blog-item-image">
-				<?php the_post_thumbnail( 'horizon-thumbnail' ); ?>
+				<?php
+					$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'horizon-thumbnail' );
+				?>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<img class="horizon-thumnail" src="<?php echo $thumbnail['0']; ?>" />
+				</a>				
 			</figure><!-- .blog-item-image -->
 		<?php endif; ?>
 		<div class="blog-item-content">

@@ -6453,7 +6453,8 @@ a:hover {
   overflow: hidden;
   border-bottom: 5px solid #aac54b;
 }
-.blog-item .blog-item-image img {
+.blog-item .blog-item-image .horizon-thumnail {
+  height: auto;
   width: 100%;
 }
 .blog-item .blog-item-image:after {
@@ -6475,6 +6476,10 @@ a:hover {
 }
 .blog-item .blog-item-header h3 {
   margin-top: 0;
+}
+.blog-item .blog-item-header img {
+  width: 100% !important;
+  height: auto !important;
 }
 .blog-item .blog-item-header .blog-item-title {
   font-size: 17px;
@@ -6499,6 +6504,11 @@ a:hover {
   font-weight: 600;
   margin-bottom: 40px;
   color: #9f9f9f;
+}
+.blog-item .blog-content img,
+.blog-item .blog-item-excerpt img {
+  max-width: 100% !important;
+  height: auto !important;
 }
 .blog-item .btn-blog-item {
   font-size: 11px;
@@ -6598,6 +6608,11 @@ a:hover {
     margin-left: -15px;
     margin-right: -15px;
   }
+}
+
+.entry-content img {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 /* =Pagination

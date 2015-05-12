@@ -8,8 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="container">
-		<?php get_sidebar(); ?>
-		<main id="main-content" class="site-main col-md-8" role="main">
+		<main id="main-content" class="site-main col-md-8 col-md-push-4" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -39,8 +38,8 @@ get_header(); ?>
 
 				endif;
 			?>
-
 		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 	</section><!-- #primary -->
 
 </div><!-- #primary -->

@@ -8,7 +8,7 @@
  */
 ?>
 
-<div id="secondary" class="col-md-4" role="complementary">
+<div id="secondary" class="col-md-4 col-md-pull-8" role="complementary">
 	<?php
 		if ( ! dynamic_sidebar( 'main-sidebar' ) ) {
 			the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ) );

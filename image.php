@@ -9,8 +9,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="">
-		<main id="main-content" class="site-main" role="main">
+	<div id="primary" class="container">
+		<main id="main-content" class="site-main col-md-8 col-md-push-4" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article <?php post_class(); ?>>
@@ -42,8 +42,8 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 				</article>
 			<?php endwhile; ?>
-
 		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
 <?php

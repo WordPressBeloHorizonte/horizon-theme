@@ -16,8 +16,7 @@ get_header(); ?>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/banner-blog.jpg" alt="">
 			</figure><!-- .banner-blog -->
 		</header><!-- .horizon-header -->
-		<?php get_sidebar(); ?>
-		<main id="main-content" class="site-main col-md-8" role="main">			
+		<main id="main-content" class="site-main col-md-8 col-md-push-4" role="main">			
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
@@ -36,6 +35,7 @@ get_header(); ?>
 				endwhile;
 			?>
 		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
 <?php

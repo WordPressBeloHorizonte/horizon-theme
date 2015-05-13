@@ -25,10 +25,11 @@
 		position: relative;
 		overflow: hidden;
 		border-bottom: 5px solid $secondaryColor;
-		img {
+		
+		.horizon-thumnail {
+			height: auto;
 			width: 100%;
 		}
-
 
 		&:after {
 			content: '';
@@ -52,6 +53,11 @@
 
 		h3 {
 			margin-top: 0;
+		}
+
+		img {
+			width: 100% !important;
+	  		height: auto !important;
 		}
 
 		.blog-item-title {
@@ -81,6 +87,11 @@
 		font-weight: 600;
 		margin-bottom: 40px;
 		color: $ligthGray;
+
+		img {
+			max-width: 100% !important;
+	  		height: auto !important;
+		}
 	}
 
 	.btn-blog-item {

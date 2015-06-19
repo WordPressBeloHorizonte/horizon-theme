@@ -243,3 +243,6 @@ require_once get_template_directory() . '/inc/class-horizon-theme-nav-walker.php
  * Customizer additions.
  */
 require_once get_template_directory() . '/inc/customizer.php';
+
+#Theme Options
+require_once get_template_directory()  . '/theme-options.php';

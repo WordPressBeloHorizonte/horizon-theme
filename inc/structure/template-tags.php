@@ -101,3 +101,124 @@ if ( ! function_exists( 'horizon_theme_paging_nav' ) ) {
 		echo horizon_theme_pagination( $mid, $end, false );
 	}
 }
+
+/**
+ * Functions for Woocomerce Homepage Control
+ */
+
+if ( ! function_exists( 'horizon_about_section' ) ) {
+
+	/**
+	 * Print HTML with the About section
+	 *
+	 * @return void
+	 */
+	function horizon_about_section() {
+		get_template_part('inc/partials/homepage', 'about');
+	}
+}
+
+if ( ! function_exists( 'horizon_separator') ) {
+	/**
+	 * Print HTML for Horizon Separator
+	 *
+	 * @return void
+	 */
+	function horizon_separator() {
+		get_template_part('inc/partials/homepage', 'separator');
+	}
+}
+
+if ( ! function_exists( 'horizon_second_separator') ) {
+	/**
+	 * Print HTML for Horizon Separator
+	 *
+	 * @return void
+	 */
+	function horizon_second_separator() {
+		get_template_part('inc/partials/homepage', 'separator');
+	}
+}
+
+if ( ! function_exists( 'horizon_services_section') ) {
+	/**
+	 * Print HTML for Horizon services section
+	 *
+	 * @return void
+	 */
+	function horizon_services_section() {
+		get_template_part('inc/partials/homepage', 'services');
+	}
+}
+
+if ( ! function_exists( 'horizon_blog_section' ) ) {
+
+	/**
+	 * Print HTML for Horizon Blog section
+	 *
+	 * @return void
+	 */
+	function horizon_blog_section() {
+		get_template_part('inc/partials/homepage', 'blog');
+	}
+}
+
+if ( ! function_exists( 'horizon_clients_section' ) ) {
+
+	/**
+	 * Print HTML for Horizon Clients Sections
+	 *
+	 * @return void
+	 */
+	function horizon_clients_section() {
+		get_template_part('inc/partials/homepage', 'clients');
+	}
+}
+
+if ( ! function_exists( 'horizon_contact_section' ) ) {
+
+	/**
+	 * Print HTML for Horizon Contact Section
+	 *
+	 * @return void
+	 */
+	function horizon_contact_section() {
+		get_template_part('inc/partials/homepage', 'contact');
+	}
+}
+
+if ( ! function_exists( 'horizon_services_section' ) ) {
+
+	/**
+	 * Print HTML for Horizon Services Section
+	 *
+	 * @return void
+	 */
+	function horizon_services_section() {
+		get_template_part('inc/partials/homepage', 'services');
+	}
+}
+
+if ( ! function_exists( 'horizon_skills_section' ) ) {
+
+	/**
+	 * Print HTML for Horizon skills section
+	 *
+	 * @return void
+	 */
+	function horizon_skills_section() {
+		get_template_part('inc/partials/homepage', 'skills');
+	}
+}
+
+if ( ! function_exists( 'horizon_portfolio_section' ) ) {
+
+	/**
+	 * Print HTML for Horizon Portfolio Section
+	 *
+	 * @return void
+	 */
+	function horizon_portfolio_section() {
+		get_template_part('inc/partials/homepage', 'portfolio');
+	}
+}

@@ -249,5 +249,4 @@ require_once get_template_directory() . '/inc/class-horizon-theme-nav-walker.php
  */
 require_once get_template_directory() . '/inc/customizer/customizer.php';
 
-
-
+require_once get_template_directory() . '/inc/cpts/cpt-clientes.php';

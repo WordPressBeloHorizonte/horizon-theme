@@ -28,20 +28,6 @@ class Horizon_Theme_Customize {
 		// Remove setting
 		$wp_customize->remove_setting( 'background_color' );
 
-		/**
-		 * Sanitizing uploads
-		 *
-		 * @param $input_image
-		 */
-		function horizon_theme_sanitize_image( $input_image ) {
-			$output = '';
-			$filetype = wp_check_filetype($input_image);
-			if ( $filetype["ext"] ) {
-			$output = $input_image;
-			}
-			return $output;
-		}
-
 		// New settings to the top section (native section [header_image ])
 		// Logo
 		$wp_customize->add_setting( 'logo', array(
@@ -66,7 +52,7 @@ class Horizon_Theme_Customize {
 		// New settings for colors section (native section [colors])
 		// Primary Color
 		$wp_customize->add_setting( 'primary_color', array(
-			'default'           => '#fffffff',
+			'default'           => '#ffffff',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
@@ -146,7 +132,38 @@ class Horizon_Theme_Customize {
 				)
 			)
 		);
+	}
 
+	/**
+	 * Sanitizing uploads
+	 *
+	 * @param $input_image
+	 */
+	function horizon_theme_sanitize_image( $input_image ) {
+		$output = '';
+		$filetype = wp_check_filetype($input_image);
+		if ( $filetype["ext"] ) {
+		$output = $input_image;
+		}
+		return $output;
+	}
+
+	/**
+	* This will output the custom WordPress settings to the live theme's WP head.
+	*
+	* Used by hook: 'wp_head'
+	*
+	* @see add_action('wp_head',$func)
+	* @since MyTheme 1.0
+	*/
+	public static function header_output() {
+		echo '<!--Customizer CSS-->';
+		echo '<style type="text/css">';
+			self::generate_css('#site-title a', 'color', 'header_textcolor', '#');
+			self::generate_css('body', 'background-color', 'background_color', '#');
+			self::generate_css('a', 'color', 'link_textcolor');
+		echo '</style>';
+		echo '<!--/Customizer CSS-->';
 	}
 }
 

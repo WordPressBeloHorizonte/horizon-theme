@@ -16,7 +16,12 @@
 <?php  endif; ?>
 		<?php if ( has_post_thumbnail() ) : ?>
 			<figure class="blog-item-image">
-				<?php the_post_thumbnail( 'horizon-thumbnail' ); ?>
+				<?php
+					$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'horizon-thumbnail' );
+				?>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<img class="horizon-thumnail" src="<?php echo $thumbnail['0']; ?>" />
+				</a>
 			</figure><!-- .blog-item-image -->
 		<?php endif; ?>
 		<div class="blog-item-content">
@@ -41,7 +46,7 @@
 					<a href="<?php echo esc_url( get_permalink() ); ?>" ><button type="button" class="horizon-btn btn-blog-item"><?php _e( 'Continue reading', 'horizon-theme' ); ?></button></a>
 				</div><!-- .blog-item-excerpt -->
 			<?php endif; ?>
-			
+
 			<footer class="blog-item-footer">
 				<span class="blog-item-author"><?php _e( 'Published by ', 'horizon-theme' );  the_author_link(); ?></span>
 				<a href="<?php comments_link(); ?>" class="blog-item-comments">
@@ -52,12 +57,12 @@
 					<a href="#" class="fa fa-google"></a>
 					<a href="#" class="fa fa-facebook"></a>
 					<a href="#" class="fa fa-twitter"></a>
-				</div>				
-				<?php if ( is_single() ) : ?>
-				<div class="blog-list-categories">
-					<span><?php _e( 'Categories:', 'horizon-theme' ); ?></span></li>
-					<?php the_category( ', '); ?>
 				</div>
+				<?php if ( is_single() ) : ?>
+					<div class="blog-list-categories">
+						<span><?php _e( 'Categories:', 'horizon-theme' ); ?></span></li>
+						<?php the_category( ', '); ?>
+					</div>
 				<?php  endif; ?>
 			</footer><!-- .blog-item-footer -->
 		</div><!-- .blog-item-content -->

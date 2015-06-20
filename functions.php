@@ -225,14 +225,19 @@ function horizon_theme_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'horizon_theme_enqueue_scripts', 1 );
 
 /**
+ * Custom Hooks
+ */
+require_once get_template_directory() . '/inc/structure/hooks.php';
+
+/**
  * Comments loop.
  */
-require_once get_template_directory() . '/inc/comments-loop.php';
+require_once get_template_directory() . '/inc/structure/comments-loop.php';
 
 /**
  * Custom template tags.
  */
-require_once get_template_directory() . '/inc/template-tags.php';
+require_once get_template_directory() . '/inc/structure/template-tags.php';
 
 /**
  * Nav Walker.
@@ -242,4 +247,7 @@ require_once get_template_directory() . '/inc/class-horizon-theme-nav-walker.php
 /**
  * Customizer additions.
  */
-require_once get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/customizer/customizer.php';
+
+
+

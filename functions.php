@@ -188,7 +188,7 @@ function horizon_theme_enqueue_scripts() {
 	wp_enqueue_script( 'jquery' );
 
 	// Google Maps
-	if ( is_home() ) {
+	if ( is_front_page() ) {
 		// Google Maps V3 Engine
 		wp_enqueue_script( 'google-maps-v3', 'http://maps.googleapis.com/maps/api/js?sensor=false', array(), null, true );
 

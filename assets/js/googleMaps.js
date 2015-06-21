@@ -2,16 +2,19 @@
  * Initialize Google Maps API
  */
 function initialize(){
+	var el = document.getElementById("map");
+
+	if ( el === null || el === undefined ) return;
 
 	// Initialize map instance and div selection
-	var map = new google.maps.Map(document.getElementById("map"), {zoom: 16, disableDefaultUI: true});
+	var map = new google.maps.Map(el, {zoom: 16, disableDefaultUI: true});
 
 	// Initialize geographical location
 	var geocoder = new google.maps.Geocoder();
 
 	// Custom icon
-	var iconMarker = new google.maps.MarkerImage(google_maps_data.icon, null, null, new google.maps.Point(25, 50), new google.maps.Size(50, 50));	
-	
+	var iconMarker = new google.maps.MarkerImage(google_maps_data.icon, null, null, new google.maps.Point(25, 50), new google.maps.Size(50, 50));
+
 	// Initialize custom icon
 	var marker = new google.maps.Marker({
 		map: map,

@@ -48,6 +48,11 @@ if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 		add_theme_support( 'post-thumbnails' );
 
 		/**
+		 * Add thumbnail blog size
+		 */
+		add_image_size( 'horizon-thumbnail', 555, 285, true );
+
+		/**
 		 * Add feed link.
 		 */
 		add_theme_support( 'automatic-feed-links' );
@@ -56,8 +61,8 @@ if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 		 * Support Custom Header.
 		 */
 		$default = array(
-			'width'         => 0,
-			'height'        => 0,
+			'width'         => 1920,
+			'height'        => 939,
 			'flex-height'   => false,
 			'flex-width'    => false,
 			'header-text'   => false,
@@ -172,14 +177,29 @@ add_action( 'widgets_init', 'horizon_theme_widgets_init' );
 function horizon_theme_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
-	// Loads Horizon Theme main stylesheet.
-	wp_enqueue_style( 'horizon-theme-style', get_stylesheet_uri(), array(), null, 'all' );
-
-	wp_register_style( 'horizon_theme-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
+	// Register and enqueues Open Sans
+	wp_register_style( 'horizon_theme-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', array(), null, 'all' );
     wp_enqueue_style( 'horizon_theme-open-sans' );
+
+	// Loads Horizon Theme main stylesheet.
+	wp_enqueue_style( 'horizon-theme-style', get_stylesheet_uri(), array( 'dashicons' ), null, 'all' );
 
 	// jQuery.
 	wp_enqueue_script( 'jquery' );
+
+	// Google Maps
+	if ( is_home() ) {
+		// Google Maps V3 Engine
+		wp_enqueue_script( 'google-maps-v3', 'http://maps.googleapis.com/maps/api/js?sensor=false', array(), null, true );
+
+		// Google Maps Configuration
+		wp_enqueue_script( 'google-maps-config', $template_url . '/assets/js/googleMaps.js', array( 'google-maps-v3' ), null, true );
+
+		wp_localize_script( 'google-maps-config', 'google_maps_data', array(
+			'address' => "Belo Horizonte - MG", //TODO Entrada de endereço personalizado (Theme options)
+			'icon' => $template_url . '/assets/images/marker.png' //TODO Entrada de icone personalizado (Theme options)
+		));
+	}
 
 	// General scripts.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
@@ -205,16 +225,29 @@ function horizon_theme_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'horizon_theme_enqueue_scripts', 1 );
 
 /**
+ * Custom Hooks
+ */
+require_once get_template_directory() . '/inc/structure/hooks.php';
+
+/**
  * Comments loop.
  */
-require_once get_template_directory() . '/inc/comments-loop.php';
+require_once get_template_directory() . '/inc/structure/comments-loop.php';
 
 /**
  * Custom template tags.
  */
-require_once get_template_directory() . '/inc/template-tags.php';
+require_once get_template_directory() . '/inc/structure/template-tags.php';
 
 /**
  * Nav Walker.
  */
 require_once get_template_directory() . '/inc/class-horizon-theme-nav-walker.php';
+
+/**
+ * Customizer additions.
+ */
+require_once get_template_directory() . '/inc/customizer/customizer.php';
+
+
+

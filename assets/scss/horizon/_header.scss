@@ -1,0 +1,137 @@
+#main-navigation {
+	font-size: 12px;
+	background-color: $darkColor;
+	padding: 0px;
+	margin: 0px;
+	height: auto;
+	width: 100%;
+}
+
+.navbar-brand {
+	padding: 0;
+	margin: 32px 0px 32px 10px !important;
+	height: auto;
+	line-height: 5px;
+}
+
+.nav>li>a {
+	padding: 0px 30px;
+}
+
+.navbar-default .navbar-nav>li {
+	border-bottom: 3px transparent solid;
+	&:after {
+		content: '';
+		display: block;
+		width: 1px;
+		height: 12px;
+		position: absolute;
+		right: 0;
+		background: $secondaryColor;
+		top: 50%;
+		margin-top: -1px;
+	}
+	&:last-child::after {
+		display: none;
+	}
+	>a {
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: bold;
+		padding: 61px 30px 51px;
+		line-height: 1;
+
+		.caret {
+			position: relative;
+			top: -1px;
+		}
+	}
+	&:last-child a {
+			border-right: 0;
+	}
+	&:hover {
+		>a {
+			color: $secondaryColor;
+		}
+		border-bottom: 3px $secondaryColor solid;
+	}
+}
+
+.navbar-default {
+	border: none;
+	.navbar-nav>li>a:hover,
+	.navbar-nav>.open>a,
+	.navbar-nav>li>a:focus,
+	.navbar-nav>.open>a:hover,
+	.navbar-nav>.open>a:focus,
+	.navbar-nav > .active {
+		background-color: transparent;
+		color: $secondaryColor;
+		border-color: $secondaryColor;
+	}
+	.navbar-nav > .active > a,
+	.navbar-nav > .active > a:hover,
+	.navbar-nav > .active > a:focus {
+	  	background-color: transparent;
+		color: $secondaryColor;
+		border-color: $secondaryColor;
+	}
+}
+
+.dropdown-menu {
+	padding: 0;
+	min-width: 100%;
+	max-width: 100%;
+	height: auto;
+	.active > a,
+	.active > a:focus,
+	.active > a:hover {
+		background-color: $secondaryColor;
+		transition: background-color $hover-transition-time;
+	}
+}
+
+.navbar-nav > li > .dropdown-menu {
+	background-color: $darkColor;
+	a {
+		font-size: 12px;
+		color: $primaryColor;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 15px;
+		line-height: 1.5;
+		&:hover {
+			background-color: $secondaryColor;
+		}
+	}
+	li {
+		a {
+			white-space: normal;
+		}
+		border-bottom: 1px rgb(45, 45, 45) solid;
+	}
+}
+
+.navbar-right .dropdown-menu {
+	border-top: 3px $secondaryColor solid;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav {
+		> li > a {
+			padding: 20px 20px;
+		}
+		.open .dropdown-menu > li > a {
+			font-size: 12px;
+			color: $primaryColor;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 15px;
+			line-height: 1.5;
+			&:hover {
+				background-color: $secondaryColor;
+			}
+		}
+	}
+
+}

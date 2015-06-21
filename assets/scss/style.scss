@@ -23,52 +23,68 @@ Domain Path: languages/
 @import "bootstrap/normalize";
 
 // Dependencies
-@import "bootstrap/glyphicons";
+//@import "bootstrap/glyphicons";
 
 // Core CSS
 @import "bootstrap/scaffolding";
 @import "bootstrap/type";
-@import "bootstrap/code";
+//@import "bootstrap/code";
 @import "bootstrap/grid";
-@import "bootstrap/tables";
+//@import "bootstrap/tables";
 @import "bootstrap/forms";
-@import "bootstrap/buttons";
+//@import "bootstrap/buttons";
 
 // Components
 @import "bootstrap/component-animations";
 @import "bootstrap/dropdowns";
-@import "bootstrap/button-groups";
-@import "bootstrap/input-groups";
+//@import "bootstrap/button-groups";
+//@import "bootstrap/input-groups";
 @import "bootstrap/navs";
 @import "bootstrap/navbar";
-@import "bootstrap/breadcrumbs";
-@import "bootstrap/pagination";
-@import "bootstrap/pager";
-@import "bootstrap/labels";
-@import "bootstrap/badges";
-@import "bootstrap/jumbotron";
-@import "bootstrap/thumbnails";
-@import "bootstrap/alerts";
-@import "bootstrap/progress-bars";
-@import "bootstrap/media";
-@import "bootstrap/list-group";
-@import "bootstrap/panels";
+//@import "bootstrap/breadcrumbs";
+//@import "bootstrap/pagination";
+//@import "bootstrap/pager";
+//@import "bootstrap/labels";
+//@import "bootstrap/badges";
+//@import "bootstrap/jumbotron";
+//@import "bootstrap/thumbnails";
+//@import "bootstrap/alerts";
+//@import "bootstrap/progress-bars";
+//@import "bootstrap/media";
+//@import "bootstrap/list-group";
+//@import "bootstrap/panels";
 @import "bootstrap/responsive-embed";
-@import "bootstrap/wells";
-@import "bootstrap/close";
+//@import "bootstrap/wells";
+//@import "bootstrap/close";
 
 // Components w/ JavaScript
-@import "bootstrap/modals";
-@import "bootstrap/tooltip";
-@import "bootstrap/popovers";
-@import "bootstrap/carousel";
+//@import "bootstrap/modals";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popovers";
+//@import "bootstrap/carousel";
 
 // Utility classes
 @import "bootstrap/utilities";
 
-//Horizon Theme classes
-@import "classes";
+@import "owlcarousel/owl.carousel";
+@import "owlcarousel/owl.theme";
 
+// Font Awesome
+@import "font-awesome/variables";
+@import "font-awesome/mixins";
+@import "font-awesome/path";
+@import "font-awesome/core";
+@import "font-awesome/larger";
+@import "font-awesome/fixed-width";
+@import "font-awesome/list";
+@import "font-awesome/bordered-pulled";
+@import "font-awesome/animated";
+@import "font-awesome/rotated-flipped";
+@import "font-awesome/stacked";
+@import "font-awesome/icons";
+
+//Horizon Theme classes
+@import "horizon/classes";
 
 /* =General
 -------------------------------------------------------------- */
@@ -80,262 +96,63 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+a {
+  color: $secondaryColor;
+  text-decoration: none;
+  -webkit-transition: color $hover-transition-time;
+			transition: color $hover-transition-time;
+
+  &:hover {
+  	color: $darkColor;
+  	text-decoration: none;
+  	-webkit-transition: color $hover-transition-time;
+			transition: color $hover-transition-time;
+  }
+
+}
+
 /* =Header
 -------------------------------------------------------------- */
+@import "horizon/header";
 
-/* =Navigation
--------------------------------------------------------------- */
-header {
-	position:relative;
-}
-#main-navigation {
-	font-size: 12px;
-	background-color: $darkColor;
-	padding: 0px;
-	margin: 0px;
-	height: auto;
-
-}
-
-.navbar-brand{
-	padding: 0;
-	margin: 32px 0px 32px 10px !important;
-	height: auto;
-	line-height: 5px;
-}
-
-.nav>li>a{
-	padding: 0px 30px;
-}
-
-.navbar-default .navbar-nav>li{
-	border-bottom: 3px transparent solid;
-	&:after{
-		content: '';
-		display: block;
-		width: 1px;
-		height: 12px;
-		position: absolute;
-		right: 0;
-		background: $secondaryColor;
-		top: 50%;
-		margin-top: -1px;
-	}
-	&:last-child::after{
-		display: none;
-	}
-	>a{
-		text-transform: uppercase;
-		color: #fff;
-		font-weight: bold;
-		padding: 61px 30px 51px;
-		line-height: 1;
-
-		.caret {
-			position: relative;
-			top: -1px;
-		}
-	}
-	&:last-child a{
-			border-right: 0px;
-	}
-	&:hover{
-		>a{
-			color: $secondaryColor;
-		}
-		border-bottom: 3px $secondaryColor solid;
-	}
-}
-
-.navbar-default{
-	border: none;
-	.navbar-nav>li>a:hover, .navbar-nav>.open>a, .navbar-nav>li>a:focus, .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus,
-	.navbar-nav > .active {
-		background-color: transparent;
-		color: $secondaryColor;
-		border-color: $secondaryColor;
-	}
-	.navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-	  	background-color: transparent;
-		color: $secondaryColor;
-		border-color: $secondaryColor;
-	}
-}
-
-.dropdown-menu{
-	padding: 0px;
-	min-width: 100%;
-	max-width: 100%;
-	height: auto;
-	.active > a, .active > a:focus, .active > a:hover{
-		background-color: $secondaryColor;
-	}
-}
-
-.navbar-nav > li > .dropdown-menu{
-	background-color: $darkColor;
-	a{
-		font-size: 12px;
-		color: $primaryColor;
-		text-align: center;
-		text-transform: uppercase;
-		padding: 15px;
-		line-height: 1.5;
-		&:hover{
-			background-color: $secondaryColor;
-		}
-	}
-	li{
-		a{
-			white-space: normal;
-		}
-		border-bottom: 1px rgb(45, 45, 45) solid;
-	}
-}
-
-.navbar-right .dropdown-menu{
-	border-top: 3px $secondaryColor solid;
-}
-
-@media (max-width: 767px){
-	.navbar-default .navbar-nav{
-		>li>a{
-			padding: 20px 20px;
-		}
-		.open .dropdown-menu > li > a{
-			font-size: 12px;
-			color: $primaryColor;
-			text-align: center;
-			text-transform: uppercase;
-			padding: 15px;
-			line-height: 1.5;
-			&:hover{
-				background-color: $secondaryColor;
-			}
-		}
-	}
-
-}
-
-
-
-/* =Content
+/* =Home Styles
 -------------------------------------------------------------- */
 
-/*
- * We need this wrapper class to crop the image, without this wrapper class
- * firefox and opera have issues with overflow:hidden
- */
-.wrapper-banner {
-	width: 100%;
-	overflow: hidden;
-	margin: -$header-height 0 0 0 !important;
-	float:left;
+@import "horizon/home";
+
+/* =Blog Styles
+-------------------------------------------------------------- */
+
+@import "horizon/blog";
+
+/* =Containers
+-------------------------------------------------------------- */
+
+#primary {
+	margin-bottom: 40px;
+	margin-top: 40px;
 }
 
-#banner {
-	position: relative;
-	display: table;
-	width: 100%;
-	height: 939px;
-	> img {
-		max-height: 100%;
-		position: absolute;
-		top: 0;
-	}
-	.wrapper-description {
-		display: table-cell;
-    	vertical-align: middle;
-		width: 100%;
-		position: relative;
-		z-index: 100;
-		.description {
-			margin: 0 auto;
-			width: 650px;
-			position: relative;
-			text-align: center;
-			color: $primaryColor;
+.container-large {
+	padding: 120px 0;
+	border-top: 10px solid #f1f1f1;
+	border-bottom: 10px solid #f1f1f1;
 
-			.horizon-icon {
-				position: relative;
-				left: 40px;
-			}
-
-			h1 {
-				font-size: 61px;
-				font-weight: 700;
-				text-transform: uppercase;
-				span {
-					color: $secondaryColor;
-				}
-			}
-
-			p {
-				font-size: 31px;
-				font-weight: 400;
-			}
+	//fixes horizontal bar that .row makes on small devices
+	.row {
+		margin-left: 0;
+		margin-right: 0 ;
+		@media (min-width: 768px) {
+			margin-left:  ($grid-gutter-width / -2);
+		 	margin-right: ($grid-gutter-width / -2);
 		}
 	}
 }
 
-@media (min-width: 1920px) {
-  #banner  {
-  	> img {
-  		width: 100%;
-  		max-height: none;
-  	}
-  }
-}
-
-
-#main-content {
-	background-color: $primaryColor;
-	float:left;
-	width: 100%;
-	> section {
-		width: 100%;
-		float:left;
-	}
-	#about {
-		height: 595px;
-		padding: 116px 0;
-		text-align: center;
-
-		blockquote {
-			margin-top: 66px;
-			margin-bottom: 87px;
-		}
-	}
-
-	.joker-sep {
-		background-color: #292c2e;
-
-		height: 450px;
-		.left {
-			max-height: 450px;
-			overflow: hidden;
-		}
-		.right {
-			display: table;
-			height: 450px;
-			.wrapper-blockquote {
-				display: table-cell;
-    			vertical-align: middle;
-			}
-
-			blockquote.cite {
-				width: 70%;
-
-			}
-		}
-	}
-
-	#services {
-		padding: 117px 0 150px 0;
-
-		blockquote {
-			margin-top:  75px;
-		}
+.entry-content {
+	img {
+		max-width: 100% !important;
+  		height: auto !important;
 	}
 }
 
@@ -344,59 +161,124 @@ header {
 -------------------------------------------------------------- */
 
 .pagination-wrap {
-	text-align: center;
+	text-align: right;
 	margin-top: 15px;
+	clear: both;
+	ul {
+		li{
+			list-style: none;
+			display: inline-block;
+			height: auto;			
+			a {
+				padding: 10px;
+				background-color: #fff;
+				color: $ligthGray;
+				border: 2px $ligthGray solid;
+				&:hover {
+					text-decoration: none;
+					color: #fff;
+					transition: background-color color $hover-transition-time;
+					border: 2px $secondaryColor solid;
+					background-color: $secondaryColor;
+				}
+			}
+
+			span {
+				border: 2px $secondaryColor solid;
+				padding:  10px;
+				background-color: $secondaryColor;
+			}
+
+			.dots {
+				padding:  10px;
+				background-color: #fff;
+				color: $ligthGray;
+				border: 2px $ligthGray solid;
+			}
+
+			.current {
+				color: #fff;
+				border: 2px $secondaryColor solid;
+				background-color: $secondaryColor;
+			}
+
+		}
+	} 
 
 	.infinite-scroll & {
 		display: none;
 	}
 }
 
+/* =Titles 
+------------------------------------------------------------- */
+
+.page-title, .entry-title {
+	color: #9f9f9f;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+#comments-title {
+	color: #9f9f9f;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+}
+
+.page-header {
+	margin: 0;
+}
+
 /* =Comments
 -------------------------------------------------------------- */
 
 .commentlist {
+	color: $ligthGray;
 	margin: 0;
 	padding: 0;
 	font-size: 13px;
 	line-height: 22px;
 
-	li.comment, li.pingback {
+	.comment, .pingback {
 		@include clearfix();
 		list-style: none;
-		margin-bottom: 10px;
-	}
-
-	.comment-meta {
-		color: #666;
-		font-size: 12px;
-		line-height: 15px;
-
-		.fn {
-			font-size: 13px;
-			font-weight: 600;
+		.children {
+			padding-left: 0;
+			margin-left: 70px;
 		}
-		a, .fn {
-			color: #444;
-
-			&:hover {
-				color: $link-color;
-				text-decoration: none;
-			}
+		.comment-content {
+			padding-left: 0;
+			margin-left: 70px;
+			margin-top: 25px;
+			margin-bottom: 20px;
+			border-top: 1px solid #ddd;
+		}
+		.comment-awaiting-moderation {
+			font-weight: bold;
 		}
 	}
 	.comment-author {
+		.fn {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.reply {
+			text-transform: uppercase;
+			font-weight: bold;
+			float: right;
+		}
 		img {
 			float: left;
 			display: block;
 			margin-right: 10px;
 		}
-	}
-
-	.comment-awaiting-moderation {
-		margin-top: 5px;
-		font-weight: bold;
-		color: #333;
 	}
 }
 
@@ -454,13 +336,7 @@ header {
 
 /* =Footer
 -------------------------------------------------------------- */
-
-#footer {
-	border-top: 1px solid #ddd;
-	margin-top: 20px;
-	padding: 20px 0 20px;
-	text-align: center;
-}
+@import "horizon/footer";
 
 /* =Error 404 page
 -------------------------------------------------------------- */

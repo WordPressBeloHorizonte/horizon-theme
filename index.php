@@ -13,79 +13,20 @@
  */
 get_header(); ?>
 
-	<div class="wrapper-banner">
-		<div id="banner" role="banner" class="hidden-xs">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner.jpg" />
-			<div class="wrapper-description">
-				<div class="description">
-					<img class="horizon-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/horizon-icon.png" alt="<?php _e('Site Icon', 'horizon-theme'); ?>">
-					<h1>WE ARE HORI<span>ZON</span></h1>
-					<p>and our goal is to serve you!</p>
-				</div>
-			</div>
-		</div> <!-- #banner -->
-	</div> <!-- .wrapper-banner -->
+	<?php get_template_part('inc/partials/homepage', 'banner'); ?>
 
 	<main id="main-content" class="site-main" role="main">
 
-		<section id="about">
 
-			<div class="container">
+		<?php if ( function_exists('Homepage_Control') ) : ?>
 
-				<header class="horizon-header">
-					<h2 class="title">I'm the <span>Horizon</span></h2>
-					<span class="sep"></span>
-					<p class="desc">Our work is your satisfaction</p>
-				</header>
+			<?php do_action('homepage'); ?>
 
-				<blockquote>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget nulla ex. Curabitur mauris felis, vestibulum eget eros ac,
-					congue suscipit felis. Etiam accumsan, libero ac tristique maximus, diam risus interdum odio, sed ultricies arcu quam vel mauris.</p>
-				</blockquote>
+		<?php else: ?>
 
-				<a href="#" class="horizon-btn">Contact us</a>
+			<?php get_template_part('inc/partials/homepage'); ?>
 
-			</div> <!-- .container -->
-
-		</section> <!-- #about -->
-
-		<section class="joker-sep">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 col-sm-4 no-padding left hidden-xs">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-joker.jpg" alt="">
-					</div>
-					<div class="col-md-6 col-sm-8 col-xs-12 no-padding right">
-						<div class="wrapper-blockquote">
-							<blockquote class="cite">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Phasellus eget nulla ex.</p>
-								<footer>
-									<cite>Chuck Norris</cite>
-								</footer>
-							</blockquote>
-						</div> <!-- .wrapper-blockquote -->
-					</div>
-				</div>
-			</div> <!-- .container-fluid -->
-		</section> <!-- #joker-sep -->
-
-		<section id="services">
-			<div class="container">
-
-				<header class="horizon-header">
-					<h2 class="title"><span>Horizon</span> Services</h2>
-					<span class="sep"></span>
-					<p class="desc">Our work is your satisfaction</p>
-				</header>
-
-				<blockquote>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget nulla ex. Curabitur mauris felis, vestibulum eget eros ac,
-					congue suscipit felis. Etiam accumsan, libero ac tristique maximus, diam risus interdum odio, sed ultricies arcu quam vel mauris.</p>
-				</blockquote>
-
-			</div>
-		</section> <!-- #services -->
+		<?php endif; ?>
 
 	</main><!-- #main-content -->
 

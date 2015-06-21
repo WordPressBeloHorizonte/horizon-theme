@@ -1,0 +1,249 @@
+.container-large {
+	@include container-fixed;
+
+	@media (min-width: $screen-sm-min) {
+		width: $container-large-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		width: $container-large-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		width: $container-large-lg;
+	}
+	@media (min-width: $screen-xlg-min) {
+		width: $container-large-xlg;
+	}
+}
+
+
+/**
+ * A Horizon header is composed of a title, separator and a description
+ * EX: <header class="horizon-header">
+ *			<h2 class="title">I'm the <span>Horizon</span></h2>
+ *			<span class="sep"></span>
+ *			<p class="desc">Our work is your satisfaction</p>
+ *		</header>
+ */
+.horizon-header{
+	text-align: center;
+	.title {
+		font-family: 'Open Sans', sans-serif;
+		color: #9f9f9f;
+		font-size: 40px;
+		font-weight: bold;
+		text-transform: uppercase;
+		span {
+			color: $secondaryColor;
+		}
+	}
+
+	.sep {
+		width: 325px;
+		height: 3px;
+		background-color: $secondaryColor;
+		display: block;
+		margin: 10px auto;
+		@media (max-width: $screen-xs-min) {
+			width: 80%;
+		}
+	}
+
+	.desc {
+		color: $ligthGray;
+		font-size: 16px;
+		font-weight: 700;
+		margin: 15px 0;
+	}
+}
+
+/**
+ * Default button styles
+ */
+
+.horizon-btn {
+	display: inline-block;
+	background-color: $secondaryColor;
+	padding: 22px 32px;
+	color: $primaryColor;
+	font-size: 16px;
+	font-weight: 700;
+	border: none;
+	transition: background-color $hover-transition-time;
+
+	&:link, &:visited, &:hover, &:active {
+		text-decoration: none;
+		color: $primaryColor;
+	}
+	&:hover {
+		background-color: $darkColor;
+	}
+	&.btn-md {
+		padding: 15px 20px;
+		font-size: 14px;
+	}
+	&.btn-sm {
+		padding: 10px 15px;
+		font-size: 12px;
+	}
+	&.secondary {
+		background-color: #fff;
+		color: $ligthGray;
+		border: 2px $ligthGray solid;
+		&:link, &:visited, &:hover, &:active {
+			text-decoration: none;
+			color: $primaryColor;
+			background-color: $ligthGray;
+		}
+	}
+}
+
+/**
+ * We have two styles for blockquote, the default and the cite blockquote.
+ */
+blockquote {
+	padding: 0;
+	margin: 0 auto;
+	border: none;
+	&:not(.cite) {
+		color: $ligthGray;
+		font-size: 17px;
+		font-weight: 700;
+		text-align: center;
+		position: relative;
+		width: 90%;
+		&:before, &:after {
+			width: 20px;
+			height: 17px;
+			display: block;
+			content: '*';
+			text-indent: -9999px;
+			position: absolute;
+		}
+		&:before {
+			top:-10px;
+			left: -23px;
+			background: url('assets/images/quote-open.png') no-repeat;
+		}
+		&:after {
+			bottom:-10px;
+			right: -23px;
+			background: url('assets/images/quote-close.png') no-repeat;
+		}
+	}
+
+	&.horizon-blockquote {
+		margin: 70px auto 60px;
+	}
+
+	&.cite {
+		text-align: left;
+		font-size: 24px;
+		font-weight: 600;
+		color: $primaryColor;
+		max-width: 665px;
+		text-align: justify;
+		p {
+			margin-bottom: 25px;
+		}
+		footer {
+			&:before{
+				color: $primaryColor;
+			}
+			border-top: 2px solid $secondaryColor;
+			padding-top: 20px;
+			cite {
+				color: $primaryColor;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 14px;
+				font-weight: 600;
+				text-transform: uppercase;
+				font-style: normal;
+			}
+		}
+	}
+}
+
+
+.no-padding {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+/**
+ * Form style
+ */
+.comment-form, .horizon-form {
+	padding: 10px 30px;
+	text-align: center;
+
+	input, textarea{
+		width: 100%;
+		padding: 10px 5px;
+		border-left: 0;
+		border-right: 0;
+		border-top: 0;
+		border-bottom: 2px #9f9f9f solid;
+		resize: none;
+
+		&:focus, &:active {
+			border-bottom-color: $secondaryColor;
+			outline: none;
+		}
+
+		.error {
+			border-bottom-color: #555;
+		}
+	}
+
+	input[type="submit"], button {
+		border: 0;
+		margin: 0 auto;
+	}
+
+}
+
+.comment-reply-title {
+	color: $ligthGray;
+}
+
+.comment-form {
+	color: $ligthGray;	
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.horizon-search {
+	position: relative;
+	width: 100%;
+	display: block;
+	text-align: right;
+
+	.search {
+		position: absolute;
+	    left: 0px;
+	    right: 50px;
+		input[type="search"] {
+			border: 1px $ligthGray solid;
+			border-right: none;
+			outline: none;
+			padding-left: 20px;
+			width: 100%;
+			height: 50px;
+		}
+	}
+
+	.search-btn {
+		border: none;
+		color: #fff;
+		background-color: $secondaryColor;
+		height: 50px;
+		width: 50px;
+		outline: none;
+		transition: background-color $hover-transition-time;
+
+		&:hover {
+			background-color: $darkColor;
+			transition: background-color $hover-transition-time;
+		}
+	}	
+}

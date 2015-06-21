@@ -5709,7 +5709,7 @@ tbody.collapse.in {
   color: #9f9f9f;
   border: 2px #9f9f9f solid;
 }
-.horizon-btn.secondary:link, .horizon-btn.secondary:visited, .horizon-btn.secondary:hover, .horizon-btn.secondary:active {
+.horizon-btn.secondary:hover, .horizon-btn.secondary:active {
   text-decoration: none;
   color: #fff;
   background-color: #9f9f9f;
@@ -6379,6 +6379,9 @@ a:hover {
 .load-more {
   clear: both;
   text-align: center;
+}
+.load-more a {
+  background: none;
 }
 
 /* Contact section */

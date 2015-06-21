@@ -13,22 +13,17 @@
  */
 get_header(); ?>
 
-	<?php get_template_part('inc/partials/homepage', 'banner'); ?>
+	<div id="primary" class="container">
 
-	<main id="main-content" class="site-main" role="main">
+		<?php get_template_part('inc/partials/blog', 'header'); ?>
 
+		<main id="main-content" class="site-main col-md-8 col-md-push-4" role="main">
+			<?php get_template_part('loop'); ?>
+		</main><!-- #main -->
 
-		<?php if ( function_exists('Homepage_Control') ) : ?>
+		<?php get_sidebar(); ?>
 
-			<?php do_action('homepage'); ?>
-
-		<?php else: ?>
-
-			<?php get_template_part('inc/partials/homepage'); ?>
-
-		<?php endif; ?>
-
-	</main><!-- #main-content -->
+	</div><!-- #primary -->
 
 <?php
 get_footer();

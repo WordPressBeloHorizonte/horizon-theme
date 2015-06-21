@@ -19,6 +19,8 @@ get_header(); ?>
 
 		<main id="main-content" class="site-main col-md-8 col-md-push-4" role="main">
 			<?php get_template_part('loop'); ?>
+
+			<?php horizon_theme_paging_nav(); ?>
 		</main><!-- #main -->
 
 		<?php get_sidebar(); ?>

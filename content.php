@@ -61,7 +61,13 @@
 				<?php if ( is_single() ) : ?>
 					<div class="blog-list-categories">
 						<span><?php _e( 'Categories:', 'horizon-theme' ); ?></span></li>
-						<?php the_category( ', '); ?>
+						<?php
+							if ( 'post' === get_post_type() ) :
+								the_category( ', ');
+							elseif ( 'jetpack-portfolio' === get_post_type() ) :
+								the_terms( get_the_ID(), 'jetpack-portfolio-tag' );
+							endif;
+						?>
 					</div>
 				<?php  endif; ?>
 			</footer><!-- .blog-item-footer -->

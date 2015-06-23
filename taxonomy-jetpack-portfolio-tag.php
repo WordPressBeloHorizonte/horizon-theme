@@ -11,11 +11,11 @@ get_header(); ?>
 		<div class="container">
 
 			<?php
-			horizon_header_with_image(
-				'<span>Horizon</span> Portfolio',
-				'Our Work is your satisfaction',
-				get_template_directory_uri() . '/assets/images/blog/banner-blog.jpg'
-			);
+				horizon_header_with_image(
+					'<span>Horizon</span> Portfolio',
+					get_the_archive_title(),
+					get_template_directory_uri() . '/assets/images/blog/banner-blog.jpg'
+				);
 			?>
 
 		</div><!-- .container -->

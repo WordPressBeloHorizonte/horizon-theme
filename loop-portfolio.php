@@ -12,7 +12,10 @@
 			<ul>
 				<?php foreach( $portfolio_terms as $portfolio_term ) : ?>
 					<li class="menu-item">
-						<a href="<?php echo esc_url( get_term_link( $portfolio_term ) ); ?>" class="menu-item-link"><?php echo esc_html( $portfolio_term->name ); ?></a>
+						<a href="<?php echo esc_url( get_term_link( $portfolio_term ) ); ?>"
+						   class="menu-item-link" >
+							<?php echo esc_html( $portfolio_term->name ); ?>
+						</a>
 					</li>
 				<?php endforeach; ?>
 			</ul>
@@ -23,24 +26,22 @@
 	</nav>
 </div> <!-- .content -->
 <?php
-	$portfolio_items = new WP_Query( array( 'post_type' => 'jetpack-portfolio' ) );
+	global $wp_query;
+
+	/**
+	 * If we are in front page, get the latest 12 projects, if not, use the default query.
+	 */
+	if ( is_front_page() )  {
+		$portfolio_items = new WP_Query( array( 'post_type' => 'jetpack-portfolio', 'posts_per_page' => 12 ) );
+	} else {
+		$portfolio_items = $wp_query;
+	}
+
 	if ( $portfolio_items->have_posts() ) :
 ?>
 	<div class="portfolio-list clearfix">
 		<?php while( $portfolio_items->have_posts() ) : $portfolio_items->the_post(); ?>
-			<figure class="portfolio-item col-lg-3 col-md-4 col-sm-6">
-				<a href="<?php the_permalink(); ?>">
-					<?php if ( has_post_thumbnail() ) : ?>
-						<?php the_post_thumbnail( 'horizon-portfolio-thumbnail' ); ?>
-					<?php else: ?>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/portifolio/foto.jpg" alt="">
-					<?php endif; ?>
-				</a>
-				<figcaption class="portfolio-item-caption">
-					<h4 class="portfolio-item-title"><?php the_title(); ?></h4>
-					<span class="portfolio-item-description"><?php the_terms( get_the_ID(), 'jetpack-portfolio-tag' ); ?></span>
-				</figcaption><!-- .portfolio-item-caption -->
-			</figure><!-- .portfolio-item -->
+			<?php get_template_part('inc/partials/portfolio', 'item'); ?>
 		<?php endwhile; ?>
 	</div><!-- .portifolio-list -->
 

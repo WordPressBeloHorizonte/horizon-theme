@@ -1,10 +1,12 @@
 <section id="blog">
     <div class="container-large">
-        <header class="horizon-header">
-            <h2 class="title">Blog da Horizon</h2>
-            <span class="sep"></span>
-            <p class="desc">Nosso trabalho é sua satisfação</p>
-        </header><!-- .horizon-header -->
+        <?php
+            horizon_header(
+                '<span>Horizon</span> Blog',
+                'Our Work is your satisfaction'
+            );
+        ?>
+
         <div class="row">
             <div class="col-md-6 col-xs-12">
                 <article class="blog-item">

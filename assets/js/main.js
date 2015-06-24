@@ -15,12 +15,12 @@ jQuery(document).ready(function($) {
 	 */
 
 	// Tabs.
-	$( '.odin-tabs a' ).click(function(e) {
+	/*$( '.odin-tabs a' ).click(function(e) {
 		e.preventDefault();
 		$(this).tab( 'show' );
-	});
-
+	});*/
 	// Tooltip.
 	//$( '.odin-tooltip' ).tooltip();
+
 
 });

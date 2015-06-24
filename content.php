@@ -15,14 +15,17 @@
 	<article id="post-<?php the_ID(); ?>" class="blog-item">
 <?php  endif; ?>
 		<?php if ( has_post_thumbnail() ) : ?>
-			<figure class="blog-item-image">
+			<?php if ( 'post' == get_post_type() ) : ?>
+				<?php get_template_part('inc/partials/content', 'thumbnail'); ?>
+			<?php elseif ( 'jetpack-portfolio' == get_post_type() ) : ?>
 				<?php
-					$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'horizon-thumbnail' );
+					/**
+					 * @todo Checar se o plugin horizon está ativo e caso positivo carregar as imagens da galeria
+					 */
+					get_template_part('inc/partials/content', 'thumbnail');
 				?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<img class="horizon-thumnail" src="<?php echo $thumbnail['0']; ?>" />
-				</a>
-			</figure><!-- .blog-item-image -->
+			<?php endif; ?>
+
 		<?php endif; ?>
 		<div class="blog-item-content">
 			<header class="blog-item-header">
@@ -61,7 +64,13 @@
 				<?php if ( is_single() ) : ?>
 					<div class="blog-list-categories">
 						<span><?php _e( 'Categories:', 'horizon-theme' ); ?></span></li>
-						<?php the_category( ', '); ?>
+						<?php
+							if ( 'post' === get_post_type() ) :
+								the_category( ', ');
+							elseif ( 'jetpack-portfolio' === get_post_type() ) :
+								the_terms( get_the_ID(), 'jetpack-portfolio-type' );
+							endif;
+						?>
 					</div>
 				<?php  endif; ?>
 			</footer><!-- .blog-item-footer -->

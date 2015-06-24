@@ -50,7 +50,13 @@ if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 		/**
 		 * Add thumbnail blog size
 		 */
-		add_image_size( 'horizon-thumbnail', 555, 285, true );
+		add_image_size( 'horizon-thumbnail', 700, 365, true );
+
+		/**
+		 * Add portfolio thumbnail size
+		 */
+		add_image_size( 'horizon-portfolio-thumbnail', 480, 400, true);
+
 
 		/**
 		 * Add feed link.
@@ -188,7 +194,7 @@ function horizon_theme_enqueue_scripts() {
 	wp_enqueue_script( 'jquery' );
 
 	// Google Maps
-	if ( is_home() ) {
+	if ( is_front_page() ) {
 		// Google Maps V3 Engine
 		wp_enqueue_script( 'google-maps-v3', 'http://maps.googleapis.com/maps/api/js?sensor=false', array(), null, true );
 

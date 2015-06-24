@@ -1,11 +1,12 @@
 <section id="contact">
     <div class="content">
         <div class="col-md-6 contact-form">
-            <header class="horizon-header">
-                <h2 class="title">Contact the <span>Horizon</span></h2>
-                <span class="sep"></span>
-                <p class="desc">Our work is your satisfaction</p>
-            </header>
+            <?php
+                horizon_header(
+                    'Contact the <span>Horizon</span>',
+                    'Our Work is your satisfaction'
+                );
+            ?>
             <form class="horizon-form">
                 <!-- Input Name-->
                 <div class="form-group">

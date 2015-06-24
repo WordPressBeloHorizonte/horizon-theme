@@ -356,6 +356,9 @@
 			.portfolio-item-description {
 				margin: 0;
 				color: $ligthGray;
+				a:hover{
+					color: #fff;
+				}
 			}
 			@media (min-width: $screen-md-min) {
 				bottom: -100px;
@@ -389,6 +392,9 @@
 .load-more {
 	clear: both;
 	text-align: center;
+	a {
+		background: none;
+	}
 }
 
 /* Contact section */

@@ -50,7 +50,13 @@ if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 		/**
 		 * Add thumbnail blog size
 		 */
-		add_image_size( 'horizon-thumbnail', 555, 285, true );
+		add_image_size( 'horizon-thumbnail', 700, 365, true );
+
+		/**
+		 * Add portfolio thumbnail size
+		 */
+		add_image_size( 'horizon-portfolio-thumbnail', 480, 400, true);
+
 
 		/**
 		 * Add feed link.

@@ -89,7 +89,7 @@
 		background-color: #fff;
 		color: $ligthGray;
 		border: 2px $ligthGray solid;
-		&:link, &:visited, &:hover, &:active {
+		&:hover, &:active {
 			text-decoration: none;
 			color: $primaryColor;
 			background-color: $ligthGray;
@@ -206,7 +206,7 @@ blockquote {
 }
 
 .comment-form {
-	color: $ligthGray;	
+	color: $ligthGray;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -245,5 +245,5 @@ blockquote {
 			background-color: $darkColor;
 			transition: background-color $hover-transition-time;
 		}
-	}	
+	}
 }

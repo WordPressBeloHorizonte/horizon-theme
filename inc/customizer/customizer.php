@@ -7,6 +7,7 @@
  */
 
 class Horizon_Theme_Customize {
+
 	/**
      * This hooks into 'customize_register' (available as of WP 3.4) and allows
      * you to add new sections and controls to the Theme Customize screen.
@@ -19,11 +20,17 @@ class Horizon_Theme_Customize {
      */
 	public static function register ( $wp_customize ) {
 
+		/**
+		 * Failsafe is safe
+		 */
+		if ( ! isset( $wp_customize ) ) {
+			return;
+		}
+
 		// Remove sections and native settings will not be used in theme
 		// Remove setcions
-		$wp_customize->remove_section( 'title_tagline' );
+		//$wp_customize->remove_section( 'title_tagline' );
 		$wp_customize->remove_section( 'background_image' );
-		$wp_customize->remove_section( 'front_page' );
 
 		// Remove setting
 		$wp_customize->remove_setting( 'background_color' );
@@ -33,18 +40,20 @@ class Horizon_Theme_Customize {
 		$wp_customize->add_setting( 'logo', array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => array( $this, 'horizon_theme_sanitize_image' ),
+			'sanitize_callback' => array( 'Horizon_Theme_Customizer', 'horizon_theme_sanitize_image' ),
 			'transport'         => 'refresh'
 		) );
+
 		$wp_customize->add_control(
-			new WP_Customize_Upload_Control(
+			new WP_Customize_Image_Control(
 				$wp_customize,
 				'logo',
 				array(
-					'label'		=> __( 'Site Logo top', 'horizon-theme' ),
-					'section'	=> 'header_image',
-					'settings'	=> 'logo',
-					'priority'	=> 10
+					'label'			=> __( 'Main Site Logo (header)', 'horizon-theme' ),
+					'description' 	=> __( 'Select the image to be used for the site logo.', 'horizon-theme' ),
+					'section'		=> 'header_image',
+					'settings'		=> 'logo',
+					'priority'		=> 10
 				)
 			)
 		);
@@ -58,6 +67,7 @@ class Horizon_Theme_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 		) );
+
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
@@ -79,6 +89,7 @@ class Horizon_Theme_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 		) );
+
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
@@ -92,8 +103,136 @@ class Horizon_Theme_Customize {
 			)
 		);
 
+		$wp_customize->add_section(
+			'horizon_theme_section_info',
+			array(
+				'title' 		=> __( 'Horizon Theme Options', 'horizon-theme' ),
+				'description' 	=> __( 'Some Basic information needed by the theme.', 'horizon-theme' ),
+				'capability' 	=> 'edit_theme_options'
+			)
+		);
+
+		$wp_customize->add_setting(
+			'latitude',
+			array(
+				'default' 	=> '',
+				'type'		=> 'theme_mod'
+			)
+		);
+
+		$wp_customize->add_setting(
+			'longitude',
+			array(
+				'default' 	=> '',
+				'type'		=> 'theme_mod'
+			)
+		);
+
+		$wp_customize->add_control(
+			'display_latitude',
+			array(
+				'settings' 		=> 'latitude',
+				'section'  		=> 'horizon_theme_section_info',
+				'type'			=> 'text',
+				'label'			=> __( 'Latitude', 'horizon-theme' ),
+				'description' 	=> __( 'Fill the Latitude for the map', 'horizon-theme' )
+			)
+		);
+
+		$wp_customize->add_control(
+			'display_langitute',
+			array(
+				'settings' 		=> 'longitude',
+				'section'  		=> 'horizon_theme_section_info',
+				'type'			=> 'text',
+				'label'			=> __( 'Longitude', 'horizon-theme' ),
+				'description' 	=> __( 'Fill the Longitude for the map', 'horizon-theme' )
+			)
+		);
+
+		$wp_customize->add_setting(
+			'phone',
+			array(
+				'default' 	=> '',
+				'type'		=> 'theme_mod'
+			)
+		);
+
+		$wp_customize->add_control(
+			'display_phone',
+			array(
+				'settings' 		=> 'phone',
+				'section'  		=> 'horizon_theme_section_info',
+				'type'			=> 'text',
+				'label'			=> __( 'Contact Phone Number', 'horizon-theme' ),
+			)
+		);
+
+		$wp_customize->add_setting(
+			'email',
+			array(
+				'default' 	=> '',
+				'type'		=> 'theme_mod'
+			)
+		);
+
+		$wp_customize->add_control(
+			'display_email',
+			array(
+				'settings' 		=> 'email',
+				'section'  		=> 'horizon_theme_section_info',
+				'type'			=> 'text',
+				'label'			=> __( 'Email Contact', 'horizon-theme' ),
+			)
+		);
+
+		$wp_customize->add_setting(
+			'address',
+			array(
+				'default' 	=> '',
+				'type'		=> 'theme_mod'
+			)
+		);
+
+		$wp_customize->add_control(
+			'display_address',
+			array(
+				'settings' 		=> 'address',
+				'section'  		=> 'horizon_theme_section_info',
+				'type'			=> 'text',
+				'label'			=> __( 'Address', 'horizon-theme' ),
+			)
+		);
+
+		$wp_customize->add_section(
+			'horizon_theme_section_pages_title',
+			array(
+				'title' 		=> __( 'Horizon Pages Title', 'horizon-theme' ),
+				'description' 	=> __( 'Define The title and subtitle for each page in Horizon', 'horizon-theme' ),
+				'capability' 	=> 'edit_theme_options'
+			)
+		);
+
+		$wp_customize->add_setting(
+			'blog_title',
+			array(
+				'default' 	=> '',
+				'type'		=> 'theme_mod'
+			)
+		);
+
+		$wp_customize->add_control(
+			'display_blog_title',
+			array(
+				'settings' 		=> 'blog_title',
+				'section'  		=> 'horizon_theme_section_pages_title',
+				'type'			=> 'text',
+				'label'			=> __( 'Blog Title Page', 'horizon-theme' ),
+			)
+		);
+
 		// Dark Color
-		$wp_customize->add_setting( 'dark_color', array(
+		/*$wp_customize->add_setting( 'dark_color', array(
 			'default'           => 'rgba(41, 44, 46, 0.9)',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
@@ -120,6 +259,7 @@ class Horizon_Theme_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 		) );
+
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
@@ -131,21 +271,71 @@ class Horizon_Theme_Customize {
 					'priority'   => 16,
 				)
 			)
-		);
+		);*/
 	}
 
 	/**
 	 * Sanitizing uploads
 	 *
 	 * @param $input_image
+	 * @return string
 	 */
 	function horizon_theme_sanitize_image( $input_image ) {
 		$output = '';
 		$filetype = wp_check_filetype($input_image);
 		if ( $filetype["ext"] ) {
-		$output = $input_image;
+			$output = $input_image;
 		}
 		return $output;
+	}
+
+	/**
+	 * This will generate a line of CSS for use in header output. If the setting
+	 * ($mod_name) has no defined value, the CSS will not be output.
+	 *
+	 * @uses get_theme_mod()
+	 * @param string $selector CSS selector
+	 * @param string $style The name of the CSS *property* to modify
+	 * @param string $mod_name The name of the 'theme_mod' option to fetch
+	 * @param string $prefix Optional. Anything that needs to be output before the CSS property
+	 * @param string $postfix Optional. Anything that needs to be output after the CSS property
+	 * @param bool $echo Optional. Whether to print directly to the page (default: true).
+	 * @return string Returns a single line of CSS with selectors and a property.
+	 */
+	public static function generate_css( $selector, $style, $mod_name, $prefix='', $postfix='', $echo=true ) {
+		$return = '';
+		$mod = get_theme_mod($mod_name);
+		if ( ! empty( $mod ) ) {
+			$return = sprintf('%s { %s:%s; }',
+				$selector,
+				$style,
+				$prefix.$mod.$postfix
+			);
+			if ( $echo ) {
+				echo $return;
+			}
+		}
+		return $return;
+	}
+
+	/**
+	 * This outputs the javascript needed to automate the live settings preview.
+	 * Also keep in mind that this function isn't necessary unless your settings
+	 * are using 'transport'=>'postMessage' instead of the default 'transport'
+	 * => 'refresh'
+	 *
+	 * Used by hook: 'customize_preview_init'
+	 *
+	 * @see add_action('customize_preview_init', $func)
+	 */
+	public static function live_preview() {
+		wp_enqueue_script(
+			'horizon-customizer-preview',
+			get_template_directory_uri() . '/assets/js/theme-customizer.js',
+			array(  'jquery', 'customize-preview' ),
+			'1.0',
+			true
+		);
 	}
 
 	/**
@@ -154,12 +344,11 @@ class Horizon_Theme_Customize {
 	* Used by hook: 'wp_head'
 	*
 	* @see add_action('wp_head',$func)
-	* @since MyTheme 1.0
 	*/
 	public static function header_output() {
 		echo '<!--Customizer CSS-->';
 		echo '<style type="text/css">';
-			self::generate_css('#site-title a', 'color', 'header_textcolor', '#');
+			self::generate_css('.primary_color', 'color', 'primary_color', '#');
 			self::generate_css('body', 'background-color', 'background_color', '#');
 			self::generate_css('a', 'color', 'link_textcolor');
 		echo '</style>';

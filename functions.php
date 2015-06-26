@@ -68,7 +68,7 @@ if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 		 */
 		$default = array(
 			'width'         => 1920,
-			'height'        => 939,
+			'height'        => 940,
 			'flex-height'   => false,
 			'flex-width'    => false,
 			'header-text'   => false,

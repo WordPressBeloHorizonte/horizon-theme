@@ -150,22 +150,64 @@ class Horizon_Theme_Customize {
 
 	/**
 	* This will output the custom WordPress settings to the live theme's WP head.
-	*
-	* Used by hook: 'wp_head'
-	*
-	* @see add_action('wp_head',$func)
-	* @since MyTheme 1.0
 	*/
-	public static function header_output() {
-		echo '<!--Customizer CSS-->';
-		echo '<style type="text/css">';
-			self::generate_css('#site-title a', 'color', 'header_textcolor', '#');
-			self::generate_css('body', 'background-color', 'background_color', '#');
-			self::generate_css('a', 'color', 'link_textcolor');
-		echo '</style>';
-		echo '<!--/Customizer CSS-->';
+	function horizon_color_customize(){
+	    ?>
+	    <style>
+			.color-primary,
+			#footer a:hover,
+			.skills-list li:hover .icon,
+			.horizon-header .title span,
+			#portfolio .menu-item-link:hover,
+			.blog-item .blog-item-footer a:hover,
+			#services .service .service-wrapper:hover .service-icon,	
+			a {
+				color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
+			}	
+			
+			.horizon-btn,
+			#footer .general-info,
+			.horizon-search .search-btn,
+			#portfolio .menu-item:after,
+			.blog-item .blog-item-header .sep,
+			.navbar-default .navbar-nav > li:after,
+			#services .service .service-wrapper:hover .sep,
+			.horizon-header .sep, .background-primary, .hover-primary:hover,
+			.portfolio-list .portfolio-item .portfolio-item-caption .portfolio-item-title::before {
+				background-color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
+			}
+
+			.skills-list,
+			.horizon-form input:active,
+			.horizon-form input:focus,
+			.horizon-form textarea:active,
+			.horizon-form textarea:focus,
+			.blog-item .blog-item-image,
+			.navbar-default .navbar-nav > li:hover,
+			blockquote.cite footer, .border-primary,
+			.blog-item .blog-item-footer .blog-item-comments {
+				border-color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
+			}
+
+			.navbar-default .navbar-nav > .active,
+			.navbar-default .navbar-nav > .active > a, 
+			.navbar-default .navbar-nav > .active > a:hover,
+			.navbar-default .navbar-nav > li > a:hover {
+				border-color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
+				color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
+			}
+
+			#footer .social-icons svg:hover {
+				fill: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
+			}
+	    </style>
+	    <?php
 	}
 }
 
 // Setup the Theme Customizer settings and controls
 add_action( 'customize_register' , array( 'Horizon_Theme_Customize' , 'register' ) );
+
+
+// Output custom CSS to live site
+add_action( 'wp_head' , array( 'Horizon_Theme_Customize' , 'horizon_color_customize' ) );

@@ -2,6 +2,12 @@
  * Variables configuration.
  */
 
+// OPTIMIZE SASS
+@import "sassy-maps/sass/memo.scss";
+
+// EASY BREAKPROINT
+@import "breakpoint-sass/stylesheets/breakpoint.scss";
+
 // Custom Boostrap variables.
 $icon-font-path: '../fonts/bootstrap/';
 $bootstrap-sass-asset-helper: false;

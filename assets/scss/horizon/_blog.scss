@@ -69,7 +69,8 @@
 
 		.sep {
 			display: block;
-			width: 240px;
+			width: 100%;
+			max-width: 240px;
 			height: 1px;
 			margin: 30px auto 20px;
 			background: $secondaryColor;

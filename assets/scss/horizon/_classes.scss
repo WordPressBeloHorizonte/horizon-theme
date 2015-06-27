@@ -121,13 +121,19 @@ blockquote {
 		}
 		&:before {
 			top:-10px;
-			left: -23px;
+			left: -12px;
 			background: url('assets/images/quote-open.png') no-repeat;
+			@include breakpoint(500px){
+				left: -23px;
+			}
 		}
 		&:after {
 			bottom:-10px;
-			right: -23px;
+			right: -12px;
 			background: url('assets/images/quote-close.png') no-repeat;
+			@include breakpoint(500px){
+				right: -23px;
+			}
 		}
 	}
 

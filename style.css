@@ -5741,13 +5741,23 @@ blockquote:not(.cite):before, blockquote:not(.cite):after {
 }
 blockquote:not(.cite):before {
   top: -10px;
-  left: -23px;
+  left: -12px;
   background: url("assets/images/quote-open.png") no-repeat;
+}
+@media (min-width: 500px) {
+  blockquote:not(.cite):before {
+    left: -23px;
+  }
 }
 blockquote:not(.cite):after {
   bottom: -10px;
-  right: -23px;
+  right: -12px;
   background: url("assets/images/quote-close.png") no-repeat;
+}
+@media (min-width: 500px) {
+  blockquote:not(.cite):after {
+    right: -23px;
+  }
 }
 blockquote.horizon-blockquote {
   margin: 70px auto 60px;
@@ -5881,39 +5891,52 @@ a:hover {
 
 /* =Header
 -------------------------------------------------------------- */
-#main-navigation {
+.main-navigation {
   font-size: 12px;
   background-color: rgba(41, 44, 46, 0.9);
   padding: 0px;
   margin: 0px;
   height: auto;
   width: 100%;
+  position: relative;
+  min-height: 50px;
 }
 
-.navbar-brand {
-  padding: 0;
-  margin: 32px 0px 32px 10px !important;
-  height: auto;
-  line-height: 5px;
+.navbar-header-logo {
+  margin: 32px 0px 32px 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.navbar-header .navbar-toggle {
+  margin-top: 45px;
+  margin-bottom: 0;
+  cursor: pointer;
 }
 
 .nav > li > a {
   padding: 0px 30px;
 }
 
+.navbar-default .navbar-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .navbar-default .navbar-nav > li {
   border-bottom: 3px transparent solid;
 }
-.navbar-default .navbar-nav > li:after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 12px;
-  position: absolute;
-  right: 0;
-  background: #aac54b;
-  top: 50%;
-  margin-top: -1px;
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav > li:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 12px;
+    position: absolute;
+    right: 0;
+    background: #aac54b;
+    top: 50%;
+    margin-top: -1px;
+  }
 }
 .navbar-default .navbar-nav > li:last-child::after {
   display: none;
@@ -6495,7 +6518,8 @@ a:hover {
 }
 .blog-item .blog-item-header .sep {
   display: block;
-  width: 240px;
+  width: 100%;
+  max-width: 240px;
   height: 1px;
   margin: 30px auto 20px;
   background: #aac54b;

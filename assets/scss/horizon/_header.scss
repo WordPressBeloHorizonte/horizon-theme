@@ -1,59 +1,79 @@
-#main-navigation {
+.main-navigation {
 	font-size: 12px;
 	background-color: $darkColor;
 	padding: 0px;
 	margin: 0px;
 	height: auto;
 	width: 100%;
+	position: relative;
+	min-height: 50px;
 }
 
-.navbar-brand {
-	padding: 0;
-	margin: 32px 0px 32px 10px !important;
-	height: auto;
-	line-height: 5px;
+.navbar-header-logo{
+	margin: 32px 0px 32px 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.navbar-header .navbar-toggle{
+	margin-top: 45px;
+	margin-bottom: 0;
+	cursor: pointer;
 }
 
 .nav>li>a {
 	padding: 0px 30px;
 }
 
-.navbar-default .navbar-nav>li {
-	border-bottom: 3px transparent solid;
-	&:after {
-		content: '';
-		display: block;
-		width: 1px;
-		height: 12px;
-		position: absolute;
-		right: 0;
-		background: $secondaryColor;
-		top: 50%;
-		margin-top: -1px;
-	}
-	&:last-child::after {
-		display: none;
-	}
-	>a {
-		text-transform: uppercase;
-		color: #fff;
-		font-weight: bold;
-		padding: 61px 30px 51px;
-		line-height: 1;
+.navbar-default .navbar-nav{
+	margin-top: 0;
+	margin-bottom: 0;
+	
+	> li {
+		border-bottom: 3px transparent solid;
 
-		.caret {
-			position: relative;
-			top: -1px;
+		&:after {
+			@include breakpoint(768px){
+				content: '';
+				display: block;
+				width: 1px;
+				height: 12px;
+				position: absolute;
+				right: 0;
+				background: $secondaryColor;
+				top: 50%;
+				margin-top: -1px;	
+			}
 		}
-	}
-	&:last-child a {
+		&:last-child::after {
+			display: none;
+		}
+
+		> a {
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: bold;
+			padding: 61px 30px 51px;
+			line-height: 1;
+
+			.caret {
+				position: relative;
+				top: -1px;
+			}
+		}
+
+		&:last-child a {
 			border-right: 0;
-	}
-	&:hover {
-		>a {
-			color: $secondaryColor;
 		}
-		border-bottom: 3px $secondaryColor solid;
+
+		&:hover {
+			border-bottom: 3px $secondaryColor solid;
+			
+			> a {
+				color: $secondaryColor;
+			}
+			
+		}
 	}
 }
 

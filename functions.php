@@ -255,5 +255,8 @@ require_once get_template_directory() . '/inc/class-horizon-theme-nav-walker.php
  */
 require_once get_template_directory() . '/inc/customizer/customizer.php';
 
-
-
+/**
+ * TGM Plugin Activation
+ */
+require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/register_plugins.php';

@@ -167,10 +167,12 @@ class Horizon_Theme_Customize {
 			
 			.horizon-btn,
 			#footer .general-info,
+			.dropdown-menu .active > a, 
 			.horizon-search .search-btn,
 			#portfolio .menu-item:after,
 			.blog-item .blog-item-header .sep,
-			.navbar-default .navbar-nav > li:after,
+			.navbar-default .navbar-nav > li:after,			
+			.navbar-nav > li > .dropdown-menu a:hover,
 			#services .service .service-wrapper:hover .sep,
 			.horizon-header .sep, .background-primary, .hover-primary:hover,
 			.portfolio-list .portfolio-item .portfolio-item-caption .portfolio-item-title::before {
@@ -182,6 +184,7 @@ class Horizon_Theme_Customize {
 			.horizon-form input:focus,
 			.horizon-form textarea:active,
 			.horizon-form textarea:focus,
+			.navbar-right .dropdown-menu,
 			.blog-item .blog-item-image,
 			.navbar-default .navbar-nav > li:hover,
 			blockquote.cite footer, .border-primary,
@@ -189,9 +192,16 @@ class Horizon_Theme_Customize {
 				border-color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
 			}
 
+			.navbar-default .navbar-nav > li > a:hover,
+			.navbar-default .navbar-nav > li > a:focus,
+			.navbar-default .navbar-nav > .open > a:hover,
+			.navbar-default .navbar-nav > .open > a:focus
+			.navbar-default .navbar-nav > .open > a,
 			.navbar-default .navbar-nav > .active,
-			.navbar-default .navbar-nav > .active > a, 
+			.navbar-default .navbar-nav > .active > a,
+			.navbar-default .navbar-nav > .active > a:active,
 			.navbar-default .navbar-nav > .active > a:hover,
+			.navbar-default .navbar-nav > .active > a:focus,
 			.navbar-default .navbar-nav > li > a:hover {
 				border-color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
 				color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;

@@ -28,6 +28,7 @@ function horizon_theme_register_required_plugins() {
 			'required' 				=> false,
 			'version' 				=> '3.5.3',
 			'force_activation' 		=> false,
+			'is_automatic'			=> true,
 		),
 		array(
 			'name'     				=> 'Homepage Control',
@@ -35,6 +36,7 @@ function horizon_theme_register_required_plugins() {
 			'required' 				=> false,
 			'version' 				=> '2.0.1',
 			'force_activation' 		=> false,
+			'is_automatic'			=> true,
 		),
 
 	);

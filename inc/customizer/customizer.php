@@ -160,6 +160,7 @@ class Horizon_Theme_Customize {
 			.horizon-header .title span,
 			#portfolio .menu-item-link:hover,
 			.blog-item .blog-item-footer a:hover,
+			.navbar-default .navbar-nav > li:hover > a,
 			#services .service .service-wrapper:hover .service-icon,	
 			a {
 				color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
@@ -182,12 +183,15 @@ class Horizon_Theme_Customize {
 			}
 
 			.skills-list,
+			.comment-form input:active,
+			.comment-form input:focus,
 			.horizon-form input:active,
 			.horizon-form input:focus,
 			.pagination-wrap ul li .current,
 			.horizon-form textarea:active,
 			.horizon-form textarea:focus,
-			.navbar-right .dropdown-menu,
+			.comment-form textarea:active,
+			.comment-form textarea:focus,
 			.blog-item .blog-item-image,
 			.pagination-wrap ul li a:hover,
 			.navbar-default .navbar-nav > li:hover,
@@ -196,17 +200,20 @@ class Horizon_Theme_Customize {
 				border-color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
 			}
 
+			.navbar-right .dropdown-menu {
+				border-top-color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
+			}
+
 			.navbar-default .navbar-nav > li > a:hover,
 			.navbar-default .navbar-nav > li > a:focus,
 			.navbar-default .navbar-nav > .open > a:hover,
-			.navbar-default .navbar-nav > .open > a:focus
+			.navbar-default .navbar-nav > .open > a:focus,
 			.navbar-default .navbar-nav > .open > a,
 			.navbar-default .navbar-nav > .active,
 			.navbar-default .navbar-nav > .active > a,
 			.navbar-default .navbar-nav > .active > a:active,
 			.navbar-default .navbar-nav > .active > a:hover,
-			.navbar-default .navbar-nav > .active > a:focus,
-			.navbar-default .navbar-nav > li > a:hover {
+			.navbar-default .navbar-nav > .active > a:focus {
 				border-color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
 				color: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
 			}

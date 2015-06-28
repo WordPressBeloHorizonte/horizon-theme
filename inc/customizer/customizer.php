@@ -221,6 +221,30 @@ class Horizon_Theme_Customize {
 			#footer .social-icons svg:hover {
 				fill: <?php echo get_theme_mod('secondary_color', '#000000'); ?>;
 			}
+
+			.horizon-header .title,
+			.horizon-header .desc,
+			.horizon-btn.secondary,
+			blockquote:not(.cite),
+			.comment-reply-title,
+			.comment-form,
+			#services .service .service-wrapper h4,
+			#services .service .service-wrapper p,
+			#portfolio .menu-item-link,
+			.portfolio-list .portfolio-item .portfolio-item-caption .portfolio-item-description,
+			.blog-item .blog-item-header,
+			.blog-item .blog-content,
+			.blog-item .blog-item-excerpt,
+			.blog-item .blog-item-footer,
+			.blog-item .blog-item-footer a,
+			.pagination-wrap ul li a,
+			.pagination-wrap ul li .dots,
+			.page-title, .entry-title,
+			#comments-title,
+			.commentlist,
+			#footer a {
+				color: <?php echo get_theme_mod('light_gray', '#9f9f9f'); ?>;
+			}
 	    </style>
 	    <?php
 	}

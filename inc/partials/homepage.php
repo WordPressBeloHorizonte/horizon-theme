@@ -6,7 +6,9 @@
 
 <?php get_template_part('inc/partials/homepage', 'skills'); ?>
 
-<?php get_template_part('inc/partials/homepage', 'portfolio'); ?>
+<?php if ( class_exists( 'Jetpack' ) && post_type_exists('jetpack-portfolio') )  : ?>
+	<?php get_template_part('inc/partials/homepage', 'portfolio'); ?>
+<?php endif; ?>
 
 <?php get_template_part('inc/partials/homepage', 'blog'); ?>
 

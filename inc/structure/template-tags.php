@@ -102,6 +102,64 @@ if ( ! function_exists( 'horizon_theme_paging_nav' ) ) {
 	}
 }
 
+if ( ! function_exists( 'horizon_get_theme_mod' ) ) {
+
+	function horizon_get_theme_mod( $name ) {
+		$default = isset( Horizon_Theme_Customize::$defaults[$name] ) ? Horizon_Theme_Customize::$defaults[$name] : '';
+		return get_theme_mod( $name, $default );
+	}
+}
+
+
+if ( ! function_exists('horizon_header_with_image') ) {
+
+	/**
+	 * Print a Horizon header with image
+	 *
+	 * @param $title		The title of the header (allows the use of span to colorize a word)
+	 * @param $description 	The description of the header
+	 * @param $image_url	The Image URL to display within the header
+	 * @param string $alt	The alt image attribute
+	 */
+	function horizon_header_with_image( $title, $description, $image_url, $alt = '') {
+		?>
+			<header class="horizon-header">
+				<h2 class="title"><?php echo wp_kses( $title, array('span' => array() ) ); ?></h2>
+				<span class="sep"></span>
+				<p class="desc"><?php echo esc_html( $description ); ?></p>
+				<figure class="banner-blog col-lg-12">
+					<img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo $alt; ?>">
+				</figure><!-- .banner-blog -->
+			</header><!-- .horizon-header -->
+		<?php
+	}
+}
+
+if ( ! function_exists('horizon_header') ) {
+
+	/**
+	 * Print a  Horizon header with blockquote
+	 *
+	 * @param $title		The title of the header (allows the use of span to colorize a word)
+	 * @param $description 	The description of the header
+	 */
+	function horizon_header( $title, $description, $blockquote = '') {
+		?>
+		<header class="horizon-header">
+			<h2 class="title"><?php echo wp_kses( $title, array('span' => array() ) ); ?></h2>
+			<span class="sep"></span>
+			<p class="desc"><?php echo esc_html( $description ); ?></p>
+		</header><!-- .horizon-header -->
+
+		<?php if ( ! empty( $blockquote ) ) : ?>
+			<blockquote class="horizon-blockquote">
+				<p><?php echo esc_html( $blockquote ); ?></p>
+			</blockquote>
+		<?php endif; ?>
+	<?php
+	}
+}
+
 /**
  * Functions for Woocomerce Homepage Control
  */

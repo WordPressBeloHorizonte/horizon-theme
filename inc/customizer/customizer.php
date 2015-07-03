@@ -8,6 +8,23 @@
 
 class Horizon_Theme_Customize {
 
+	public static $defaults;
+
+	public static function setDefaults() {
+		self::$defaults =  array(
+			'logo' 				=> get_template_directory_uri() . "/assets/images/horizon-logo.png",
+			'banner_icon'		=> get_template_directory_uri() . "/assets/images/horizon-icon.png",
+			'banner_title'		=> 'We are <span>Horizon</span>',
+			'banner_subtitle'	=> 'and our goal is to serve you',
+			'contact_info'		=> 'Tel: +55 (31) 9999-9999 | +55 (31) 3333-3333 | contact@horizon.com.br',
+			'address'			=> '000 Client Street, Minas Gerais BH, Brazil',
+			'gplus'				=> '#',
+			'facebook'			=> '#',
+			'twitter'			=> '#',
+
+		);
+	}
+
 	/**
      * This hooks into 'customize_register' (available as of WP 3.4) and allows
      * you to add new sections and controls to the Theme Customize screen.
@@ -19,7 +36,6 @@ class Horizon_Theme_Customize {
      * @param \WP_Customize_Manager $wp_customize
      */
 	public static function register ( $wp_customize ) {
-
 		/**
 		 * Failsafe is safe
 		 */
@@ -35,54 +51,6 @@ class Horizon_Theme_Customize {
 		// Remove setting
 		$wp_customize->remove_setting( 'background_color' );
 
-
-
-		// New settings for colors section (native section [colors])
-		// Falta discutir mais sobre a questão das cores
-		/*$wp_customize->add_setting( 'primary_color', array(
-			'default'           => '#ffffff',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'type'              => 'theme_mod',
-			'capability'        => 'edit_theme_options',
-			'transport'         => 'refresh',
-		) );
-
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'primary_color',
-				array(
-					'label'      => __( 'Primary Color', 'horizon-theme' ),
-					'section'    => 'colors',
-					'settings'   => 'primary_color',
-					'priority'   => 10,
-				)
-			)
-		);
-
-		// Secondary Color
-		$wp_customize->add_setting( 'secondary_color', array(
-			'default'           => '#aac54b',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'type'              => 'theme_mod',
-			'capability'        => 'edit_theme_options',
-			'transport'         => 'refresh',
-		) );
-
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'secondary_color',
-				array(
-					'label'      => __( 'Secondary Color', 'horizon-theme' ),
-					'section'    => 'colors',
-					'settings'   => 'secondary_color',
-					'priority'   => 12,
-				)
-			)
-		);*/
-
-
 		self::register_options_for_header_image( $wp_customize );
 		self::register_pages_title_section( $wp_customize );
 		self::register_options_section( $wp_customize );
@@ -91,12 +59,11 @@ class Horizon_Theme_Customize {
 
 	public static function register_options_for_header_image( $wp_customize ) {
 		// Logo
-		$wp_customize->add_setting( 'logo', array(
+		$wp_customize->add_setting( 'logo' , array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => array( 'Horizon_Theme_Customizer', 'horizon_theme_sanitize_image' ),
 			'transport'         => 'postMessage',
-			'default'			=>  get_template_directory_uri() . "/assets/images/horizon-logo.png"
+			'default'			=>  self::$defaults['logo']
 		) );
 
 		$wp_customize->add_control(
@@ -116,9 +83,8 @@ class Horizon_Theme_Customize {
 		$wp_customize->add_setting( 'banner_icon', array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => array( 'Horizon_Theme_Customizer', 'horizon_theme_sanitize_image' ),
 			'transport'         => 'postMessage',
-			'default'			=>  get_template_directory_uri() . "/assets/images/horizon-icon.png"
+			'default'			=> self::$defaults['banner_icon']
 		) );
 
 		$wp_customize->add_control(
@@ -139,7 +105,7 @@ class Horizon_Theme_Customize {
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
-			'default'			=> 'We are <span>Horizon</span>'
+			'default'			=> self::$defaults['banner_title']
 		) );
 
 		$wp_customize->add_control(
@@ -157,7 +123,7 @@ class Horizon_Theme_Customize {
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
-			'default'			=> 'and our goal is to serve you'
+			'default'			=> self::$defaults['banner_subtitle']
 		) );
 
 		$wp_customize->add_control(
@@ -255,9 +221,9 @@ class Horizon_Theme_Customize {
 		$wp_customize->add_setting(
 			'contact_info',
 			array(
-				'default' 	=> 'Tel: +55 (31) 9999-9999 | +55 (31) 3333-3333 | contact@horizon.com.br',
+				'default' 	=> self::$defaults['contact_info'],
 				'type'		=> 'theme_mod',
-				'transport' =>  'postMessage'
+				'transport' => 'postMessage'
 			)
 		);
 
@@ -275,7 +241,7 @@ class Horizon_Theme_Customize {
 		$wp_customize->add_setting(
 			'address',
 			array(
-				'default' 	=> '000 Client Street, Minas Gerais BH, Brazil',
+				'default' 	=> self::$defaults['address'],
 				'type'		=> 'theme_mod',
 				'transport' =>  'postMessage'
 			)
@@ -294,7 +260,7 @@ class Horizon_Theme_Customize {
 		$wp_customize->add_setting(
 			'gplus',
 			array(
-				'default' 	=> '#',
+				'default' 	=> self::$defaults['gplus'],
 				'type'		=> 'theme_mod',
 				'transport' =>  'postMessage'
 			)
@@ -314,9 +280,9 @@ class Horizon_Theme_Customize {
 		$wp_customize->add_setting(
 			'facebook',
 			array(
-				'default' 	=> '#',
+				'default' 	=> self::$defaults['facebook'],
 				'type'		=> 'theme_mod',
-				'transport' =>  'postMessage'
+				'transport' => 'postMessage'
 			)
 		);
 
@@ -334,7 +300,7 @@ class Horizon_Theme_Customize {
 		$wp_customize->add_setting(
 			'twitter',
 			array(
-				'default' 	=> '#',
+				'default' 	=> self::$defaults['twitter'],
 				'type'		=> 'theme_mod',
 				'transport' =>  'postMessage'
 			)
@@ -351,21 +317,6 @@ class Horizon_Theme_Customize {
 			)
 		);
 
-	}
-
-	/**
-	 * Sanitizing uploads
-	 *
-	 * @param $input_image
-	 * @return string
-	 */
-	function horizon_theme_sanitize_image( $input_image ) {
-		$output = '';
-		$filetype = wp_check_filetype($input_image);
-		if ( $filetype["ext"] ) {
-			$output = $input_image;
-		}
-		return $output;
 	}
 
 	/**
@@ -412,7 +363,7 @@ class Horizon_Theme_Customize {
 			'horizon-customizer-preview',
 			get_template_directory_uri() . '/assets/js/theme-customizer.js',
 			array(  'jquery', 'customize-preview' ),
-			'0.1',
+			'11.1.0',
 			true
 		);
 	}
@@ -436,3 +387,4 @@ class Horizon_Theme_Customize {
 }
 
 
+Horizon_Theme_Customize::setDefaults();

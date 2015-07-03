@@ -3,19 +3,51 @@
 	//Images
 	wp.customize( 'logo' , function( value ) {
 		value.bind( function( to ) {
-			if ( to.length > 0 )
-				$( '.customizer-logo' ).attr('src', to).show();
-			else
-				$( '.customizer-logo' ).hide();
+			var $logo = $( '.customizer-logo' );
+
+			if ( to.length > 0 ) {
+				if ( $logo.length > 0 ) {
+					$logo.attr('src', to).show();
+				} else {
+					/**
+					  * The logo isn't being display on the site,
+					  * so we need to build a html element.
+					  */
+					$('.navbar-header').append(
+						"<a class='navbar-brand' href='#' rel='home'>" +
+							"<img src='" + to + "' />" +
+						"</a>"
+					);
+				}
+
+			}
+			else {
+				$logo.hide();
+			}
 		} );
 	});
 
 	wp.customize( 'banner_icon' , function( value ) {
 		value.bind( function( to ) {
-			if ( to.length > 0 )
-				$( '.customizer-banner-icon' ).attr('src', to).show();
-			else
-				$( '.customizer-banner-icon').hide();
+			var $icon = $( '.customizer-banner-icon' );
+			if ( to.length > 0 ) {
+				if ( $icon.length > 0 ) {
+					$icon.attr('src', to).show();
+				} else {
+					/**
+					 * The icon isn't being display on the site,
+					 * so we need to build a html element.
+					 */
+					$('#banner .description').prepend(
+						"<img class='horizon-icon customizer-banner-icon' " +
+							"src=" + to + " />"
+					);
+				}
+			}
+			else {
+				$icon.hide();
+			}
+
 		} );
 	});
 

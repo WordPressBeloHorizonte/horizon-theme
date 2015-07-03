@@ -68,11 +68,11 @@ if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 		 */
 		$default = array(
 			'width'         => 1920,
-			'height'        => 939,
+			'height'        => 940,
 			'flex-height'   => false,
 			'flex-width'    => false,
 			'header-text'   => false,
-			'default-image' => '',
+			'default-image' => get_template_directory_uri() . '/assets/images/banner.jpg',
 			'uploads'       => true,
 		);
 
@@ -255,5 +255,8 @@ require_once get_template_directory() . '/inc/class-horizon-theme-nav-walker.php
  */
 require_once get_template_directory() . '/inc/customizer/customizer.php';
 
-
-
+/**
+ * TGM Plugin Activation
+ */
+require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/register_plugins.php';

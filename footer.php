@@ -13,20 +13,20 @@
 	<footer id="footer" role="contentinfo">
 		<div class="general-info clearfix">
 			<div class="col-md-6">
-				<p>	Tel: +55 (31) 9999-9999 | +55 (31) 3333-3333 | contact@horizon.com.br</p>
+				<p class="customizer-contact_info">	<?php echo esc_html( get_theme_mod( 'contact_info' ) ); ?> </p>
 			</div><!-- .col-md-6 -->
 			<div class="col-md-6">
-				<p>Rua do cliente, nº000, Bairro do Cliente, BH / MG</p>
+				<p class="customizer-address"><?php echo esc_html( get_theme_mod( 'address' ) ); ?></p>
 			</div><!-- .col-md-6 -->
 		</div><!-- .general-info .row -->
 		<div class="social-icons">
-			<a href="#">
+			<a class="customizer-gplus" href="<?php echo esc_url( get_theme_mod( 'gplus' ) ); ?>">
 				<?php echo file_get_contents(get_stylesheet_directory_uri().'/assets/images/social/google.svg'); ?>
 			</a>
-			<a href="#">
+			<a class="customizer-facebook" href="<?php echo esc_url( get_theme_mod( 'facebook' ) ); ?>">
 				<?php echo file_get_contents(get_stylesheet_directory_uri().'/assets/images/social/facebook.svg'); ?>
 			</a>
-			<a href="#">
+			<a class="customizer-twitter" href="<?php echo esc_url( get_theme_mod( 'twitter' ) ); ?>">
 				<?php echo file_get_contents(get_stylesheet_directory_uri().'/assets/images/social/twitter.svg'); ?>
 			</a>
 		</div><!-- .social-icons -->

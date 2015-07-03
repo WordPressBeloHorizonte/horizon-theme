@@ -72,7 +72,7 @@ if ( ! function_exists( 'horizon_theme_setup_features' ) ) {
 			'flex-height'   => false,
 			'flex-width'    => false,
 			'header-text'   => false,
-			'default-image' => '',
+			'default-image' => get_template_directory_uri() . '/assets/images/banner.jpg',
 			'uploads'       => true,
 		);
 

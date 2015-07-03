@@ -30,5 +30,5 @@ add_action('homepage', 'horizon_contact_section', 90);
  * WordPress Customizer Hooks
  */
 add_action( 'customize_register' , array( 'Horizon_Theme_Customize' , 'register' ) );
-add_action( 'wp_head', array( 'Horizon_Theme_Customize', 'header_output' ) );
-add_action( 'customize_preview_init', array( 'Horizon_Theme_Customize', 'live_preview' ) );
+//add_action( 'wp_head', array( 'Horizon_Theme_Customize', 'header_output' ) );
+add_action( 'customize_preview_init' , array( 'Horizon_Theme_Customize', 'live_preview' ) );

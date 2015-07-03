@@ -36,7 +36,7 @@
 					</button>
 
 					<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/horizon-logo.png" alt="<?php _e('Site Logo', 'horizon-theme'); ?>">
+						<img class="customizer-logo" src="<?php echo esc_attr( get_theme_mod( 'logo' ) ); ?>" alt="<?php _e('Site Logo', 'horizon-theme'); ?>">
 					</a>
 				</div>
 				<div class="collapse navbar-collapse navbar-main-navigation navbar-right">

@@ -102,6 +102,15 @@ if ( ! function_exists( 'horizon_theme_paging_nav' ) ) {
 	}
 }
 
+if ( ! function_exists( 'horizon_get_theme_mod' ) ) {
+
+	function horizon_get_theme_mod( $name ) {
+		$default = isset( Horizon_Theme_Customize::$defaults[$name] ) ? Horizon_Theme_Customize::$defaults[$name] : '';
+		return get_theme_mod( $name, $default );
+	}
+}
+
+
 if ( ! function_exists('horizon_header_with_image') ) {
 
 	/**

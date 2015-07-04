@@ -27,9 +27,11 @@
 	<header class="navbar-default main-navigation" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-header-logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/horizon-logo.png" alt="<?php _e('Site Logo', 'horizon-theme'); ?>">
-				</a>
+				<?php if ( horizon_get_theme_mod( 'logo' ) ) : ?>
+					<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<img class="customizer-logo" src="<?php echo esc_attr( horizon_get_theme_mod( 'logo' ) ); ?>" alt="<?php _e('Site Logo', 'horizon-theme'); ?>">
+					</a>
+				<?php endif; ?>
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
 				<span class="sr-only"><?php _e( 'Toggle navigation', 'horizon-theme' ); ?></span>
 					<span class="icon-bar"></span>

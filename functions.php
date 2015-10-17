@@ -191,7 +191,7 @@ function horizon_theme_enqueue_scripts() {
 	wp_enqueue_style( 'horizon-theme-style', get_stylesheet_uri(), array( 'dashicons' ), null, 'all' );
 
 	// jQuery.
-	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jquery', 'http://code.jquery.com/jquery-1.11.3.min.js', array(), null, true );
 
 	// Google Maps
 	if ( is_front_page() ) {
@@ -209,6 +209,9 @@ function horizon_theme_enqueue_scripts() {
 
 	// General scripts.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		// Bootstrap.
+		wp_enqueue_script( 'owl-carousel', $template_url . '/assets/js/libs/owl.carousel.js', array( 'jquery' ), null, true );
+
 		// Bootstrap.
 		wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array( 'jquery' ), null, true );
 

@@ -3022,6 +3022,62 @@ tbody.collapse.in {
   color: #444;
 }
 
+.media {
+  margin-top: 15px;
+}
+.media:first-child {
+  margin-top: 0;
+}
+
+.media,
+.media-body {
+  zoom: 1;
+  overflow: hidden;
+}
+
+.media-body {
+  width: 10000px;
+}
+
+.media-object {
+  display: block;
+}
+
+.media-right,
+.media > .pull-right {
+  padding-left: 10px;
+}
+
+.media-left,
+.media > .pull-left {
+  padding-right: 10px;
+}
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.media-middle {
+  vertical-align: middle;
+}
+
+.media-bottom {
+  vertical-align: bottom;
+}
+
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.media-list {
+  padding-left: 0;
+  list-style: none;
+}
+
 .embed-responsive {
   position: relative;
   display: block;
@@ -5864,6 +5920,39 @@ blockquote.cite footer cite {
 .horizon-search .search-btn:hover {
   background-color: rgba(41, 44, 46, 0.9);
   transition: background-color 0.3s;
+}
+
+.horizon-summary-sidebar .nav-tabs {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.horizon-summary-sidebar .nav-tabs li {
+  width: 33.333%;
+}
+.horizon-summary-sidebar .nav-tabs > li > a {
+  border: 1px solid #eee;
+  width: 100%;
+  border-radius: 0;
+  text-align: center;
+  padding: 15px 0 !important;
+  background: #fff;
+}
+.horizon-summary-sidebar .nav-tabs > li.active > a,
+.horizon-summary-sidebar .nav-tabs > li.active > a:focus,
+.horizon-summary-sidebar .nav-tabs > li.active > a:hover {
+  border-top: 3px #aac54b solid !important;
+  background: #eee;
+}
+.horizon-summary-sidebar .tab-content {
+  border: 1px #eee solid;
+  margin-bottom: 10px;
+}
+.horizon-summary-sidebar .list-featured {
+  padding: 15px;
+}
+.horizon-summary-sidebar .list-featured h5 {
+  font-weight: bold;
 }
 
 /* =General

@@ -253,3 +253,45 @@ blockquote {
 		}
 	}
 }
+
+.horizon-summary-sidebar {
+	.nav-tabs {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		li {
+			width: 33.333%;
+		}
+	}
+
+	.nav-tabs > li > a {
+		border: 1px solid #eee;
+		width: 100%;
+		border-radius: 0;
+		text-align: center;
+		padding: 15px 0 !important;
+		background: #fff;
+	}
+
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover {
+		border-top: 3px $secondaryColor solid !important;
+		background: #eee;
+	}
+
+	.tab-content {
+		border: 1px #eee solid;
+		margin-bottom: 10px;
+	}
+
+	.list-featured {
+		padding: 15px;
+		p {
+
+		}
+		h5 {
+			font-weight: bold;
+		}
+	}
+}

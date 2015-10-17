@@ -191,7 +191,7 @@ function horizon_theme_enqueue_scripts() {
 	wp_enqueue_style( 'horizon-theme-style', get_stylesheet_uri(), array( 'dashicons' ), null, 'all' );
 
 	// jQuery.
-	wp_enqueue_script( 'jquery', 'http://code.jquery.com/jquery-1.11.3.min.js', array(), null, true );
+	wp_enqueue_script( 'jquery' );
 
 	// Google Maps
 	if ( is_front_page() ) {

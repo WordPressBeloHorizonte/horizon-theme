@@ -46,7 +46,8 @@ module.exports = function( grunt ) {
 					'<%= dirs.js %>/libs/bootstrap.min.js': [
 						'<%= dirs.js %>/bootstrap/button.js',
 						'<%= dirs.js %>/bootstrap/dropdown.js',
-						'<%= dirs.js %>/bootstrap/collapse.js'
+						'<%= dirs.js %>/bootstrap/collapse.js',
+						'<%= dirs.js %>/bootstrap/tab.js'
 					]
 				}
 			}

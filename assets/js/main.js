@@ -14,13 +14,6 @@ jQuery(document).ready(function($) {
 	 * Horizon Theme Core shortcodes
 	 */
 
-	// Tabs.
-	/*$( '.odin-tabs a' ).click(function(e) {
-		e.preventDefault();
-		$(this).tab( 'show' );
-	});*/
 	// Tooltip.
 	//$( '.odin-tooltip' ).tooltip();
-
-
 });

@@ -210,6 +210,9 @@ function horizon_theme_enqueue_scripts() {
 	// General scripts.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 		// Bootstrap.
+		wp_enqueue_script( 'owl-carousel', $template_url . '/assets/js/libs/owl.carousel.js', array( 'jquery' ), null, true );
+
+		// Bootstrap.
 		wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array( 'jquery' ), null, true );
 
 		// FitVids.
